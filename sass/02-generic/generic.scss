@@ -1,0 +1,16 @@
+/*
+* GENERIC
+* The generic file is quite simple since it only contains a rule that allows us to change the margins and paddings of all the elements of the page,
+as well as to configure the default typography.
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $fontType;
+}
+
+div[id='disqus_thread'] {
+    width: 100%;
+    max-width: 100%;
+}
