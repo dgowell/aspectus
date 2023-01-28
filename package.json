@@ -1,13 +1,11 @@
 {
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/aspectus-styles.css -w"
+  },
   "dependencies": {
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-clean": "^0.4.0",
-    "gulp-cli": "^2.3.0",
-    "gulp-sass": "^5.1.0"
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
     "node-sass": "^8.0.0",
     "sass": "^1.57.1"
   }
