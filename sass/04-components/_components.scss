@@ -1,0 +1,18 @@
+.container {
+    max-width: $screenSizeLarge;
+    padding: 0 40px;
+}
+#primary {
+    width: 100%;
+    max-width: 100%;
+}
+.align-wide {
+    width: 100vw;
+    margin-left: auto;
+}
+@media screen and (min-width: $screenSizeSmall) {
+    .alignwide {
+        width: 100%;
+        margin-left: auto;
+    }
+}

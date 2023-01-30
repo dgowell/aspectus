@@ -20,22 +20,57 @@ function my_theme_enqueue_styles() {
 function mytheme_setup_theme_supported_features() {
     add_theme_support( 'editor-color-palette', array(
         array(
-            'name'  => esc_attr__( 'green', 'mea-genesis' ),
-            'slug'  => 'green',
-            'color' => '#7FB736',
+            'name'  => esc_attr__( 'lime green', 'tapacode' ),
+            'slug'  => 'lime-green',
+            'color' => '#C7F03D',
         ),
         array(
-            'name'  => esc_attr__( 'dark green', 'mea-genesis' ),
+            'name'  => esc_attr__( 'dark green', 'tapacode' ),
             'slug'  => 'dark-green',
-            'color' => '#0E1900',
+            'color' => '#022C2E',
         ),
         array(
-            'name'  => esc_attr__( 'light green', 'mea-genesis' ),
-            'slug'  => 'light-green',
-            'color' => '#B6E25A',
+            'name'  => esc_attr__( 'jade', 'tapacode' ),
+            'slug'  => 'jade',
+            'color' => '#6ED4B7',
         ),
         array(
-            'name'  => esc_attr__( 'white', 'mea-genesis' ),
+            'name'  => esc_attr__( 'violet', 'tapacode' ),
+            'slug'  => 'violet',
+            'color' => '#022C2E',
+        ),
+        array(
+            'name'  => esc_attr__( 'crimson', 'tapacode' ),
+            'slug'  => 'crimson',
+            'color' => '#F14D54',
+        ),
+        array(
+            'name'  => esc_attr__( 'peach', 'tapacode' ),
+            'slug'  => 'peach',
+            'color' => '#FFBF65',
+        ),
+        array(
+            'name'  => esc_attr__( 'black', 'tapacode' ),
+            'slug'  => 'black',
+            'color' => '#1C1C1C',
+        ),
+        array(
+            'name'  => esc_attr__( 'deep grey', 'tapacode' ),
+            'slug'  => 'deep grey',
+            'color' => '#6F7783',
+        ),
+        array(
+            'name'  => esc_attr__( 'pale grey', 'tapacode' ),
+            'slug'  => 'pale grey',
+            'color' => '#E6EBEB',
+        ),
+        array(
+            'name'  => esc_attr__( 'light jade', 'tapacode' ),
+            'slug'  => 'light jade',
+            'color' => '#F4FCD8',
+        ),
+        array(
+            'name'  => esc_attr__( 'white', 'tapacode' ),
             'slug'  => 'white',
             'color' => '#FFFFFF',
         ),

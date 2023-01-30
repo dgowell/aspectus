@@ -37,11 +37,82 @@ as well as to configure the default typography.
 * ELEMENTS
 * such as h1, h2, h3 etc body, html, a
 */
-h1 {
+.container {
+  max-width: 1920px;
+  padding: 0 40px; }
+
+#primary {
+  width: 100%;
+  max-width: 100%; }
+
+.align-wide {
+  width: 100vw;
+  margin-left: auto; }
+
+@media screen and (min-width: 1000px) {
+  .alignwide {
+    width: 100%;
+    margin-left: auto; } }
+
+.has-lime-green-background-color {
+  background: #C7F03D; }
+
+.has-lime-green-color {
+  color: #C7F03D; }
+
+.has-dark-green-background-color {
+  background: #022C2E; }
+
+.has-dark-green-color {
+  color: #022C2E; }
+
+.has-jade-background-color {
+  background: #6ED4B7; }
+
+.has-dark-green-color {
+  color: #6ED4B7; }
+
+.has-violet-background-color {
+  background: #8A59FF; }
+
+.has-violet-color {
   color: #8A59FF; }
 
-h2 {
-  color: blue; }
+.has-crimson-background-color {
+  background: #F14D54; }
+
+.has-crimson-color {
+  color: #F14D54; }
+
+.has-peach-background-color {
+  background: #FFBF65; }
+
+.has-peach-color {
+  color: #FFBF65; }
+
+.has-black-background-color {
+  background: #1C1C1C; }
+
+.has-black-color {
+  color: #1C1C1C; }
+
+.has-dark-grey-background-color {
+  background: #6F7783; }
+
+.has-dark-grey-color {
+  color: #6F7783; }
+
+.has-light-grey-background-color {
+  background: #E6EBEB; }
+
+.has-light-grey-color {
+  color: #E6EBEB; }
+
+.has-white-background-color {
+  background: #FFFFFF; }
+
+.has-white-grey-color {
+  color: #FFFFFF; }
 
 .m-0 {
   margin: 0px; }
