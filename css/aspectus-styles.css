@@ -18,6 +18,12 @@
   font-weight: 400;
   font-style: normal; }
 
+@font-face {
+  font-family: "ivypresto-display", serif;
+  src: url("https: //use.typekit.net/pil4eql.css");
+  font-weight: 500;
+  font-style: normal; }
+
 /*
 *   TOOLS
 * Global mixins and functions
@@ -37,6 +43,55 @@ as well as to configure the default typography.
 * ELEMENTS
 * such as h1, h2, h3 etc body, html, a
 */
+body {
+  font-size: 16px; }
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 3.25rem;
+  line-height: 3.75rem; }
+
+h2 {
+  font-family: "ivypresto-display", sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 3.25rem; }
+
+h3 {
+  font-family: "ivypresto-display", sans-serif;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 3.25rem; }
+
+h4 {
+  font-family: "ivypresto-display", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem; }
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 2.25rem;
+    line-height: 2.625rem; }
+  h2 {
+    font-family: "ivypresto-display", sans-serif;
+    font-weight: 400;
+    font-size: 2.125rem;
+    line-height: 2.875rem; }
+  h3 {
+    font-family: "ivypresto-display", sans-serif;
+    font-weight: 400;
+    font-size: 1.875rem;
+    line-height: 2.375rem; }
+  h4 {
+    font-family: "ivypresto-display", sans-serif;
+    font-weight: 400;
+    font-size: 1.375rem;
+    line-height: 1.75rem; } }
+
 .container {
   max-width: 1920px;
   padding: 0 40px; }
