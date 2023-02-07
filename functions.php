@@ -16,6 +16,9 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style( 'tapacode-sass-styles',
         get_stylesheet_directory_uri() . '/css/aspectus-styles.css'
     );
+
+    //jquery
+    wp_enqueue_script( 'tapacode-nav-menu', get_stylesheet_directory_uri() . '/js/nav-menu.js', array( 'jquery' ), '1.0.0', true );
 }
 function mytheme_setup_theme_supported_features() {
     add_theme_support( 'editor-color-palette', array(
@@ -78,3 +81,5 @@ function mytheme_setup_theme_supported_features() {
 }
 
 add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
+
+
