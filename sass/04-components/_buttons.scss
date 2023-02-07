@@ -1,0 +1,30 @@
+button.button {
+    -webkit-appearance: none;
+    background: $colorPrimaryDark;
+    background-image: url('../assets/right-chevron.svg');
+    background-position: right calc(50% - 40px) center;
+    background-repeat: no-repeat;
+    font-family: $fontMain;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1px 30px 2px 15px;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    background-color: $colorPrimaryDark;
+    color: $colorPrimaryLight;
+    border: solid 1px $colorPrimaryLight;
+}
+button.button:hover {
+    background: $colorPrimaryDark;
+    background-image: url('../assets/right-chevron-dark.svg');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1px 30px 2px 15px;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    background-color: $colorPrimaryLight;
+    color: $colorPrimaryDark;
+    border: solid 1px $colorPrimaryDark;
+}

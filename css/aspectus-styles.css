@@ -43,8 +43,18 @@ as well as to configure the default typography.
 * ELEMENTS
 * such as h1, h2, h3 etc body, html, a
 */
-body {
+html {
   font-size: 16px; }
+
+body {
+  font-size: 16px;
+  color: #6F7783;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.375rem;
+  font-weight: 400; }
+
+p {
+  font-size: 1rem; }
 
 h1 {
   font-family: "Poppins", sans-serif;
@@ -69,6 +79,17 @@ h4 {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 2rem; }
+
+a,
+a:link,
+a:visited {
+  color: #022C2E;
+  text-decoration: none; }
+
+a:hover,
+a:active {
+  color: #022C2E;
+  text-decoration: underline; }
 
 @media screen and (min-width: 1000px) {
   h1 {
@@ -108,6 +129,111 @@ h4 {
   .alignwide {
     width: 100%;
     margin-left: auto; } }
+
+button.button {
+  -webkit-appearance: none;
+  background: #022C2E;
+  background-image: url("../assets/right-chevron.svg");
+  background-position: right calc(50% - 40px) center;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1px 30px 2px 15px;
+  transition: 0.2s ease-in-out;
+  border-radius: 50px;
+  background-color: #022C2E;
+  color: #C7F03D;
+  border: solid 1px #C7F03D; }
+
+button.button:hover {
+  background: #022C2E;
+  background-image: url("../assets/right-chevron-dark.svg");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1px 30px 2px 15px;
+  transition: 0.2s ease-in-out;
+  border-radius: 50px;
+  background-color: #C7F03D;
+  color: #022C2E;
+  border: solid 1px #022C2E; }
+
+.footer {
+  background-color: #022C2E;
+  min-height: 392px;
+  padding: 100px 40px;
+  color: #FFFFFF; }
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr; }
+
+.footer__column {
+  display: flex;
+  flex-direction: column; }
+
+.footer__logo {
+  max-width: 60px;
+  grid-area: logo; }
+
+.footer__tag-line {
+  font-family: "ivypresto-display", sans-serif;
+  font-size: 1.125rem;
+  grid-area: tag; }
+
+.footer__social-logo img {
+  width: 20px; }
+
+.footer__social-links {
+  display: flex;
+  gap: 24px;
+  margin-top: 48px;
+  margin-bottom: 34px;
+  grid-area: social; }
+
+.footer__title {
+  margin-bottom: 24px;
+  font-size: 0.875rem;
+  line-height: 1.25rem; }
+
+.footer-navigation .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; }
+
+.footer-navigation li a {
+  color: #FFFFFF;
+  font-weight: 500; }
+
+.footer__text {
+  font-weight: 400;
+  margin-bottom: 44px; }
+
+@media screen and (max-width: 1000px) {
+  .footer__container {
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr; } }
+
+@media screen and (max-width: 600px) {
+  .footer__column {
+    margin-bottom: 60px; }
+  .footer__column:last-child {
+    margin-bottom: 0; }
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr; }
+  .footer__column--social-links {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo social" "tag tag"; }
+  .footer__social-links {
+    justify-content: space-between;
+    max-width: 190px; }
+  .footer__button {
+    width: 100%; } }
 
 .has-lime-green-background-color {
   background: #C7F03D; }

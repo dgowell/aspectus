@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "sass": "node-sass sass/main.scss css/aspectus-styles.css -w"
+    "sass": "node-sass sass/main.scss css/aspectus-styles.css -w -r"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
