@@ -14,6 +14,7 @@ button.button {
     color: $colorPrimaryLight;
     border: solid 1px $colorPrimaryLight;
 }
+
 button.button:hover {
     background: $colorPrimaryDark;
     background-image: url('../assets/right-chevron-dark.svg');
@@ -27,4 +28,25 @@ button.button:hover {
     background-color: $colorPrimaryLight;
     color: $colorPrimaryDark;
     border: solid 1px $colorPrimaryDark;
+}
+
+button.button--clean {
+    background-image: none;
+    padding: 1px 15px 2px;
+}
+
+button.button--clean:hover {
+    background-image: none;
+    padding: 1px 15px 2px;
+}
+
+button.button--light {
+    background-color: $colorPrimaryLight;
+    color: $colorPrimaryDark;
+    border: solid 1px $colorPrimaryDark;
+}
+
+button.button--light:hover {
+    background-color: $colorPrimaryDark;
+    color: $colorSupportingWhite;
 }

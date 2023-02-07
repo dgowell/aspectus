@@ -21,20 +21,32 @@
 
 <body <?php body_class(); ?>>
 
-<header id="masthead" class="site-header">
+<header id="masthead" class="header">
     <div class="navbar">
         <div class="navbar__logo">
-            <!-- Site title and logo -->
-            <?php genesis_block_theme_title_logo(); ?>
+            <?php
+            if ( function_exists( 'the_custom_logo' ) && the_custom_logo() ) {
+
+                the_custom_logo();
+            }
+            ?>
         </div>
-        <div class="navbar__burger">
-            <a href="javascript:void(0)" onclick="openNav()" class="navbar__link">&#9776;</a>
-        </div>
-        <div class="navbar__cta">
-            <a href="/contact">
-                <button class="navbar__contact button">Contact</button>
-            </a>
-        </div>
+        <div class="navbar__right">
+            <div class="navbar__burger">
+                <a href="javascript:void(0)" onclick="openNav()" class="navbar__link">
+                    <img class="js-navbar__burger-icon navbar__burger-icon" src="<?php echo get_stylesheet_directory_uri() ?>/assets/burger.svg" alt="Burger Menu Icon" />
+                </a>
+                <a href="javascript:void(0)" onclick="closeNav()" class="navbar__link">
+                    <img class="js-navbar__close-icon navbar__close-icon" src="<?php echo get_stylesheet_directory_uri() ?>/assets/close.svg" alt="Close Menu Icon" />
+                </a>
+            </div>
+            <div class="navbar__break"></div>
+            <div class="navbar__cta">
+                <a href="/contact">
+                    <button class="navbar__contact button button--clean button--light">Contact</button>
+                </a>
+            </div>
+        </div><!-- navbarright -->
     </div><!-- navbar -->
     <!-- Main navigation -->
     <nav class="js-main-nav main-nav" aria-label="<?php esc_attr_e( 'Main', 'genesis-block-theme' ); ?>">
