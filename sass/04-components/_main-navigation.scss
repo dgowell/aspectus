@@ -1,5 +1,5 @@
 .header {
-    background-color: black;
+//    background-color: black;
 }
 
 .js-main-nav {
@@ -31,4 +31,7 @@
 .navbar__burger-icon {
     line-height: 1rem;
     transition: 0.5s ease;
+}
+.js-navbar__logo--black {
+    display: none;
 }

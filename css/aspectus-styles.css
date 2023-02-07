@@ -170,15 +170,11 @@ button.button--clean:hover {
 
 button.button--light {
   background-color: #C7F03D;
-  color: #022C2E;
-  border: solid 1px #022C2E; }
+  color: #022C2E; }
 
 button.button--light:hover {
   background-color: #022C2E;
   color: #FFFFFF; }
-
-.header {
-  background-color: black; }
 
 .js-main-nav {
   height: 0;
@@ -208,6 +204,9 @@ button.button--light:hover {
 .navbar__burger-icon {
   line-height: 1rem;
   transition: 0.5s ease; }
+
+.js-navbar__logo--black {
+  display: none; }
 
 .footer {
   background-color: #022C2E;

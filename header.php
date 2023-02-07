@@ -24,12 +24,8 @@
 <header id="masthead" class="header">
     <div class="navbar">
         <div class="navbar__logo">
-            <?php
-            if ( function_exists( 'the_custom_logo' ) && the_custom_logo() ) {
-
-                the_custom_logo();
-            }
-            ?>
+            <img class="js-navbar__logo--white" src="<?php echo get_stylesheet_directory_uri() ?>/assets/aspectus-logo-white-complete.svg" alt="Aspectus Logo" />
+            <img class="js-navbar__logo--black" src="<?php echo get_stylesheet_directory_uri() ?>/assets/aspectus-logo-black-complete.svg" alt="Aspectus Logo" />
         </div>
         <div class="navbar__right">
             <div class="navbar__burger">
