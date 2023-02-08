@@ -54,7 +54,7 @@ a:active {
     color: $colorPrimaryDark;
     text-decoration: underline;
 }
-@media screen and (min-width: $screenSizeSmall) {
+@media screen and (max-width: $screenSizeSmall) {
     h1 {
         font-family: $fontMain;
         font-weight: 400;

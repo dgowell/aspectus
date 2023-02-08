@@ -1,7 +1,9 @@
 .header {
 //    background-color: black;
 }
-
+body {
+    background-color:burlywood;
+}
 .js-main-nav {
     height: 0;
     overflow-x: hidden;
@@ -11,6 +13,11 @@
     padding: 40px;
     display: flex;
     justify-content: space-between;
+    transition: 0.5s ease;
+}
+.navbar.open {
+    background-color: $colorSupportingWhite;
+    transition: 1s ease;
 }
 .navbar__right {
     display: flex;
@@ -19,7 +26,6 @@
 }
 .navbar__break {
     border-left: 1px solid $colorSupportingGreyLight;
-
     height: 32px;
 }
 .navbar__link {
@@ -34,4 +40,45 @@
 }
 .js-navbar__logo--black {
     display: none;
+}
+.main-nav {
+    padding: 20px 40px;
+    background-color: $colorSupportingWhite;
+}
+.main-nav__list,
+.sub-menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+.menu-item {
+    font-family: $fontMain;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 20px 0;
+}
+.menu-item a {
+    color: $colorSupportingGreyDark;
+}
+.menu-item:hover {
+    background-image: url('../assets/arrow-right.svg');
+    background-repeat: no-repeat;
+    background-position: left calc(60px + 15%) center;
+}
+.current-menu-item > a {
+    color: $colorPrimaryDark;
+}
+.sub-menu {
+    display: none;
+}
+.js-sub-menu__title {
+    font-size: 1.125rem;
+}
+.menu-item:hover .sub-menu {
+    display: block;
+    position: absolute;
+    left: calc(90px + 30%);
+    top: 136px;
 }

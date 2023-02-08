@@ -15,14 +15,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+    <link rel="stylesheet" href=https://use.typekit.net/cfr6non.css>
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
 <header id="masthead" class="header">
-    <div class="navbar">
+    <div class="js-navbar navbar">
         <div class="navbar__logo">
             <img class="js-navbar__logo--white" src="<?php echo get_stylesheet_directory_uri() ?>/assets/aspectus-logo-white-complete.svg" alt="Aspectus Logo" />
             <img class="js-navbar__logo--black" src="<?php echo get_stylesheet_directory_uri() ?>/assets/aspectus-logo-black-complete.svg" alt="Aspectus Logo" />
@@ -49,8 +49,10 @@
         <?php
         wp_nav_menu(
             array(
-                'theme_location' => 'primary',
-                'fallback_cb'    => 'genesis_block_theme_fallback_menu',
+                'theme_location'  => 'primary',
+                'fallback_cb'     => 'genesis_block_theme_fallback_menu',
+                'menu_class'      => 'main-nav__list',
+                'container_class' => 'main-nav__container',
             )
         );
         ?>

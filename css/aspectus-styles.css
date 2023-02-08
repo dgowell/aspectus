@@ -12,18 +12,6 @@
   src: url(../../font/Poppins-Medium.ttf) format("ttf");
   font-weight: 500; }
 
-@font-face {
-  font-family: "ivypresto-display", serif;
-  src: url("https: //use.typekit.net/pil4eql.css");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: "ivypresto-display", serif;
-  src: url("https: //use.typekit.net/pil4eql.css");
-  font-weight: 500;
-  font-style: normal; }
-
 /*
 *   TOOLS
 * Global mixins and functions
@@ -91,7 +79,7 @@ a:active {
   color: #022C2E;
   text-decoration: underline; }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1000px) {
   h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -176,6 +164,9 @@ button.button--light:hover {
   background-color: #022C2E;
   color: #FFFFFF; }
 
+body {
+  background-color: burlywood; }
+
 .js-main-nav {
   height: 0;
   overflow-x: hidden;
@@ -184,7 +175,12 @@ button.button--light:hover {
 .navbar {
   padding: 40px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  transition: 0.5s ease; }
+
+.navbar.open {
+  background-color: #FFFFFF;
+  transition: 1s ease; }
 
 .navbar__right {
   display: flex;
@@ -207,6 +203,47 @@ button.button--light:hover {
 
 .js-navbar__logo--black {
   display: none; }
+
+.main-nav {
+  padding: 20px 40px;
+  background-color: #FFFFFF; }
+
+.main-nav__list,
+.sub-menu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column; }
+
+.menu-item {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 20px 0; }
+
+.menu-item a {
+  color: #6F7783; }
+
+.menu-item:hover {
+  background-image: url("../assets/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: left calc(60px + 15%) center; }
+
+.current-menu-item > a {
+  color: #022C2E; }
+
+.sub-menu {
+  display: none; }
+
+.js-sub-menu__title {
+  font-size: 1.125rem; }
+
+.menu-item:hover .sub-menu {
+  display: block;
+  position: absolute;
+  left: calc(90px + 30%);
+  top: 136px; }
 
 .footer {
   background-color: #022C2E;
