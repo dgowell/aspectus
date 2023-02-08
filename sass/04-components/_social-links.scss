@@ -1,0 +1,18 @@
+.social-links__logo img {
+    width: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 24px;
+    margin-top: 48px;
+    margin-bottom: 34px;
+    grid-area: social;
+}
+
+@media screen and (max-width: $mobileFormatBig) {
+    .social-links {
+        justify-content: space-between;
+        max-width: 190px;
+    }
+}

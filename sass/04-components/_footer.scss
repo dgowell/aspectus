@@ -26,18 +26,6 @@
     grid-area: tag;
 }
 
-.footer__social-logo img {
-    width: 20px;
-}
-
-.footer__social-links {
-    display: flex;
-    gap: 24px;
-    margin-top: 48px;
-    margin-bottom: 34px;
-    grid-area: social;
-}
-
 .footer__title {
     margin-bottom: 24px;
     font-size: 0.875rem;
@@ -89,10 +77,6 @@
             "tag tag";
     }
 
-    .footer__social-links {
-        justify-content: space-between;
-        max-width: 190px;
-    }
     .footer__button {
         width: 100%;
     }

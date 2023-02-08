@@ -56,6 +56,38 @@
             )
         );
         ?>
+        <div class="secondary-nav">
+
+            <div class="social-links">
+                <div class="social-links__logo">
+                    <a href="#">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/linkedin-logo.svg"
+                            alt="LinkedIn Logo" />
+                    </a>
+                </div>
+                <div class="social-links__logo">
+                    <a href="#">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/facebook-logo.svg"
+                            alt="Facebook Logo" />
+                    </a>
+                </div>
+                <div class="social-links__logo">
+                    <a href="#">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/linkedin-logo.svg"
+                            alt="LinkedIn Logo" />
+                    </a>
+                </div>
+                <div class="social-links__logo">
+                    <a href="#">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/twitter-icon.svg"
+                            alt="Instagram Logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="social-links__tag-line">
+                A Formula for Success.
+            </div>
+        </div>
     </nav><!-- .main-navigation -->
     <!-- Get the archive page titles -->
     <?php if ( is_archive() || is_search() || is_404() ) { ?>

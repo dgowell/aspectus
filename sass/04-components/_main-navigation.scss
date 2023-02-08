@@ -53,21 +53,21 @@ body {
     margin: 0;
     flex-direction: column;
 }
-.menu-item {
+.main-nav__container .menu-item {
     font-family: $fontMain;
     font-size: 1rem;
     font-weight: 500;
     padding: 20px 0;
 }
-.menu-item a {
+.main-nav__container .menu-item a {
     color: $colorSupportingGreyDark;
 }
-.menu-item:hover {
+.main-nav__container .menu-item:hover {
     background-image: url('../assets/arrow-right.svg');
     background-repeat: no-repeat;
     background-position: left calc(60px + 15%) center;
 }
-.current-menu-item > a {
+.main-nav__container .menu-item:hover > a {
     color: $colorPrimaryDark;
 }
 .sub-menu {
