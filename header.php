@@ -56,30 +56,44 @@
             )
         );
         ?>
-        <div class="secondary-nav">
-
+        <div class="header__second-column">
+            <?php if ( has_nav_menu( 'footer' ) ) { ?>
+            <nav class="secondary-nav" aria-label="<?php esc_attr_e( 'Important Links Menu', 'genesis-block-theme' ); ?>">
+                <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'footer',
+                            'depth'          => 1,
+                            'fallback_cb'    => false,
+                            'menu_class'      => 'secondary-nav__list',
+                            'container_class' => 'secondary-nav__container',
+                        )
+                    );
+                    ?>
+            </nav><!-- .footer-navigation -->
+            <?php } ?>
             <div class="social-links">
                 <div class="social-links__logo">
                     <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/linkedin-logo.svg"
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/linkedin-black.svg"
                             alt="LinkedIn Logo" />
                     </a>
                 </div>
                 <div class="social-links__logo">
                     <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/facebook-logo.svg"
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/facebook-black.svg"
                             alt="Facebook Logo" />
                     </a>
                 </div>
                 <div class="social-links__logo">
                     <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/linkedin-logo.svg"
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/linkedin-black.svg"
                             alt="LinkedIn Logo" />
                     </a>
                 </div>
                 <div class="social-links__logo">
                     <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/twitter-icon.svg"
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/twitter-black.svg"
                             alt="Instagram Logo" />
                     </a>
                 </div>

@@ -42,16 +42,23 @@ body {
     display: none;
 }
 .main-nav {
-    padding: 20px 40px;
+    padding: 40px 40px 0;
     background-color: $colorSupportingWhite;
+    display: grid;
+    grid-template-columns: calc(22.5% + 80px) 1fr;
 }
 .main-nav__list,
 .sub-menu {
     display: flex;
+    background: $colorSupportingWhite;
     list-style-type: none;
     padding: 0;
     margin: 0;
     flex-direction: column;
+    min-height: 400px;
+}
+.main-nav__list .menu-item:first-child {
+    padding-top: 0;
 }
 .main-nav__container .menu-item {
     font-family: $fontMain;
@@ -60,16 +67,25 @@ body {
     padding: 20px 0;
 }
 .main-nav__container .menu-item a {
-    color: $colorSupportingGreyDark;
+    color: $colorPrimaryDark;
+    font-weight: 500;
 }
 .main-nav__container .menu-item:hover {
     background-image: url('../assets/arrow-right.svg');
     background-repeat: no-repeat;
-    background-position: left calc(60px + 15%) center;
+    background-position: right 24% center;
 }
-.main-nav__container .menu-item:hover > a {
+.main-nav__container:hover .menu-item a {
+    color: $colorSupportingGreyDark;
+}
+.main-nav__container .menu-item:hover>a {
     color: $colorPrimaryDark;
+    text-decoration: none;
 }
+.header__second-column {
+    border-left: 2px solid $colorSupportingGreyLight;
+}
+
 .sub-menu {
     display: none;
 }
@@ -79,6 +95,6 @@ body {
 .menu-item:hover .sub-menu {
     display: block;
     position: absolute;
-    left: calc(90px + 30%);
+    left: calc(21.3% + 120px);
     top: 136px;
 }
