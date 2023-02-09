@@ -1,6 +1,7 @@
 .header__second-column {
     padding-left: 13.5%;
 }
+
 .secondary-nav__list {
     display: flex;
     flex-direction: column;
@@ -9,9 +10,27 @@
     margin: 0;
     padding: 0;
 }
+
 .secondary-nav__spacer {
     height: 60px;
 }
+
 .secondary-nav .menu-item a {
     font-weight: 500;
+    padding: 8px 0;
+}
+
+.secondary-nav .menu-item a:hover {
+    text-decoration: none;
+    border-bottom: solid 1px $colorPrimaryLight;
+}
+
+@media screen and (max-width: $screenSizeSmall) {
+    .header__second-column {
+        padding-left: 0;
+    }
+
+    .secondary-nav__spacer {
+        height: 12px;
+    }
 }

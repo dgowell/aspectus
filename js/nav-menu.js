@@ -1,4 +1,5 @@
-function openNav() {
+if (window.matchMedia('(min-width: 1000px)').matches) {
+    function openNav() {
     document.getElementsByClassName('js-main-nav')[0].style.height = '588px';
     document.getElementsByClassName('js-main-nav')[0].style.padding = '40px 40px 0';
     document.getElementsByClassName('header__column-line')[0].style.opacity = '1';
@@ -7,16 +8,37 @@ function openNav() {
     document.getElementsByClassName('js-navbar__logo--white')[0].style.display = 'none';
     document.getElementsByClassName('js-navbar__logo--black')[0].style.display = 'block';
     document.getElementsByClassName('js-navbar')[0].classList.add('open');
+    }
+    function closeNav() {
+        document.getElementsByClassName('js-main-nav')[0].style.height = '0';
+        document.getElementsByClassName('js-main-nav')[0].style.padding = '0 40px 0';
+        document.getElementsByClassName('header__column-line')[0].style.opacity = '0';
+        document.getElementsByClassName('js-navbar__close-icon')[0].style.display = 'none';
+        document.getElementsByClassName('js-navbar__burger-icon')[0].style.display = 'block';
+        document.getElementsByClassName('js-navbar__logo--white')[0].style.display = 'block';
+        document.getElementsByClassName('js-navbar__logo--black')[0].style.display = 'none';
+        document.getElementsByClassName('js-navbar')[0].classList.remove('open');
+    }
 }
-function closeNav() {
-    document.getElementsByClassName('js-main-nav')[0].style.height = '0';
-    document.getElementsByClassName('js-main-nav')[0].style.padding = '0 40px 0';
-    document.getElementsByClassName('header__column-line')[0].style.opacity = '0';
-    document.getElementsByClassName('js-navbar__close-icon')[0].style.display = 'none';
-    document.getElementsByClassName('js-navbar__burger-icon')[0].style.display = 'block';
-    document.getElementsByClassName('js-navbar__logo--white')[0].style.display = 'block';
-    document.getElementsByClassName('js-navbar__logo--black')[0].style.display = 'none';
-    document.getElementsByClassName('js-navbar')[0].classList.remove('open');
+if (window.matchMedia('(max-width: 999px)').matches) {
+    function openNav() {
+        document.getElementsByClassName('js-main-nav')[0].style.height = '945px';
+        document.getElementsByClassName('js-main-nav')[0].style.padding = '40px 40px 60px';
+        document.getElementsByClassName('js-navbar__close-icon')[0].style.display = 'block';
+        document.getElementsByClassName('js-navbar__burger-icon')[0].style.display = 'none';
+        document.getElementsByClassName('js-navbar__logo--white')[0].style.display = 'none';
+        document.getElementsByClassName('js-navbar__logo--black')[0].style.display = 'block';
+        document.getElementsByClassName('js-navbar')[0].classList.add('open');
+    }
+    function closeNav() {
+        document.getElementsByClassName('js-main-nav')[0].style.height = '0';
+        document.getElementsByClassName('js-main-nav')[0].style.padding = '0 40px 0';
+        document.getElementsByClassName('js-navbar__close-icon')[0].style.display = 'none';
+        document.getElementsByClassName('js-navbar__burger-icon')[0].style.display = 'block';
+        document.getElementsByClassName('js-navbar__logo--white')[0].style.display = 'block';
+        document.getElementsByClassName('js-navbar__logo--black')[0].style.display = 'none';
+        document.getElementsByClassName('js-navbar')[0].classList.remove('open');
+    }
 }
 jQuery(document).ready(function () {
 
@@ -32,16 +54,17 @@ jQuery(document).ready(function () {
             jQuery(this).find('.js-sub-menu__title').last().remove();
         }
     )
-
-    //Function to add the grey menu breaker for the sub sub menu
-    jQuery('.main-nav__container .sub-menu .menu-item-has-children').hover(
-        function() {
-            //find the line and increase the height to show it
-            jQuery('.header__column-line--second').first().height(543);
-        },
-        function() {
-            //decrease the height to hide it
-            jQuery('.header__column-line--second').first().height(0);
-        }
-    )
+    if (window.matchMedia('(min-width: 1000px)').matches) {
+        //Function to add the grey menu breaker for the sub sub menu
+        jQuery('.main-nav__container .sub-menu .menu-item-has-children').hover(
+            function() {
+                //find the line and increase the height to show it
+                jQuery('.header__column-line--second').first().height(543);
+            },
+            function() {
+                //decrease the height to hide it
+                jQuery('.header__column-line--second').first().height(0);
+            }
+        )
+    }
 });
