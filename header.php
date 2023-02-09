@@ -72,6 +72,7 @@
                     ?>
             </nav><!-- .footer-navigation -->
             <?php } ?>
+            <div class="secondary-nav__spacer"></div>
             <div class="social-links">
                 <div class="social-links__logo">
                     <a href="#">
@@ -87,7 +88,7 @@
                 </div>
                 <div class="social-links__logo">
                     <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/linkedin-black.svg"
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/instagram-black.svg"
                             alt="LinkedIn Logo" />
                     </a>
                 </div>
@@ -103,6 +104,8 @@
             </div>
         </div>
     </nav><!-- .main-navigation -->
+    <div class="header__column-line"></div>
+    <div class="header__column-line header__column-line--second"></div>
     <!-- Get the archive page titles -->
     <?php if ( is_archive() || is_search() || is_404() ) { ?>
         <div class="container text-container">

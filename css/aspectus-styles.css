@@ -170,13 +170,13 @@ body {
 .js-main-nav {
   height: 0;
   overflow-x: hidden;
-  transition: 0.5s ease; }
+  transition: 1s ease; }
 
 .navbar {
   padding: 40px;
   display: flex;
   justify-content: space-between;
-  transition: 0.5s ease; }
+  transition: 1s ease; }
 
 .navbar.open {
   background-color: #FFFFFF;
@@ -213,15 +213,28 @@ body {
 .main-nav__list,
 .sub-menu {
   display: flex;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   list-style-type: none;
   padding: 0;
   margin: 0;
   flex-direction: column;
   min-height: 400px; }
 
+.sub-menu {
+  display: none;
+  padding-left: 9.2%;
+  width: 100%;
+  height: 480px; }
+
+.sub-menu li,
+.sub-menu h3 {
+  background-color: #FFFFFF; }
+
+.js-sub-menu__title {
+  margin-bottom: 0; }
+
 .main-nav__list .menu-item:first-child {
-  padding-top: 0; }
+  margin-top: -20px; }
 
 .main-nav__container .menu-item {
   font-family: "Poppins", sans-serif;
@@ -233,10 +246,13 @@ body {
   color: #022C2E;
   font-weight: 500; }
 
-.main-nav__container .menu-item:hover {
+.main-nav__container .menu-item-has-children:hover {
   background-image: url("../assets/arrow-right.svg");
   background-repeat: no-repeat;
   background-position: right 24% center; }
+
+.sub-menu .menu-item-has-children:hover {
+  background-position: left 20vw center; }
 
 .main-nav__container:hover .menu-item a {
   color: #6F7783; }
@@ -244,12 +260,6 @@ body {
 .main-nav__container .menu-item:hover > a {
   color: #022C2E;
   text-decoration: none; }
-
-.header__second-column {
-  border-left: 2px solid #E6EBEB; }
-
-.sub-menu {
-  display: none; }
 
 .js-sub-menu__title {
   font-size: 1.125rem; }
@@ -259,6 +269,26 @@ body {
   position: absolute;
   left: calc(21.3% + 120px);
   top: 136px; }
+
+.header__column-line {
+  position: absolute;
+  height: 0;
+  border: #E6EBEB solid 1px;
+  top: 155px;
+  left: 28.95%;
+  transition: 1s ease; }
+
+.header__column-line--second {
+  left: 65.55%; }
+
+.main-nav__container .sub-menu .menu-item .sub-menu {
+  display: none; }
+
+.main-nav__container .sub-menu .menu-item:hover .sub-menu {
+  display: block;
+  position: absolute;
+  left: 35vw;
+  top: 0; }
 
 .header__second-column {
   padding-left: 13.5%; }
@@ -270,6 +300,12 @@ body {
   list-style: none;
   margin: 0;
   padding: 0; }
+
+.secondary-nav__spacer {
+  height: 60px; }
+
+.secondary-nav .menu-item a {
+  font-weight: 500; }
 
 .footer {
   background-color: #022C2E;
