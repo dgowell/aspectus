@@ -2,7 +2,7 @@
     margin: 0;
 }
 
-button.button, 
+button.button,
 a.gb-button {
     -webkit-appearance: none;
     background: $colorPrimaryDark;
@@ -20,8 +20,7 @@ a.gb-button {
     border: solid 1px $colorPrimaryLight;
 }
 
-button.button:hover
-a.gb-button:hover {
+button.button:hover a.gb-button:hover {
     background: $colorPrimaryDark;
     background-image: url('../assets/right-chevron-dark.svg');
     background-position: right 10px center;
@@ -35,30 +34,37 @@ a.gb-button:hover {
     color: $colorPrimaryDark;
     border: solid 1px $colorPrimaryDark;
 }
+
 a.gb-button {
     padding: 6px 30px 6px 15px;
 }
-.gb-block-button.button--outline > .gb-button {
+
+.gb-block-button.button--outline>.gb-button {
     background-color: transparent;
 }
-.gb-block-button.button--dark-green > .gb-button {
+
+.gb-block-button.button--dark-green>.gb-button {
     color: $colorPrimaryDark;
 }
+
 .gb-block-button.button--outline a {
     background-position: right 10px center;
     text-decoration: none;
 }
+
 .gb-block-button.button--outline.button--dark-green a {
     border-color: $colorPrimaryDark;
-    background-color: transparent!important;
-    color: $colorPrimaryDark!important;
+    background-color: transparent !important;
+    color: $colorPrimaryDark !important;
     background-image: url('../assets/right-chevron-dark.svg');
 }
+
 .gb-block-button.button--outline.button--dark-green a.gb-button:hover {
-   background-color: $colorPrimaryDark!important;
-   color: $colorSupportingWhite!important;
-   background-image: url('../assets/right-chevron.svg');
+    background-color: $colorPrimaryDark !important;
+    color: $colorSupportingWhite !important;
+    background-image: url('../assets/right-chevron.svg');
 }
+
 button.button--clean {
     background-image: none;
     padding: 1px 15px 2px;
@@ -77,4 +83,13 @@ button.button--light {
 button.button--light:hover {
     background-color: $colorPrimaryDark;
     color: $colorSupportingWhite;
+}
+
+
+@media screen and (max-width: $mobileFormatBig) {
+    .sm-button-full-width>.gb-button {
+        width: 100%;
+        margin-top: 20px;
+        background-position: right calc(50% + -82px) center!important;
+    }
 }

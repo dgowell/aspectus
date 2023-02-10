@@ -143,8 +143,7 @@ a.gb-button {
   color: #C7F03D;
   border: solid 1px #C7F03D; }
 
-button.button:hover
-a.gb-button:hover {
+button.button:hover a.gb-button:hover {
   background: #022C2E;
   background-image: url("../assets/right-chevron-dark.svg");
   background-position: right 10px center;
@@ -197,6 +196,12 @@ button.button--light {
 button.button--light:hover {
   background-color: #022C2E;
   color: #FFFFFF; }
+
+@media screen and (max-width: 600px) {
+  .sm-button-full-width > .gb-button {
+    width: 100%;
+    margin-top: 20px;
+    background-position: right calc(50% + -82px) center !important; } }
 
 body {
   background-image: url("../assets/bg-image.jpg"); }
@@ -417,6 +422,16 @@ body {
 .last-third-block__header {
   padding-bottom: 80px;
   padding-top: 100px; }
+
+@media screen and (max-width: 600px) {
+  .last-third-block__header {
+    padding-bottom: 40px; }
+  .last-third-block .gb-2-col-wideleft > .gb-layout-column-wrap {
+    grid-template-columns: 1fr; }
+  .image-container__column--quarter {
+    display: none; }
+  .last-third-block__text-and-link {
+    padding-top: 0; } }
 
 .footer {
   background-color: #022C2E;
