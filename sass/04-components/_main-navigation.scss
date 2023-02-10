@@ -114,27 +114,34 @@ body {
 }
 
 .main-nav__container:hover .menu-item a {
-    color: $colorSupportingGreyDark;
     padding: 8px 0;
 }
 
-.main-nav__container .menu-item:hover>a {
-    color: $colorPrimaryDark;
-    text-decoration: none;
-    border-bottom: solid 1px $colorPrimaryLight;
-}
-.main-nav__container .menu-item-has-children:hover>a {
-    border-bottom: none;
-}
-.js-sub-menu__title {
-    font-size: 1.125rem;
+.main-nav__container:hover .menu-item a {
+    color: $colorSupportingGreyDark;
 }
 
-.menu-item:hover .sub-menu {
-    display: block;
-    position: absolute;
-    left: calc(21.3% + 120px);
-    top: 151px;
+@media screen and (min-width: $screenSizeSmall) {
+    .main-nav__container .menu-item:hover>a {
+        color: $colorPrimaryDark;
+        text-decoration: none;
+        border-bottom: solid 1px $colorPrimaryLight;
+    }
+
+    .main-nav__container .menu-item-has-children:hover>a {
+        border-bottom: none;
+    }
+
+    .menu-item:hover .sub-menu {
+        display: block;
+        position: absolute;
+        left: calc(21.3% + 120px);
+        top: 151px;
+    }
+}
+
+.js-sub-menu__title {
+    font-size: 1.125rem;
 }
 
 .header__column-line {
@@ -163,21 +170,47 @@ body {
 }
 
 @media screen and (max-width: $screenSizeSmall) {
+    .navbar__cta, 
+    .navbar__break {
+        display: none;
+    }
     .main-nav {
         grid-template-columns: 1fr;
     }
+
     .header__column-line {
         display: none;
     }
+
     .main-nav__container {
         padding-bottom: 28px;
         margin-bottom: 48px;
         border-bottom: 2px solid $colorSupportingGreyLight;
     }
+
     .menu-item:hover .sub-menu {
         display: none;
+        left: inherit;
+        top: inherit;
     }
+
+    .sub-menu {
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 186px;
+    }
+
     .main-nav__container .menu-item-has-children:hover {
         background-position: right center;
+    }
+
+    .main-nav__container .menu-item-has-children a {
+        display: block;
+    }
+
+    .main-nav__container:hover .menu-item-has-children a {
+        padding: 0;
     }
 }

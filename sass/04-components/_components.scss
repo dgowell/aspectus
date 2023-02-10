@@ -2,17 +2,24 @@
     max-width: $screenSizeLarge;
     padding: 0 40px;
 }
+.site-content {
+    padding: 0;
+}
 #primary {
     width: 100%;
     max-width: 100%;
 }
-.align-wide {
-    width: 100vw;
+.alignwide {
+    width: 100%;
     margin-left: auto;
+    margin-bottom: 0;
 }
-@media screen and (min-width: $screenSizeSmall) {
-    .alignwide {
-        width: 100%;
-        margin-left: auto;
-    }
+.alignfull {
+    padding: 0 40px;
+}
+.wp-block-image {
+    margin: 0;
+}
+@media screen and (max-width: $screenSizeSmall) {
+ 
 }
