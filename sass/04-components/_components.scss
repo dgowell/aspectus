@@ -44,3 +44,9 @@
 .wp-block-post-template.is-flex-container {
     gap: 20px;
 }
+@media screen and (max-width: $mobileFormatBig) {
+    .mobile-fullwidth {
+        width: 100vw;
+        margin-left: -20px;
+    }
+}

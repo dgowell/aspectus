@@ -5,6 +5,12 @@
     width: 100%;
 }
 
+@media screen and (max-width: $mobileFormatBig) {
+    .vertical-navigation__list ul {
+        gap: 12px;
+    }
+}
+
 .vertical-navigation__list li.vertical-navigation__item {
     padding: 42px 40px;
     background: $colorSupportingGreenLight;
@@ -16,6 +22,13 @@
     background-repeat: no-repeat;
     opacity: 0.7;
 }
+
+@media screen and (max-width: $mobileFormatBig) {
+.vertical-navigation__list li.vertical-navigation__item {
+    @include h4-mob;
+    padding: 36px 40px;
+}
+}
 .vertical-navigation__list li.vertical-navigation__item:hover {
     opacity: 1;
 }
@@ -26,4 +39,9 @@
     border: $colorSupportingGreyLight solid 1px;
     position: absolute;
     right: 90px;
+}
+@media screen and (max-width: $mobileFormatBig) {
+    .vertical-navigation__list li.vertical-navigation__item::after {
+        height: 52px;
+    }
 }

@@ -4,6 +4,21 @@
 .pr-32 {
     padding-right: 32px;
 }
+@media screen and (max-width: $mobileFormatBig) {
+    .mob-p-0 {
+        padding: 0;
+    }
+    .mob-py-24 {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .mob-pt-100 {
+        padding-top: 100px;
+    }
+    .mob-pb-60 {
+        padding-bottom: 60px;
+    }
+}
 .mb-100 {
     margin-bottom: 100px;
 }
