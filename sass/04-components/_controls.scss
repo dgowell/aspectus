@@ -1,0 +1,21 @@
+.slider-control a {
+    background-color: transparent;
+    color: transparent;
+    height: 60px;
+    width: 60px;
+    border-radius: 0;
+    background-position: center center;
+    background-size: contain;
+}
+.slider-control--prev {
+    background: transparent url('../assets/arrow-small-left.svg') no-repeat center;
+}
+.slider-control--prev:hover {
+    background: $colorSupportingGreenLight url('../assets/arrow-small-left.svg') no-repeat center;
+}
+.slider-control--next {
+    background: transparent url('../assets/arrow-small-right.svg') no-repeat center;
+}
+.slider-control--next:hover {
+    background: $colorSupportingGreenLight url('../assets/arrow-small-right.svg') no-repeat center;
+}

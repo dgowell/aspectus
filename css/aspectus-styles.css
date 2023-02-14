@@ -633,6 +633,27 @@ button.button--light:hover {
     justify-content: space-between;
     max-width: 190px; } }
 
+.slider-control a {
+  background-color: transparent;
+  color: transparent;
+  height: 60px;
+  width: 60px;
+  border-radius: 0;
+  background-position: center center;
+  background-size: contain; }
+
+.slider-control--prev {
+  background: transparent url("../assets/arrow-small-left.svg") no-repeat center; }
+
+.slider-control--prev:hover {
+  background: #F4FCD8 url("../assets/arrow-small-left.svg") no-repeat center; }
+
+.slider-control--next {
+  background: transparent url("../assets/arrow-small-right.svg") no-repeat center; }
+
+.slider-control--next:hover {
+  background: #F4FCD8 url("../assets/arrow-small-right.svg") no-repeat center; }
+
 .has-lime-green-background-color {
   background: #C7F03D; }
 
@@ -702,7 +723,7 @@ button.button--light:hover {
 @media screen and (max-width: 600px) {
   .mob-p-0 {
     padding: 0; }
-  .mob-py-24 {
+  .mob-px-24 {
     padding-left: 24px;
     padding-right: 24px; }
   .mob-pt-100 {
@@ -710,5 +731,6 @@ button.button--light:hover {
   .mob-pb-60 {
     padding-bottom: 60px; } }
 
-.mb-100 {
+.my-100 {
+  margin-top: 100px;
   margin-bottom: 100px; }
