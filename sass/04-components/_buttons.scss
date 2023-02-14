@@ -50,6 +50,7 @@ a.gb-button {
 .gb-block-button.button--outline a {
     background-position: right 10px center;
     text-decoration: none;
+    background-color: transparent !important;
 }
 
 .gb-block-button.button--outline.button--dark-green a {
@@ -84,7 +85,16 @@ button.button--light:hover {
     background-color: $colorPrimaryDark;
     color: $colorSupportingWhite;
 }
-
+.has-white-borders a {
+    border-color: $colorSupportingWhite!important;
+    background-image: url('../assets/right-chevron-white.svg');
+}
+.has-white-borders a.gb-button:hover {
+    border-color: $colorSupportingWhite!important;
+    background-color: $colorSupportingWhite!important;
+    color: $colorFontsDark!important;
+    background-image: url('../assets/right-chevron-dark.svg');
+}
 
 @media screen and (max-width: $mobileFormatBig) {
     .sm-button-full-width>.gb-button {

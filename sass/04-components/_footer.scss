@@ -4,7 +4,11 @@
     padding: 100px $globalPaddingX;
     color: $colorSupportingWhite;
 }
-
+@media screen and (max-width: $mobileFormatBig) {
+    .footer {
+        padding: 100px 20px;
+    }
+}
 .footer__container {
     display: grid;
     grid-template-columns: 3fr 2fr 2fr 1fr;

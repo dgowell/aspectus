@@ -2,24 +2,45 @@
     max-width: $screenSizeLarge;
     padding: 0 40px;
 }
+
+@media screen and (max-width: $mobileFormatBig) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
 .site-content {
     padding: 0;
 }
+
 #primary {
     width: 100%;
     max-width: 100%;
 }
+
 .alignwide {
     width: 100%;
     margin-left: auto;
     margin-bottom: 0;
 }
+
 .alignfull {
     padding: 0 40px;
+}
+@media screen and (max-width: $screenSizeSmall) {
+.alignfull {
+        padding: 0 20px;
+    }
 }
 .wp-block-image {
     margin: 0;
 }
-@media screen and (max-width: $screenSizeSmall) {
- 
+
+.entry-content ul,
+.entry-content ol {
+    padding: 0;
+}
+
+.wp-block-post-template.is-flex-container {
+    gap: 20px;
 }

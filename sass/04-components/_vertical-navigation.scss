@@ -1,0 +1,29 @@
+.vertical-navigation__list ul {
+    display: flex;
+    align-content: stretch;
+    gap: 32px;
+    width: 100%;
+}
+
+.vertical-navigation__list li.vertical-navigation__item {
+    padding: 42px 40px;
+    background: $colorSupportingGreenLight;
+    width: 100%;
+    margin-bottom: 0;
+    @include h4;
+    background-image: url('../assets/right-chevron-dark.svg');
+    background-position: right 40px center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+.vertical-navigation__list li.vertical-navigation__item:hover {
+    opacity: 1;
+}
+
+.vertical-navigation__list li.vertical-navigation__item::after {
+    height: 100px;
+    content: "";
+    border: $colorSupportingGreyLight solid 1px;
+    position: absolute;
+    right: 90px;
+}

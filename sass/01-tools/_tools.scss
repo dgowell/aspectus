@@ -13,3 +13,11 @@
     justify-content: $alignWidth;
     align-items: $alignHeight;
 }
+
+@mixin h4 {
+    font-family: $fontSecondary;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $colorFontsDark;
+}
