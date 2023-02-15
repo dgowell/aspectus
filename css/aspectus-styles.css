@@ -655,7 +655,11 @@ button.button--light:hover {
   background: #F4FCD8 url("../assets/arrow-small-right.svg") no-repeat center; }
 
 .client-slider {
-  margin-top: 66px; }
+  margin-top: 66px;
+  margin-bottom: 240px; }
+
+.client-slider__container.wp-block-post-template.is-flex-container {
+  gap: 80px; }
 
 .client-slider__logo {
   display: flex;
@@ -668,6 +672,31 @@ button.button--light:hover {
 
 .client-slider__text {
   max-width: 75%; }
+
+.js-client-slider__indicators {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  gap: 0;
+  margin: 0;
+  padding: 0; }
+
+.js-client-slider__indicators li::marker {
+  content: ""; }
+
+.js-client-slider__indicators li {
+  padding: 0;
+  margin: 0; }
+
+.js-client-slider__indicators button {
+  width: 100%;
+  height: 2px;
+  font-size: 0;
+  padding: 0;
+  background-color: #E6EBEB; }
+
+.js-client-slider__indicators .slick-active button {
+  background-color: #022C2E; }
 
 .has-lime-green-background-color {
   background: #C7F03D; }
