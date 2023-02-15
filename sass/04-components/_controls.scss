@@ -19,3 +19,9 @@
 .slider-control--next:hover {
     background: $colorSupportingGreenLight url('../assets/arrow-small-right.svg') no-repeat center;
 }
+@media screen and (max-width: $mobileFormatBig) {
+    .slider-control__container.wp-block-buttons.wp-container-1 {
+        margin-top: 40px;
+        justify-content: flex-start;
+    }
+}

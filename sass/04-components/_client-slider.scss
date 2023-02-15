@@ -2,6 +2,11 @@
     margin-top: 66px;
     margin-bottom: 240px;
 }
+@media screen and (max-width: $mobileFormatBig) {
+    .client-slider {
+        margin-bottom: 100px;
+    }
+}
 .client-slider__container.wp-block-post-template.is-flex-container {
     gap:80px;
 }

@@ -654,9 +654,18 @@ button.button--light:hover {
 .slider-control--next:hover {
   background: #F4FCD8 url("../assets/arrow-small-right.svg") no-repeat center; }
 
+@media screen and (max-width: 600px) {
+  .slider-control__container.wp-block-buttons.wp-container-1 {
+    margin-top: 40px;
+    justify-content: flex-start; } }
+
 .client-slider {
   margin-top: 66px;
   margin-bottom: 240px; }
+
+@media screen and (max-width: 600px) {
+  .client-slider {
+    margin-bottom: 100px; } }
 
 .client-slider__container.wp-block-post-template.is-flex-container {
   gap: 80px; }
@@ -697,6 +706,18 @@ button.button--light:hover {
 
 .js-client-slider__indicators .slick-active button {
   background-color: #022C2E; }
+
+.basic {
+  margin-top: 100px;
+  margin-bottom: 60px; }
+
+.basic__container {
+  max-width: 668px;
+  margin: auto; }
+
+.basic__text {
+  padding: 0 35px;
+  margin-bottom: 30px; }
 
 .has-lime-green-background-color {
   background: #C7F03D; }
@@ -778,3 +799,6 @@ button.button--light:hover {
 .my-100 {
   margin-top: 100px;
   margin-bottom: 100px; }
+
+.mt-240 {
+  margin-top: 240px; }
