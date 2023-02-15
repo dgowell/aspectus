@@ -654,6 +654,21 @@ button.button--light:hover {
 .slider-control--next:hover {
   background: #F4FCD8 url("../assets/arrow-small-right.svg") no-repeat center; }
 
+.client-slider {
+  margin-top: 66px; }
+
+.client-slider__logo {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40px; }
+
+.client-slider__logo img {
+  max-height: 74px;
+  width: auto; }
+
+.client-slider__text {
+  max-width: 75%; }
+
 .has-lime-green-background-color {
   background: #C7F03D; }
 
