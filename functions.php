@@ -20,8 +20,8 @@ function my_theme_enqueue_styles() {
     //nav menu js
     wp_enqueue_script( 'tapacode-nav-menu', get_stylesheet_directory_uri() . '/js/nav-menu.js', array( 'jquery' ), '1.0.0', true );
 
-    //cuastom slider js
-    wp_enqueue_script( 'tapacode-sliders', get_stylesheet_directory_uri() . '/js/aspectus-sliders.js', array( 'jquery' ), '1.0.0', true );
+    //custom slider js
+    wp_enqueue_script( 'tapacode-sliders', get_stylesheet_directory_uri() . '/js/aspectus-sliders.js', array( 'jquery', 'easy-pie-chart-js' ), '1.0.0', true );
 
     //slick css
     wp_enqueue_style( 'slick-styles',
@@ -30,6 +30,11 @@ function my_theme_enqueue_styles() {
 
     //slick js
     wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.0.0', true ); 
+
+    //easy pie chart
+    wp_enqueue_script( 'easy-pie-chart-js', get_stylesheet_directory_uri() . '/js/easy-pie-chart.js', array( 'jquery' ), '1.0.0', true );
+
+
 }
 function mytheme_setup_theme_supported_features() {
     add_theme_support( 'editor-color-palette', array(

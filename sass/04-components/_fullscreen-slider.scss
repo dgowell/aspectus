@@ -1,0 +1,94 @@
+.fullscreen-slider {
+    padding: 0;
+    position: absolute;
+    top:-220px;
+
+}
+.fullscreen-slider__img {
+    width:100vw;
+    height: 1040px;
+}
+.fullscreen-slider__img img {
+    width: 100%;
+    object-fit: cover;
+}
+.fullscreen-slider__title {
+    color: $colorSupportingWhite;
+    text-align: center;
+    margin-top: -267px;
+}
+.fullscreen-slider__text {
+    color: $colorSupportingWhite;
+    text-align: center;
+}
+.slider-spacer {
+    height:728px;
+}
+
+.entry-content .js-fullscreen-slider__indicators {
+    width: 100vw;
+    margin-left: -40px;
+    padding: 0 34px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.js-fullscreen-slider__indicators li::marker {
+    content: "";
+}
+.js-fullscreen-slider__indicators li,
+.js-fullscreen-slider__indicators button {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    min-height: 220px;
+    border: 1px $colorSupportingGreyLight solid;
+    color: $colorFontsDark;
+    @include global-title;
+    background-color:$colorSupportingWhite;
+}
+.js-fullscreen-slider__indicators li:nth-child(1) button {
+    background: $colorSupportingWhite url('../assets/capital-markets.svg') no-repeat center top 55px;
+}
+.js-fullscreen-slider__indicators li:nth-child(2) button {
+    background: $colorSupportingWhite url('../assets/energy.svg') no-repeat center top 55px;
+}
+.js-fullscreen-slider__indicators li:nth-child(3) button {
+    background: $colorSupportingWhite url('../assets/financial-service.svg') no-repeat center top 55px;
+}
+.js-fullscreen-slider__indicators li:nth-child(4) button {
+    background: $colorSupportingWhite url('../assets/industrials.svg') no-repeat center top 55px;
+}
+.js-fullscreen-slider__indicators li:nth-child(5) button {
+    background: $colorSupportingWhite url('../assets/professional-service.svg') no-repeat center top 55px;
+}
+.js-fullscreen-slider__indicators li:nth-child(6) button {
+    background: $colorSupportingWhite url('../assets/technology.svg') no-repeat center top 55px;
+}
+.js-fullscreen-slider__indicators button {
+    padding-bottom: 44px;
+}
+.js-fullscreen-slider__indicators > li.slick-active button {
+    background-color: $colorSupportingGreenLight;
+}
+
+.indicator__chart {
+    position: relative;
+    margin-left: auto;
+    line-height: 16px;
+    height: 16px;
+    color: #fff;
+    display: none;
+}
+.js-fullscreen-slider__indicators>li.slick-active .indicator__chart {
+    display: block;
+}
+.js-indicator__container {
+    width: 100%;
+    width: 100%;
+    display: flex;
+}

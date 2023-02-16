@@ -28,3 +28,10 @@
     font-size: 1.375rem;
     line-height: 1.75rem;
 }
+
+@mixin global-title {
+    font-family: $fontSecondary;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+}
