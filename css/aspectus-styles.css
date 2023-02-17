@@ -865,6 +865,52 @@ button.button--light:hover {
     padding: 0px;
     margin-bottom: 14px; } }
 
+.title__header {
+  margin-bottom: 24px; }
+
+.title__text {
+  max-width: 460px; }
+
+.col-px-40 > .gb-block-layout-column-inner {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.col-px-120 > .gb-block-layout-column-inner {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+
+@media screen and (max-width: 600px) {
+  .col-px-120 > .gb-block-layout-column-inner {
+    padding-top: 74px;
+    padding-bottom: 74px; } }
+
+.col-gap-40 > .gb-block-layout-column-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-content: center; }
+
+.col-with-image-bg > .gb-block-layout-column-inner {
+  min-height: 576px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-position: center; }
+
+@media screen and (max-width: 600px) {
+  .col-with-image-bg > .gb-block-layout-column-inner {
+    min-height: 488px; } }
+
+.col-with-image-bg__text {
+  max-width: 139px; }
+
+div.about-banner__container.alignfull {
+  margin-top: -204px;
+  padding-top: 220px;
+  padding-bottom: 180px; }
+
 .has-lime-green-background-color {
   background: #C7F03D; }
 
@@ -931,6 +977,10 @@ button.button--light:hover {
 .pr-32 {
   padding-right: 32px; }
 
+.px-120 {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+
 @media screen and (max-width: 600px) {
   .mob-p-0 {
     padding: 0; }
@@ -942,9 +992,21 @@ button.button--light:hover {
   .mob-pb-60 {
     padding-bottom: 60px; } }
 
+.m-0 {
+  margin-bottom: 0; }
+
+.m-0 .aligncenter {
+  margin-bottom: 0; }
+
 .my-100 {
   margin-top: 100px;
   margin-bottom: 100px; }
 
+.mb-100 {
+  margin-bottom: 100px; }
+
 .mt-240 {
   margin-top: 240px; }
+
+.nogutter {
+  padding: 0 !important; }
