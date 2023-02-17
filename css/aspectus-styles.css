@@ -720,16 +720,19 @@ button.button--light:hover {
 
 .fullscreen-slider__img img {
   width: 100%;
+  height: 100%;
   object-fit: cover; }
 
 .fullscreen-slider__title {
   color: #FFFFFF;
   text-align: center;
-  margin-top: -267px; }
+  margin: -272px auto 24px;
+  max-width: 976px; }
 
 .fullscreen-slider__text {
   color: #FFFFFF;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 100px; }
 
 .slider-spacer {
   height: 728px; }
@@ -801,6 +804,46 @@ button.button--light:hover {
   width: 100%;
   width: 100%;
   display: flex; }
+
+@media screen and (max-width: 600px) {
+  .fullscreen-slider__img {
+    height: 700px; }
+  .slider-spacer {
+    height: 461px; }
+  .entry-content .js-fullscreen-slider__indicators {
+    padding: 0;
+    flex-direction: column;
+    margin-left: -20px; }
+  .js-fullscreen-slider__indicators li,
+  .js-fullscreen-slider__indicators button {
+    min-height: 131px;
+    background-position: left 20px center !important;
+    background-size: 50px 50px !important;
+    margin-bottom: 0;
+    border-top: 0;
+    justify-content: start;
+    align-content: center; }
+  .js-fullscreen-slider__indicators button {
+    padding-left: 91px;
+    padding-bottom: 10px; }
+  .js-fullscreen-slider__indicators li::after {
+    height: 79px;
+    content: "";
+    border: #E6EBEB solid 1px;
+    position: absolute;
+    right: 79px;
+    margin-top: 29px; }
+  .js-fullscreen-slider__indicators li::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: url("../assets/right-chevron-dark.svg") no-repeat;
+    margin-top: 60px;
+    right: 5px;
+    position: absolute;
+    display: inline-block; }
+  .js-indicator__container {
+    display: none; } }
 
 .basic {
   margin-top: 100px;

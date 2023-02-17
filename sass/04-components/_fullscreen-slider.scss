@@ -1,28 +1,36 @@
 .fullscreen-slider {
     padding: 0;
     position: absolute;
-    top:-220px;
+    top: -220px;
 
 }
+
 .fullscreen-slider__img {
-    width:100vw;
+    width: 100vw;
     height: 1040px;
 }
+
 .fullscreen-slider__img img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
+
 .fullscreen-slider__title {
     color: $colorSupportingWhite;
     text-align: center;
-    margin-top: -267px;
+    margin: -272px auto 24px;
+    max-width: 976px;
 }
+
 .fullscreen-slider__text {
     color: $colorSupportingWhite;
     text-align: center;
+    margin-bottom: 100px;
 }
+
 .slider-spacer {
-    height:728px;
+    height: 728px;
 }
 
 .entry-content .js-fullscreen-slider__indicators {
@@ -37,6 +45,7 @@
 .js-fullscreen-slider__indicators li::marker {
     content: "";
 }
+
 .js-fullscreen-slider__indicators li,
 .js-fullscreen-slider__indicators button {
     display: flex;
@@ -49,30 +58,38 @@
     border: 1px $colorSupportingGreyLight solid;
     color: $colorFontsDark;
     @include global-title;
-    background-color:$colorSupportingWhite;
+    background-color: $colorSupportingWhite;
 }
+
 .js-fullscreen-slider__indicators li:nth-child(1) button {
     background: $colorSupportingWhite url('../assets/capital-markets.svg') no-repeat center top 55px;
 }
+
 .js-fullscreen-slider__indicators li:nth-child(2) button {
     background: $colorSupportingWhite url('../assets/energy.svg') no-repeat center top 55px;
 }
+
 .js-fullscreen-slider__indicators li:nth-child(3) button {
     background: $colorSupportingWhite url('../assets/financial-service.svg') no-repeat center top 55px;
 }
+
 .js-fullscreen-slider__indicators li:nth-child(4) button {
     background: $colorSupportingWhite url('../assets/industrials.svg') no-repeat center top 55px;
 }
+
 .js-fullscreen-slider__indicators li:nth-child(5) button {
     background: $colorSupportingWhite url('../assets/professional-service.svg') no-repeat center top 55px;
 }
+
 .js-fullscreen-slider__indicators li:nth-child(6) button {
     background: $colorSupportingWhite url('../assets/technology.svg') no-repeat center top 55px;
 }
+
 .js-fullscreen-slider__indicators button {
     padding-bottom: 44px;
 }
-.js-fullscreen-slider__indicators > li.slick-active button {
+
+.js-fullscreen-slider__indicators>li.slick-active button {
     background-color: $colorSupportingGreenLight;
 }
 
@@ -84,11 +101,69 @@
     color: #fff;
     display: none;
 }
+
 .js-fullscreen-slider__indicators>li.slick-active .indicator__chart {
     display: block;
 }
+
 .js-indicator__container {
     width: 100%;
     width: 100%;
     display: flex;
+}
+
+@media screen and (max-width: $mobileFormatBig) {
+    .fullscreen-slider__img {
+        height: 700px;
+    }
+
+    .slider-spacer {
+        height: 461px;
+    }
+
+    .entry-content .js-fullscreen-slider__indicators {
+        padding: 0;
+        flex-direction: column;
+        margin-left: -20px;
+    }
+
+    .js-fullscreen-slider__indicators li,
+    .js-fullscreen-slider__indicators button {
+        min-height: 131px;
+        background-position: left 20px center !important;
+        background-size: 50px 50px !important;
+        margin-bottom: 0;
+        border-top: 0;
+        justify-content: start;
+        align-content: center;
+    }
+
+    .js-fullscreen-slider__indicators button {
+        padding-left: 91px;
+        padding-bottom: 10px;
+    }
+
+    .js-fullscreen-slider__indicators li::after {
+        height: 79px;
+        content: "";
+        border: $colorSupportingGreyLight solid 1px;
+        position: absolute;
+        right: 79px;
+        margin-top: 29px;
+    }
+
+    .js-fullscreen-slider__indicators li::before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        background: url('../assets/right-chevron-dark.svg') no-repeat;
+        margin-top: 60px;
+        right: 5px;
+        position: absolute;
+        display: inline-block;
+    }
+
+    .js-indicator__container {
+        display: none;
+    }
 }
