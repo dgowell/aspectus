@@ -921,6 +921,10 @@ button.button--light:hover {
   line-height: 1.625rem;
   font-weight: 400; }
 
+@media screen and (max-width: 600px) {
+  .value__container {
+    margin-bottom: 40px; } }
+
 div.about-banner__container.alignfull {
   margin-top: -204px;
   padding-top: 220px;
@@ -996,17 +1000,6 @@ div.about-banner__container.alignfull {
   padding-top: 120px;
   padding-bottom: 120px; }
 
-@media screen and (max-width: 600px) {
-  .mob-p-0 {
-    padding: 0; }
-  .mob-px-24 {
-    padding-left: 24px;
-    padding-right: 24px; }
-  .mob-pt-100 {
-    padding-top: 100px; }
-  .mob-pb-60 {
-    padding-bottom: 60px; } }
-
 .m-0 {
   margin-bottom: 0; }
 
@@ -1028,3 +1021,18 @@ div.about-banner__container.alignfull {
 
 .nogutter {
   padding: 0 !important; }
+
+@media screen and (max-width: 600px) {
+  .mob-p-0 {
+    padding: 0; }
+  .mob-px-24 {
+    padding-left: 24px;
+    padding-right: 24px; }
+  .mob-pt-100 {
+    padding-top: 100px; }
+  .mob-pb-60 {
+    padding-bottom: 60px; }
+  .mob-mt-100 {
+    margin-top: 100px; }
+  .mob-mb-80 {
+    margin-bottom: 80px; } }

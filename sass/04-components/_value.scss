@@ -10,3 +10,8 @@
     color: $colorFontsDark;
     @include global-title;
 }
+@media screen and (max-width: $mobileFormatBig) {
+    .value__container {
+        margin-bottom: 40px;
+    }
+}
