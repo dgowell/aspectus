@@ -1,0 +1,12 @@
+.value__container {
+    border-left: 1px solid $colorSupportingGreyLight;
+    padding: 0 40px;
+}
+.value__icon {
+    margin-bottom: 36px;
+}
+.value__title {
+    margin-bottom: 24px;
+    color: $colorFontsDark;
+    @include global-title;
+}

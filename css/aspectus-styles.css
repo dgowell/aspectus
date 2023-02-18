@@ -906,6 +906,21 @@ button.button--light:hover {
 .col-with-image-bg__text {
   max-width: 139px; }
 
+.value__container {
+  border-left: 1px solid #E6EBEB;
+  padding: 0 40px; }
+
+.value__icon {
+  margin-bottom: 36px; }
+
+.value__title {
+  margin-bottom: 24px;
+  color: #022C2E;
+  font-family: "ivypresto-display", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 400; }
+
 div.about-banner__container.alignfull {
   margin-top: -204px;
   padding-top: 220px;
@@ -1007,6 +1022,9 @@ div.about-banner__container.alignfull {
 
 .mt-240 {
   margin-top: 240px; }
+
+.mb-240 {
+  margin-bottom: 240px; }
 
 .nogutter {
   padding: 0 !important; }
