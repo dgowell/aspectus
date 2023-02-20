@@ -85,14 +85,16 @@ button.button--light:hover {
     background-color: $colorPrimaryDark;
     color: $colorSupportingWhite;
 }
+
 .has-white-borders a {
-    border-color: $colorSupportingWhite!important;
+    border-color: $colorSupportingWhite !important;
     background-image: url('../assets/right-chevron-white.svg');
 }
+
 .has-white-borders a.gb-button:hover {
-    border-color: $colorSupportingWhite!important;
-    background-color: $colorSupportingWhite!important;
-    color: $colorFontsDark!important;
+    border-color: $colorSupportingWhite !important;
+    background-color: $colorSupportingWhite !important;
+    color: $colorFontsDark !important;
     background-image: url('../assets/right-chevron-dark.svg');
 }
 
@@ -100,6 +102,12 @@ button.button--light:hover {
     .sm-button-full-width>.gb-button {
         width: 100%;
         margin-top: 20px;
-        background-position: right calc(50% + -82px) center!important;
+        background-position: right calc(50% + -82px) center !important;
+    }
+
+    .sm-button-full-width--small-word>.gb-button {
+        width: 100%;
+        margin-top: 20px;
+        background-position: right calc(50% + -35px) center !important;
     }
 }

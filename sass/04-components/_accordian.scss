@@ -1,0 +1,32 @@
+.accordian__header {
+    margin-bottom: 0;
+    display: inline-block;
+    color: $colorFontsLight;
+}
+.accordian__body {
+    height: 0;
+    overflow: hidden;
+    max-width: 457px;
+}
+.js-accordian__item {
+    margin-top:48px;
+}
+.js-accordian__item .js-indicator__container {
+    position: absolute;
+}
+.js-accordian__item.active .accordian__header {
+    color: $colorFontsDark;
+}
+.js-accordian__item.active .accordian__body {
+    height: 100%;
+}
+.accordian__text {
+    margin-top: 24px;
+    margin-bottom: 36px;
+}
+.accordian__button {
+    margin-bottom: 16px;
+}
+.js-accordian__item.active .indicator__chart {
+    display: block;
+}

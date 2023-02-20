@@ -1,0 +1,54 @@
+.cta {
+    padding: 32px;
+    background: $colorSupportingGreenLight;
+    width: 43.5vw;
+    max-width: 628px;
+    margin-bottom: 0;
+    background-image: url('../assets/right-chevron-dark.svg');
+    background-position: right 40px center;
+    background-repeat: no-repeat;
+    color: $colorFontsDark;
+    position: absolute;
+    bottom: 24px;
+    left: 10vw;
+}
+
+.cta__title {
+    @include global-small;
+    color: $colorFontsDark;
+}
+
+.cta__text {
+    @include h4;
+    color: $colorFontsDark;
+    max-width: 464px;
+}
+
+.cta::after {
+    height: 100px;
+    content: "";
+    border: #E6EBEB solid 1px;
+    position: absolute;
+    right: 90px;
+    margin-top: -90px;
+}
+
+@media screen and (max-width: $mobileFormatBig) {
+    .cta {
+        padding: 32px 20px;
+        width: 100vw;
+        left: -20px;
+        bottom: 0;
+    }
+
+    .cta__text {
+        max-width: 252px;
+        @include h4-mob;
+    }
+
+    .cta::after {
+        height: 124px;
+        right: 79px;
+        margin-top: -114px;
+    }
+}

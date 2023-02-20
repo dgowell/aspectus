@@ -2,17 +2,34 @@
     gap: 20px;
     justify-items: stretch;
 }
+
 .image-container--three .gb-block-layout-column {
     height: 100%;
 }
+
 .image-container--three .gb-block-layout-column-inner {
     height: 100%;
 }
+
 .image-container__img {
     height: 100%;
+    overflow: hidden;
 }
+
 .image-container__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.image-container__img--portrait {
+    height: 620px;
+}
+.image-container--fullwidth {
+    margin-left:-40px;
+}
+@media screen and (max-width: $mobileFormatBig) {
+    .image-container__img--portrait {
+        height: 548px;
+    }
 }

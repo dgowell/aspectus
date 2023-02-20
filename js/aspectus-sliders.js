@@ -47,6 +47,7 @@ jQuery(document).ready(function () {
   //for each  button insert the corresponding text
   const controls = jQuery('.js-fullscreen-slider__indicators li button');
   jQuery.each(controls, constructButton);
+
   function constructButton(index, button) {
     jQuery(button).prop('textContent', slides[index]);
     jQuery(button).prepend('<div class="js-indicator__container"><div class="indicator__chart" data-percent="100" data-scale-color="#022C2E"></></div>');

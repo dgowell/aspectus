@@ -2,6 +2,11 @@
     border-left: 1px solid $colorSupportingGreyLight;
     padding: 0 40px;
 }
+@media screen and (max-width: $mobileFormatBig) {
+    .value__container {
+        margin-bottom: 40px;
+    }
+}
 .value__icon {
     margin-bottom: 36px;
 }
@@ -10,8 +15,12 @@
     color: $colorFontsDark;
     @include global-title;
 }
-@media screen and (max-width: $mobileFormatBig) {
-    .value__container {
-        margin-bottom: 40px;
-    }
+.value__separator {
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+.value__percentage {
+    background-image: url('../assets/arrow-up.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
 }

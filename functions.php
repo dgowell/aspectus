@@ -23,6 +23,9 @@ function my_theme_enqueue_styles() {
     //custom slider js
     wp_enqueue_script( 'tapacode-sliders', get_stylesheet_directory_uri() . '/js/aspectus-sliders.js', array( 'jquery', 'easy-pie-chart-js' ), '1.0.0', true );
 
+    //custom slider js
+    wp_enqueue_script( 'tapacode-moving-menu', get_stylesheet_directory_uri() . '/js/aspectus-moving-menu.js', array( 'jquery', 'easy-pie-chart-js' ), '1.0.0', true );
+
     //slick css
     wp_enqueue_style( 'slick-styles',
     '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'
@@ -79,8 +82,8 @@ function mytheme_setup_theme_supported_features() {
             'color' => '#6F7783',
         ),
         array(
-            'name'  => esc_attr__( 'pale grey', 'tapacode' ),
-            'slug'  => 'pale grey',
+            'name'  => esc_attr__( 'light grey', 'tapacode' ),
+            'slug'  => 'light grey',
             'color' => '#E6EBEB',
         ),
         array(

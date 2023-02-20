@@ -1,0 +1,15 @@
+.client-logos {
+    margin-top: 160px;
+    margin-bottom: 120px;
+}
+
+@media screen and (max-width: $mobileFormatBig) {
+    .client-logos {
+        margin-top: 140px;
+        margin-bottom: 100px;
+    }
+        .client-logos>.gb-layout-column-wrap.gb-is-responsive-column {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "col1 col2";
+    }
+}

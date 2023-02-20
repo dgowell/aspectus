@@ -2,6 +2,10 @@
     max-width: $screenSizeLarge;
     padding: 0 40px;
 }
+#page {
+    padding-top: 0;
+}
+
 
 @media screen and (max-width: $mobileFormatBig) {
     .container {
@@ -27,6 +31,7 @@
 .alignfull {
     padding: 0 40px;
 }
+
 @media screen and (max-width: $screenSizeSmall) {
 .alignfull {
         padding: 0 20px;

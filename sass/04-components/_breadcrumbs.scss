@@ -1,0 +1,16 @@
+.entry-content .breadcrumbs a {
+    text-decoration: none;
+    box-shadow: none;
+    color: $colorSupportingWhite;
+}
+
+.breadcrumbs {
+    font-family: $fontMain;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.entry-content .breadcrumbs a:hover {
+    color: $colorPrimaryLight;
+    box-shadow: none;
+}

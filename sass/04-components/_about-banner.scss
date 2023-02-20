@@ -3,3 +3,8 @@ div.about-banner__container.alignfull {
     padding-top: 220px;
     padding-bottom: 180px;
 }
+@media screen and (max-width: $mobileFormatBig) {
+div.about-banner__container.alignfull {
+    padding-bottom: 100px;
+}
+}
