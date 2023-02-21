@@ -1,3 +1,8 @@
+.nogutter {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 @media screen and (max-width: $mobileFormatBig) {
     .mob-hide {
         display: none;  
@@ -6,3 +11,4 @@
         grid-template-areas: "col2" "col1";
     }
 }
+

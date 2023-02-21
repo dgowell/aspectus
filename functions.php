@@ -25,6 +25,9 @@ function my_theme_enqueue_styles() {
 
     //custom slider js
     wp_enqueue_script( 'tapacode-moving-menu', get_stylesheet_directory_uri() . '/js/aspectus-moving-menu.js', array( 'jquery', 'easy-pie-chart-js' ), '1.0.0', true );
+    
+    //custom submenu js
+    wp_enqueue_script( 'tapacode-submenu-navs', get_stylesheet_directory_uri() . '/js/aspectus-submenu-navs.js', array( 'jquery', 'easy-pie-chart-js' ), '1.0.0', true );
 
     //slick css
     wp_enqueue_style( 'slick-styles',
@@ -148,3 +151,18 @@ function tapacode_client_setup_post_type() {
     );
 }
 add_action( 'init', 'tapacode_client_setup_post_type' );
+
+if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
+
+    function aspectus_register_nav_menu(){
+        register_nav_menus( array(
+            'sector_one' => __('Sector Menu 1', 'text_domain'),
+            'sector_two' => __('Sector Menu 2', 'text_domain'),
+            'sector_three' => __('Sector Menu 3', 'text_domain'),
+            'sector_four' => __('Sector Menu 4', 'text_domain'),
+            'sector_five' => __('Sector Menu 5', 'text_domain'),
+            'sector_six' => __('Sector Menu 6', 'text_domain'),
+        ) );
+    }
+    add_action( 'after_setup_theme', 'aspectus_register_nav_menu', 0 );
+}
