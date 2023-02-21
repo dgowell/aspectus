@@ -157,6 +157,25 @@ p.has-background {
     width: 100vw;
     margin-left: -20px; } }
 
+.page-id-1735 .js-navbar__logo--black {
+  display: block; }
+
+.page-id-1735 .js-navbar__logo--white {
+  display: none; }
+
+.navbar__burger-icon {
+  line-height: 1rem;
+  transition: 0.5s ease; }
+
+.navbar__burger-icon--black {
+  display: none; }
+
+.page-id-1735 .navbar__burger-icon--white {
+  display: none !important; }
+
+.page-id-1735 .navbar__burger-icon--black {
+  display: block; }
+
 .gb-block-button {
   margin: 0; }
 
@@ -252,6 +271,11 @@ button.button--light:hover {
     margin-top: 20px;
     background-position: right calc(50% + -35px) center !important; } }
 
+.page-id-1735 button.navbar__contact {
+  background-color: #022C2E;
+  color: #FFFFFF;
+  border: #022C2E; }
+
 .js-main-nav {
   height: 0;
   overflow-x: hidden;
@@ -283,10 +307,6 @@ button.button--light:hover {
 
 .js-navbar__close-icon {
   display: none; }
-
-.navbar__burger-icon {
-  line-height: 1rem;
-  transition: 0.5s ease; }
 
 .js-navbar__logo--black {
   display: none; }
@@ -638,6 +658,23 @@ button.button--light:hover {
     grid-template-areas: "logo social" "tag tag"; }
   .footer__button {
     width: 100%; } }
+
+.equals-sign__container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: -342px;
+  z-index: 1; }
+
+.equals-sign {
+  width: 185px;
+  height: 42px;
+  background-color: #C7F03D; }
+
+.equals-sign--above {
+  margin-bottom: 28.27px; }
 
 .social-links__logo img {
   width: 20px;
@@ -1005,7 +1042,7 @@ button.button--light:hover {
 .submenu-nav > .wp-block-navigation__container.open {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 140px; }
+  gap: 0px 140px; }
 
 .submenu-nav > .wp-block-navigation__container li {
   padding-top: 16px;
@@ -1180,7 +1217,7 @@ button.button--light:hover {
 
 div.about-banner__container.alignfull {
   margin-top: -204px;
-  padding-top: 220px;
+  padding-top: 305px;
   padding-bottom: 180px; }
 
 @media screen and (max-width: 600px) {
@@ -1396,6 +1433,9 @@ div.about-banner__container.alignfull {
 .nogutter {
   padding-left: 0 !important;
   padding-right: 0 !important; }
+
+.vertical-align > figure.aligncenter {
+  margin: 0 auto !important; }
 
 @media screen and (max-width: 600px) {
   .mob-hide {

@@ -24,13 +24,16 @@
 <header id="masthead" class="header">
     <div class="js-navbar navbar">
         <div class="navbar__logo">
-            <img class="js-navbar__logo--white" src="<?php echo get_stylesheet_directory_uri() ?>/assets/aspectus-logo-white-complete.svg" alt="Aspectus Logo" />
-            <img class="js-navbar__logo--black" src="<?php echo get_stylesheet_directory_uri() ?>/assets/aspectus-logo-black-complete.svg" alt="Aspectus Logo" />
+            <a href="/">
+                <img class="js-navbar__logo--white" src="<?php echo get_stylesheet_directory_uri() ?>/assets/aspectus-logo-white-complete.svg" alt="Aspectus Logo" />
+                <img class="js-navbar__logo--black" src="<?php echo get_stylesheet_directory_uri() ?>/assets/aspectus-logo-black-complete.svg" alt="Aspectus Logo" />
+            </a>
         </div>
         <div class="navbar__right">
             <div class="navbar__burger">
                 <a href="javascript:void(0)" onclick="openNav()" class="navbar__link">
-                    <img class="js-navbar__burger-icon navbar__burger-icon" src="<?php echo get_stylesheet_directory_uri() ?>/assets/burger.svg" alt="Burger Menu Icon" />
+                    <img class="js-navbar__burger-icon navbar__burger-icon navbar__burger-icon--white" src="<?php echo get_stylesheet_directory_uri() ?>/assets/burger.svg" alt="Burger Menu Icon" />
+                    <img class="js-navbar__burger-icon navbar__burger-icon navbar__burger-icon--black" src="<?php echo get_stylesheet_directory_uri() ?>/assets/burger-black.svg" alt="Burger Menu Icon" />
                 </a>
                 <a href="javascript:void(0)" onclick="closeNav()" class="navbar__link">
                     <img class="js-navbar__close-icon navbar__close-icon" src="<?php echo get_stylesheet_directory_uri() ?>/assets/close.svg" alt="Close Menu Icon" />

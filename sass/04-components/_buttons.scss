@@ -111,3 +111,10 @@ button.button--light:hover {
         background-position: right calc(50% + -35px) center !important;
     }
 }
+
+//page specific styles
+.page-id-1735 button.navbar__contact {
+    background-color: $colorPrimaryDark;
+    color: $colorSupportingWhite;
+    border: $colorPrimaryDark;
+}

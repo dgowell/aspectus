@@ -1,0 +1,14 @@
+.navbar__burger-icon {
+    line-height: 1rem;
+    transition: 0.5s ease;
+}
+.navbar__burger-icon--black {
+    display: none;
+}
+//page specific styles
+.page-id-1735 .navbar__burger-icon--white {
+    display: none!important;
+}
+.page-id-1735 .navbar__burger-icon--black {
+    display: block;
+}

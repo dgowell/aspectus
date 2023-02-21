@@ -2,10 +2,13 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+.vertical-align>figure.aligncenter {
+    margin: 0 auto!important;
+}
 
 @media screen and (max-width: $mobileFormatBig) {
     .mob-hide {
-        display: none;  
+        display: none; 
     }
     .mob-reverse-columns>.gb-layout-column-wrap.gb-is-responsive-column {
         grid-template-areas: "col2" "col1";
