@@ -1,4 +1,15 @@
 jQuery(document).ready(function () {
+  //standard image slider
+  jQuery('.image-slider').slick({
+    infinite: true,
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="image-slider__button image-slider__button--prev"></button>',
+    nextArrow: '<button type="button" class="image-slider__button image-slider__button--next"></button>',
+  });
+
+
   //client logos
   jQuery('.slick-slider ul').slick({
     infinite: !0,
@@ -75,5 +86,4 @@ jQuery(document).ready(function () {
       jQuery(chart).data('easyPieChart').update(100);
     }
   });
-
 });

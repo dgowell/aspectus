@@ -7,3 +7,8 @@
 .title h4 {
     margin-bottom: 0;
 }
+
+.title--technology {
+    @include global-title;
+    margin-bottom: 32px;
+}

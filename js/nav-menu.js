@@ -81,35 +81,3 @@ jQuery(document).ready(function () {
         }
     }
 });
-
-/*
-jQuery(document).ready(function () {
-    const linksWithChildren = jQuery('.menu-item-has-children');
-    Array.from(linksWithChildren).forEach(modifyLinkBehaviour);
-
-    function modifyLinkBehaviour(listItem) {
-        //grab link to use later
-        const link = jQuery(listItem).children('a').attr('href');
-        //change link to nothing
-        jQuery(listItem).children('a').attr('href', '#');
-        //add a click handler onto the list item
-        jQuery(listItem).click(handleClick);
-
-        function handleClick(event) {
-            event.preventDefault();
-            console.log(this);
-            const subMenu = jQuery(this).children('ul.sub-menu')[0];
-            jQuery(subMenu).find('.menu-item').eq(0).before(`<li class="menu-item"><a href="${link}">Test</a></li>`);
-            jQuery(this).children('ul.sub-menu')[0].style.display = "block";
-            debugger;
-            //show the submenu related to that link
-        }
-    }
-});
-*/
-//for each link that has children
-//remove the oiginal link
-//and when clicked
-//show the submenu related to that link
-//full width
-//with back button to take us back to the open menu

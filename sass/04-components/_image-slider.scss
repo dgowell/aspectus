@@ -1,0 +1,20 @@
+.image-slider__button {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 30px);
+    height: 60px;
+    width: 60px;
+    background-color: transparent;
+    border: 1px solid $colorSupportingWhite;
+    border-radius: 0;
+    background-repeat: no-repeat;
+        background-position: center center;
+}
+.image-slider__button--prev {
+    left: 40px;
+    background-image: url('../assets/arrow-small-left-white.svg');
+}
+.image-slider__button--next {
+    right: 40px;
+    background-image: url('../assets/arrow-small-right-white.svg');
+}

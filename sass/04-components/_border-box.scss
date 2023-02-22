@@ -3,10 +3,18 @@
     padding: 80px 20px;
 
 }
+
 .border-box--inverted {
     background-color: $colorSupportingBlack;
     color: $colorSupportingWhite;
 }
+
 .border-box--inverted .value__percentage {
-    background-image: url('../assets/arrow-up-white.svg')!important;
+    background-image: url('../assets/arrow-up-white.svg') !important;
+}
+
+@media screen and (max-width: $mobileFormatBig) {
+    .border-box {
+        padding: 60px 20px;
+    }
 }

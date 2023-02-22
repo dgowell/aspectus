@@ -54,3 +54,11 @@
 .col-with-image-bg__text {
     max-width: 139px;
 }
+
+.row-3-col>.gb-layout-column-wrap{
+    grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr;
+    grid-template-areas: "col1 . col2 . col3";
+}
+.col__2fr {
+
+}

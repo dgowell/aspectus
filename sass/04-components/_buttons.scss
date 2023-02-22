@@ -66,6 +66,14 @@ a.gb-button {
     background-image: url('../assets/right-chevron.svg');
 }
 
+.gb-block-button.button--twitter a.gb-button {
+    background-image: url('../assets/twitter.svg');
+}
+
+.gb-block-button.button--twitter:hover a.gb-button {
+    background-image: url('../assets/twitter-light-green.svg') !important;
+}
+
 button.button--clean {
     background-image: none;
     padding: 1px 15px 2px;
@@ -99,15 +107,24 @@ button.button--light:hover {
 }
 
 @media screen and (max-width: $mobileFormatBig) {
-    .sm-button-full-width>.gb-button {
+    .mob-button-full-width--97>.gb-button {
+            width: 100%;
+            background-position: right calc(50% + -97px) center !important;
+        }
+    .mob-button-full-width--82>.gb-button {
         width: 100%;
-        margin-top: 20px;
         background-position: right calc(50% + -82px) center !important;
     }
-
-    .sm-button-full-width--small-word>.gb-button {
+   .mob-button-full-width--62>.gb-button {
+       width: 100%;
+       background-position: right calc(50% + -62px) center !important;
+   }
+    .mob-button-full-width--52>.gb-button {
         width: 100%;
-        margin-top: 20px;
+        background-position: right calc(50% + -52px) center !important;
+    }
+    .mob-button-full-width--35>.gb-button {
+        width: 100%;
         background-position: right calc(50% + -35px) center !important;
     }
 }

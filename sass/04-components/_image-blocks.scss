@@ -25,11 +25,21 @@
 .image-container__img--portrait {
     height: 620px;
 }
+
 .image-container--fullwidth {
-    margin-left:-40px;
+    margin-left: -40px;
 }
+
 @media screen and (max-width: $mobileFormatBig) {
     .image-container__img--portrait {
         height: 548px;
+    }
+
+    .mob-img-portrait {
+        height: 548px;
+    }
+
+    .mob-img-portrait--560 {
+        height: 560px;
     }
 }

@@ -21,10 +21,10 @@ function my_theme_enqueue_styles() {
     wp_enqueue_script( 'tapacode-nav-menu', get_stylesheet_directory_uri() . '/js/nav-menu.js', array( 'jquery' ), '1.0.0', true );
 
     //custom slider js
-    wp_enqueue_script( 'tapacode-sliders', get_stylesheet_directory_uri() . '/js/aspectus-sliders.js', array( 'jquery', 'easy-pie-chart-js' ), '1.0.0', true );
+    wp_enqueue_script( 'tapacode-sliders', get_stylesheet_directory_uri() . '/js/aspectus-sliders.js', array( 'jquery', 'slick-js', 'easy-pie-chart-js' ), '1.0.0', true );
 
     //custom slider js
-    wp_enqueue_script( 'tapacode-moving-menu', get_stylesheet_directory_uri() . '/js/aspectus-moving-menu.js', array( 'jquery', 'easy-pie-chart-js' ), '1.0.0', true );
+    wp_enqueue_script( 'tapacode-moving-menu', get_stylesheet_directory_uri() . '/js/aspectus-moving-menu.js', array( 'jquery', 'slick-js', 'easy-pie-chart-js' ), '1.0.0', true );
     
     //custom submenu js
     wp_enqueue_script( 'tapacode-submenu-navs', get_stylesheet_directory_uri() . '/js/aspectus-submenu-navs.js', array( 'jquery', 'easy-pie-chart-js' ), '1.0.0', true );

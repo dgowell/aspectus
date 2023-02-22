@@ -5,13 +5,28 @@
 .vertical-align>figure.aligncenter {
     margin: 0 auto!important;
 }
-
+.mob-show {
+    display: none;
+}
+.max-75 {
+    max-width: 75%;
+}
 @media screen and (max-width: $mobileFormatBig) {
+    .mob-max-75 {
+        max-width: 75%;
+    }
     .mob-hide {
         display: none; 
     }
+    .mob-show {
+        display: block;
+    }
     .mob-reverse-columns>.gb-layout-column-wrap.gb-is-responsive-column {
         grid-template-areas: "col2" "col1";
+    }
+    .mob-gap-20, 
+    .mob-gap-20>.gb-layout-column-wrap {
+        gap: 20px;
     }
 }
 

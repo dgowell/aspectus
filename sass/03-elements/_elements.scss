@@ -58,6 +58,10 @@ ul,
 ol {
     margin: 0;
 }
+b, strong {
+    font-weight: 500;
+    color: $colorPrimaryDark;
+}
 @media screen and (max-width: $screenSizeSmall) {
     h1 {
         font-family: $fontMain;
