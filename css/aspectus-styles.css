@@ -1098,6 +1098,54 @@ button.button--light:hover {
   grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr;
   grid-template-areas: "col1 . col2 . col3"; }
 
+.floating-menu__section {
+  overflow: revert; }
+
+.floating-menu__section > .gb-layout-column-wrap {
+  grid-template-columns: 1fr 4fr 1fr 2fr; }
+
+.floating-nav {
+  z-index: 200;
+  position: relative;
+  margin-top: -180px; }
+
+.floating-menu__item {
+  width: 100%;
+  border-bottom: 1px #E6EBEB solid;
+  background-color: #FFFFFF;
+  background-image: url("../assets/arrow-down.svg");
+  background-position: right 32px center;
+  background-repeat: no-repeat; }
+
+p.floating-menu__item > a {
+  text-decoration: none;
+  box-shadow: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 500;
+  color: #022C2E;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 29px 40px; }
+
+p.floating-menu__item > a:hover {
+  text-decoration: none;
+  box-shadow: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 500; }
+
+.floating-menu__item:hover {
+  background-color: #022C2E;
+  background-image: url("../assets/arrow-right-white.svg");
+  border: 1px solid #FFFFFF; }
+
+.floating-menu__item:hover.floating-menu__item > a {
+  color: #FFFFFF; }
+
 .sector-menu__container > .gb-layout-column-wrap {
   display: grid;
   grid-template-columns: 1fr 3fr 4fr; }
@@ -1402,20 +1450,34 @@ button.button--light:hover {
 .js-accordian__item.active .indicator__chart {
   display: block; }
 
+.breadcrumbs {
+  margin-bottom: 0;
+  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400; }
+
 .entry-content .breadcrumbs a {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
   text-decoration: none;
   box-shadow: none;
   color: #FFFFFF; }
 
-.breadcrumbs {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  margin-bottom: 0; }
-
 .entry-content .breadcrumbs a:hover {
   color: #C7F03D;
   box-shadow: none; }
+
+.breadcrumbs__container {
+  position: absolute;
+  top: 120px;
+  left: 40px; }
+
+.breadcrumbs .sep > svg {
+  height: 9px; }
 
 div.about-banner__container.alignfull {
   margin-top: -204px;

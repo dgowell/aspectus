@@ -1,16 +1,23 @@
+.breadcrumbs {
+    margin-bottom: 0;
+    color: $colorSupportingWhite;
+    @include global-micro;
+}
 .entry-content .breadcrumbs a {
+    @include global-small;
     text-decoration: none;
     box-shadow: none;
     color: $colorSupportingWhite;
 }
-
-.breadcrumbs {
-    font-family: $fontMain;
-    font-size: 0.875rem;
-    font-weight: 400;
-    margin-bottom: 0;
-}
 .entry-content .breadcrumbs a:hover {
     color: $colorPrimaryLight;
     box-shadow: none;
+}
+.breadcrumbs__container {
+    position: absolute;
+    top: 120px;
+    left: 40px;
+}
+.breadcrumbs .sep>svg {
+    height: 9px;
 }

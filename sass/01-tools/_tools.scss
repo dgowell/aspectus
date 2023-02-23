@@ -42,3 +42,17 @@
     line-height: 1.25rem;
     font-weight: 500;
 }
+
+@mixin global-micro {
+    font-family: $fontMain;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+}
+
+@mixin global-cta {
+    font-family: $fontMain;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+}
