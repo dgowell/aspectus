@@ -1,0 +1,30 @@
+div.alignfull.case-study-block {
+    margin-top: -302px;
+    margin-left: -60px;
+    width: calc(100vw + 40px );
+}
+.case-study__col {
+    padding: 32px 32px 14px 32px;
+}
+.case-study__title {
+    @include global-title;
+    color: $colorFontsDark;
+}
+.case-study-block .gb-layout-column-wrap {
+    background-color: $colorSupportingWhite;
+}
+.case-study__logo img {
+    max-width: 124px;
+    height: 40px;
+}
+.case-study__text {
+    @include global-micro;
+    max-width: 356px;
+    margin: auto;
+}
+
+.case-study__border-right {
+    border-right: 1px solid $colorFontsLight;
+    padding-right: 32px;
+    margin-right: -32px;
+}
