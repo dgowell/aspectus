@@ -1,0 +1,24 @@
+.post-alt__container>.gb-layout-column-wrap {
+    grid-template-columns: 1fr 3fr;
+}
+.post-alt__separator {
+    margin-top: 40px;
+    border-color: $colorSupportingGreyLight;
+}
+.post-alt__list li:hover .post-alt__separator {
+    border-color: $colorFontsDark;
+}
+.post-alt__list>.is-layout-flow li {
+    margin-bottom: 32px;
+}
+.post-alt__title a{
+    margin-top: 18px;
+    text-decoration: none;
+}
+.post-alt__date a {
+    color: $colorSupportingGreyDark;
+    text-decoration: none;
+}
+.post-alt__list .gb-block-layout-column-gap-2 {
+    gap: 20px;
+}

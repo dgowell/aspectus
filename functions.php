@@ -25,9 +25,12 @@ function my_theme_enqueue_styles() {
 
     //custom slider js
     wp_enqueue_script( 'tapacode-moving-menu', get_stylesheet_directory_uri() . '/js/aspectus-moving-menu.js', array( 'jquery', 'slick-js', 'easy-pie-chart-js' ), '1.0.0', true );
-    
+
     //custom submenu js
     wp_enqueue_script( 'tapacode-submenu-navs', get_stylesheet_directory_uri() . '/js/aspectus-submenu-navs.js', array( 'jquery', 'easy-pie-chart-js' ), '1.0.0', true );
+
+    //custom switches js
+    wp_enqueue_script( 'tapacode-switches', get_stylesheet_directory_uri() . '/js/aspectus-switches.js', array( 'jquery' ), '1.0.0', true );
 
     //slick css
     wp_enqueue_style( 'slick-styles',
@@ -151,6 +154,56 @@ function tapacode_client_setup_post_type() {
     );
 }
 add_action( 'init', 'tapacode_client_setup_post_type' );
+
+function tapacode_casestudy_setup_post_type() {
+
+    /*
+    * Labels for client custom post type
+    */
+    $labels = array(
+        'name'                  => _x( 'Case Study', 'Post type general name', 'case-study' ),
+        'singular_name'         => _x( 'Case Study', 'Post type singular name', 'case-study' ),
+        'menu_name'             => _x( 'Case Studies', 'Admin Menu text', 'case-study' ),
+        'name_admin_bar'        => _x( 'Case Study', 'Add New on Toolbar', 'case-study' ),
+        'add_new'               => __( 'Add New', 'case-study' ),
+        'add_new_item'          => __( 'Add New case-study', 'case-study' ),
+        'new_item'              => __( 'New case study', 'case-study' ),
+        'edit_item'             => __( 'Edit case study', 'case-study' ),
+        'view_item'             => __( 'View case study', 'case-study' ),
+        'all_items'             => __( 'All case studies', 'case-study' ),
+        'search_items'          => __( 'Search case studies', 'case-study' ),
+        'parent_item_colon'     => __( 'Parent case studies:', 'case-study' ),
+        'not_found'             => __( 'No case studies found.', 'case-study' ),
+        'not_found_in_trash'    => __( 'No case studies found in Trash.', 'case-study' ),
+        'featured_image'        => _x( 'Case Study Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'case-study' ),
+        'set_featured_image'    => _x( 'Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'case-study' ),
+        'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'case-study' ),
+        'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'case-study' ),
+        'archives'              => _x( 'Case Study archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'case-study' ),
+        'insert_into_item'      => _x( 'Insert into case study', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'case-study' ),
+        'uploaded_to_this_item' => _x( 'Uploaded to this case study', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'case-study' ),
+        'filter_items_list'     => _x( 'Filter case studies list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'case-study' ),
+        'items_list_navigation' => _x( 'Case Studies list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'case-study' ),
+        'items_list'            => _x( 'Case Studies list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'case-study' ),
+    );
+
+    //Register CPT case-study
+    register_post_type('tapacode_case-study',
+        array(
+            'labels'      => $labels,
+            'public'      => true,
+            'has_archive' => true,
+            'rewrite'     => array( 'slug' => 'case-study'),
+            'capability_type'    => 'post',
+            'supports'    => array( 'title', 'thumbnail', 'excerpt' ),
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action( 'init', 'tapacode_casestudy_setup_post_type' );
+
+
+
 
 if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
 

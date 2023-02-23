@@ -12,7 +12,13 @@
     bottom: 24px;
     left: 10vw;
 }
-
+.cta--left {
+    left: -8vw;
+}
+.cta--bottom-left {
+    left: 20px;
+    bottom: 20px;
+}
 .cta__title {
     @include global-small;
     color: $colorFontsDark;

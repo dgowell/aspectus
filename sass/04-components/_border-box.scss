@@ -13,6 +13,55 @@
     background-image: url('../assets/arrow-up-white.svg') !important;
 }
 
+.border-box--green {
+    border: none;
+    background-color: $colorPrimaryDark;
+    color: $colorSupportingGreenLight;
+}
+
+.border-box--green.border-box--inverted {
+    background-color: $colorSupportingGreenLight;
+    color: $colorPrimaryDark;
+}
+
+.border-box__percentage {
+    background-image: url('../assets/arrow-up.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.border-box__percentage--white {
+    background-image: url('../assets/arrow-up-white.svg');
+}
+
+.border-box__text {
+    margin-bottom: 24px;
+    color: $colorFontsDark;
+    @include global-title;
+}
+
+.border-box--green .border-box__text {
+    color: $colorSupportingGreenLight;
+}
+
+
+/* separator */
+.border-box__separator {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid;
+}
+.border-box--green .border-box__separator {
+    border-color: $colorSupportingGreenLight;
+}
+.border-box--green.border-box--inverted .border-box__text {
+    color: $colorPrimaryDark;
+}
+
+.border-box--green.border-box--inverted .border-box__separator {
+    border-color: $colorPrimaryDark;
+}
+
 @media screen and (max-width: $mobileFormatBig) {
     .border-box {
         padding: 60px 20px;
