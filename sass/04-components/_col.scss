@@ -59,6 +59,13 @@
     grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr;
     grid-template-areas: "col1 . col2 . col3";
 }
-.col__2fr {
-
+.col-5-col-3>.gb-layout-column-wrap {
+    grid-template-columns: 5fr 3fr;
+}
+.col-3-col-5>.gb-layout-column-wrap {
+    grid-template-columns: 3fr 5fr;
+}
+.col-2-col-1-col-2-col-1-col-2col-1>.gb-layout-column-wrap {
+    grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr;
+    grid-template-areas: "col1 . col2 . col3";
 }

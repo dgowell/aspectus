@@ -19,6 +19,9 @@
     left: 20px;
     bottom: 20px;
 }
+.cta--bottom-3-5 {
+    left: 38.9%;
+}
 .cta__title {
     @include global-small;
     color: $colorFontsDark;
@@ -38,7 +41,21 @@
     right: 90px;
     margin-top: -90px;
 }
-
+.cta--dark {
+    background: $colorPrimaryDark;
+    color: $colorSupportingWhite;
+    background-image: url('../assets/arrow-right-white.svg');
+    background-repeat: no-repeat;
+    background-position: right 40px center;
+}
+.cta--dark .cta__title {
+    color: $colorSupportingWhite;
+    @include global-title;
+}
+.cta--dark .cta__text {
+    color: $colorSupportingWhite;
+    @include global-body;
+}
 @media screen and (max-width: $mobileFormatBig) {
     .cta {
         padding: 32px 20px;
