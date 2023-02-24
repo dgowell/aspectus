@@ -12,6 +12,9 @@
 .border-box--inverted .value__percentage {
     background-image: url('../assets/arrow-up-white.svg') !important;
 }
+.border-box--inverted .border-box__percentage {
+    background-image: url('../assets/arrow-up-white.svg') !important;
+}
 
 .border-box--green {
     border: none;
@@ -23,6 +26,12 @@
     background-color: $colorSupportingGreenLight;
     color: $colorPrimaryDark;
 }
+.border-box.violet {
+    color: $colorSecondaryTwo;
+}
+.border-box.violet.border-box--inverted {
+    background-color: $colorSecondaryTwo;
+}
 
 .border-box__percentage {
     background-image: url('../assets/arrow-up.svg');
@@ -32,6 +41,9 @@
 
 .border-box__percentage--white {
     background-image: url('../assets/arrow-up-white.svg');
+}
+.violet.border-box__percentage {
+    background-image: url('../assets/arrow-up-violet.svg');
 }
 
 .border-box__text {
@@ -43,7 +55,12 @@
 .border-box--green .border-box__text {
     color: $colorSupportingGreenLight;
 }
-
+.violet .border-box__text {
+    color: $colorSecondaryTwo;
+}
+.violet .border-box__percentage {
+    color: $colorSecondaryTwo;
+}
 
 /* separator */
 .border-box__separator {

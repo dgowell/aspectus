@@ -3,21 +3,32 @@
     color: $colorSupportingWhite;
     @include global-micro;
 }
+
 .entry-content .breadcrumbs a {
     @include global-small;
     text-decoration: none;
     box-shadow: none;
     color: $colorSupportingWhite;
 }
+
 .entry-content .breadcrumbs a:hover {
     color: $colorPrimaryLight;
     box-shadow: none;
 }
+
 .breadcrumbs__container {
     position: absolute;
     top: 120px;
     left: 40px;
 }
+
+.breadcrumbs__container--alt {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+
 .breadcrumbs .sep>svg {
     height: 9px;
 }

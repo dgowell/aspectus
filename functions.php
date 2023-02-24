@@ -65,7 +65,7 @@ function mytheme_setup_theme_supported_features() {
         array(
             'name'  => esc_attr__( 'violet', 'tapacode' ),
             'slug'  => 'violet',
-            'color' => '#022C2E',
+            'color' => '#8A59FF',
         ),
         array(
             'name'  => esc_attr__( 'crimson', 'tapacode' ),

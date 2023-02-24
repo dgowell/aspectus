@@ -1,0 +1,30 @@
+.tab-block__container.wp-block-atbs-tabs[class*="atbs__tabs_"] {
+    border-radius: 0;
+    box-shadow: none;;
+}
+.tab-block__container.wp-block-atbs-tabs[class*="atbs__tabs_"] .atbs__tab-labels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    border:0!important;
+}
+.tab-block__container.wp-block-atbs-tabs[class*="atbs__tabs_"] .atbs__tab-label {
+    border: 0;
+    padding: 0 10px 24px 0;
+    @include global-title;
+    border-bottom: 1px solid $colorSupportingGreyLight;
+}
+
+.tab-block__container.wp-block-atbs-tabs[class*="atbs__tabs_"] .atbs__tab-label.active {
+    border-bottom: 2px solid $colorSecondaryTwo;
+}
+.wp-block-atbs-tabs,
+.wp-block-atbs-tabs .wp-block-atbs-tab {
+    overflow: inherit;
+}
+.tab-block__container.wp-block-atbs-tabs[class*="atbs__tabs_"] .atbs__tab-content {
+    background-color: $colorLightGreyWithOpacity;
+    width: 100vw;
+    margin-left: -40px;
+    padding: 100px 40px;
+}
