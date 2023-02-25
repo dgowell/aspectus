@@ -9,6 +9,9 @@
 .p-20 {
     padding: 20px;
 }
+.pt-28 {
+    padding-top: 28px;
+}
 .pt-32 {
     padding-top: 32px;
 }
@@ -28,6 +31,10 @@
 .px-40 {
     padding-left: 40px;
     padding-right: 40px;
+}
+.py-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .pr-80 {
     padding-right: 80px;
@@ -92,7 +99,9 @@
     padding-top: 200px;
     padding-bottom: 200px;
 }
-
+.pt-320 {
+    padding-top: 320px;
+}
 @media screen and (max-width: $screenSizeSmall) {
     .tablet-p-60 {
         padding: 60px;

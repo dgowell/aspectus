@@ -1,0 +1,65 @@
+input[type="submit"].form__submit {
+    -webkit-appearance: n8ne;
+    padding-left: 12px;
+    @include global-micro;
+    background-color: transparent;
+    background-position: right calc(50% - 58px) center;
+    background-repeat: no-repeat;
+    font-family: $fontMain;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1px 30px 2px 15px;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    color: $colorPrimaryDark;
+    border: solid 1px $colorPrimaryDark;
+    border-color: $colorPrimaryDark;
+    background-image: url('../assets/right-chevron-dark.svg');
+}
+
+input[type="submit"].form__submit:hover {
+    background-color: $colorPrimaryDark !important;
+    color: $colorSupportingWhite !important;
+    background-image: url('../assets/right-chevron.svg');
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="tel"],
+select,
+.select2-container .select2-selection--single {
+    background: #fff;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    padding: 15px;
+    border: none;
+}
+
+.form__label,
+textarea {
+    border: 1px solid $colorPrimaryDark;
+    border-radius: 0;
+    padding-top: 7px;
+    padding-left: 12px;
+    @include global-micro;
+}
+
+.form__label input {
+    padding: 3px 0 8px;
+    @include global-body;
+}
+
+input[type="tel"]:focus,
+input[type="tel"]:focus-visible {
+    width: 98%;
+    outline: none !important;
+    border: 0;
+}
+
+select.wpcf7-select {
+    padding: 3px 0 8px;
+    @include global-body;
+    color: $colorPrimaryDark;
+}

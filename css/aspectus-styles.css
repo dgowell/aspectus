@@ -1016,6 +1016,172 @@ button.button--light:hover {
     padding: 0px;
     margin-bottom: 14px; } }
 
+.team__img {
+  max-height: 480px; }
+
+.team__job {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.375rem;
+  font-weight: 400;
+  margin-top: 24px;
+  margin-bottom: 8px; }
+
+.team__name {
+  font-family: "ivypresto-display", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+  color: #022C2E; }
+
+.office__img {
+  width: 100%;
+  padding-right: 18px; }
+
+.office__location {
+  margin-top: 24px;
+  font-family: "ivypresto-display", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+  color: #022C2E; }
+
+input[type="submit"].form__submit {
+  -webkit-appearance: n8ne;
+  padding-left: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  background-color: transparent;
+  background-position: right calc(50% - 58px) center;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1px 30px 2px 15px;
+  transition: 0.2s ease-in-out;
+  border-radius: 50px;
+  color: #022C2E;
+  border: solid 1px #022C2E;
+  border-color: #022C2E;
+  background-image: url("../assets/right-chevron-dark.svg"); }
+
+input[type="submit"].form__submit:hover {
+  background-color: #022C2E !important;
+  color: #FFFFFF !important;
+  background-image: url("../assets/right-chevron.svg"); }
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="tel"],
+select,
+.select2-container .select2-selection--single {
+  background: #fff;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  padding: 15px;
+  border: none; }
+
+.form__label,
+textarea {
+  border: 1px solid #022C2E;
+  border-radius: 0;
+  padding-top: 7px;
+  padding-left: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400; }
+
+.form__label input {
+  padding: 3px 0 8px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.375rem;
+  font-weight: 400; }
+
+input[type="tel"]:focus,
+input[type="tel"]:focus-visible {
+  width: 98%;
+  outline: none !important;
+  border: 0; }
+
+select.wpcf7-select {
+  padding: 3px 0 8px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: #022C2E; }
+
+.location__toggle {
+  border: 1px solid #FFFFFF;
+  width: 38px;
+  height: 22px;
+  background: #FFFFFF url("../assets/plus.svg") no-repeat center;
+  border-radius: 30px;
+  margin: 32px 0 32px auto;
+  border: 1px solid #022C2E; }
+
+.location__toggle.open {
+  background: #022C2E url("../assets/minus-white.svg") no-repeat center; }
+
+.location__name {
+  font-size: 1.375rem;
+  color: #FFFFFF; }
+
+.location__country {
+  font-family: "ivypresto-display", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+  color: #022C2E;
+  margin-bottom: 38px; }
+
+.location__title {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: #6F7783;
+  margin-bottom: 20px; }
+
+.location__text {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: #022C2E;
+  margin-bottom: 12px; }
+
+.location__icon {
+  margin-bottom: 20px; }
+
+.location__separator {
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  border-color: #E6EBEB; }
+
+.location__separator.open {
+  border-color: #022C2E; }
+
+.js-location__dropdown {
+  height: 0;
+  transition: max-height 500ms linear;
+  overflow: hidden; }
+
+/* OPEN */
+.js-location__dropdown.open {
+  height: 100%; }
+
+.js-location__container.open {
+  background-color: #FFFFFF !important;
+  transition: background-color 500ms linear;
+  color: #022C2E; }
+
 .title__header {
   margin-bottom: 24px; }
 
@@ -1031,6 +1197,13 @@ button.button--light:hover {
   line-height: 1.625rem;
   font-weight: 400;
   margin-bottom: 32px; }
+
+.contact__container {
+  margin-top: 182px;
+  padding-left: 40px; }
+
+.contact__text-box {
+  max-width: 325px; }
 
 .quote {
   border-top: 1px solid #022C2E;
@@ -1073,6 +1246,9 @@ button.button--light:hover {
 
 .col-fullwidth--left {
   margin-left: -40px; }
+
+.col--banner {
+  margin-top: -117.5px; }
 
 @media screen and (max-width: 600px) {
   .col-fullwidth--right {
@@ -1688,10 +1864,10 @@ div.about-banner__container.alignfull {
 .has-dark-green-color {
   color: #022C2E; }
 
-.jade-background-color {
+.has-light-jade-background-color {
   background: #F4FCD8; }
 
-.has-jade-color {
+.has-light-jade-color {
   color: #F4FCD8; }
 
 .has-violet-background-color {
@@ -1745,6 +1921,9 @@ div.about-banner__container.alignfull {
 .p-20 {
   padding: 20px; }
 
+.pt-28 {
+  padding-top: 28px; }
+
 .pt-32 {
   padding-top: 32px; }
 
@@ -1763,6 +1942,10 @@ div.about-banner__container.alignfull {
 .px-40 {
   padding-left: 40px;
   padding-right: 40px; }
+
+.py-40 {
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
 .pr-80 {
   padding-right: 80px; }
@@ -1815,6 +1998,9 @@ div.about-banner__container.alignfull {
   padding-top: 200px;
   padding-bottom: 200px; }
 
+.pt-320 {
+  padding-top: 320px; }
+
 @media screen and (max-width: 1000px) {
   .tablet-p-60 {
     padding: 60px; } }
@@ -1862,11 +2048,17 @@ div.about-banner__container.alignfull {
 .mb-12 {
   margin-bottom: 12px; }
 
+.mb-20 {
+  margin-bottom: 20px; }
+
 .mt-24 {
   margin-top: 24px; }
 
 .mb-24 {
   margin-bottom: 24px; }
+
+.mt-28 {
+  margin-top: 28px; }
 
 .mt-32 {
   margin-top: 32px; }
@@ -1880,6 +2072,9 @@ div.about-banner__container.alignfull {
 .mb-40 {
   margin-bottom: 40px; }
 
+.mt-58 {
+  margin-top: 58px; }
+
 .mb-60 {
   margin-bottom: 60px; }
 
@@ -1888,6 +2083,9 @@ div.about-banner__container.alignfull {
 
 .mb-80 {
   margin-bottom: 80px; }
+
+.mb-90 {
+  margin-bottom: 90px; }
 
 .my-100 {
   margin-top: 100px;
@@ -1945,7 +2143,7 @@ div.about-banner__container.alignfull {
 .max-75 {
   max-width: 75%; }
 
-.gloabl-title {
+.global-title {
   font-family: "ivypresto-display", sans-serif;
   font-size: 1.125rem;
   line-height: 1.625rem;

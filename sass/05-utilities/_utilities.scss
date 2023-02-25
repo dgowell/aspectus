@@ -11,7 +11,7 @@
 .max-75 {
     max-width: 75%;
 }
-.gloabl-title {
+.global-title {
     @include global-title;
 }
 @media screen and (max-width: $mobileFormatBig) {

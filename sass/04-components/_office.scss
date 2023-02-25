@@ -1,0 +1,9 @@
+.office__img {
+    width: 100%;
+    padding-right: 18px;
+}
+.office__location {
+    margin-top: 24px;
+    @include global-title;
+    color: $colorFontsDark;
+}

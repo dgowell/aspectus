@@ -1,0 +1,61 @@
+.location__toggle {
+    border: 1px solid $colorSupportingWhite;
+    width: 38px;
+    height: 22px;
+    background: $colorSupportingWhite url('../assets/plus.svg') no-repeat center;
+    border-radius: 30px;
+    margin: 32px 0 32px auto;
+    border: 1px solid $colorFontsDark;
+}
+
+.location__toggle.open {
+    background: $colorPrimaryDark url('../assets/minus-white.svg') no-repeat center;
+}
+
+.location__name{
+    font-size: 1.375rem;
+    color: $colorSupportingWhite;
+}
+.location__country {
+    @include global-title;
+    color: $colorFontsDark;
+    margin-bottom: 38px;
+}
+.location__title {
+    @include global-body;
+    color: $colorFontsLight;
+    margin-bottom: 20px;
+}
+.location__text {
+    @include global-body;
+    color: $colorFontsDark;
+    margin-bottom: 12px;
+}
+.location__icon {
+    margin-bottom: 20px;
+}
+.location__separator {
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    border-color: $colorSupportingGreyLight;
+}
+.location__separator.open {
+    border-color: $colorPrimaryDark;
+}
+
+.js-location__dropdown {
+    height: 0;
+    transition: max-height 500ms linear;
+    overflow: hidden;
+}
+
+/* OPEN */
+.js-location__dropdown.open {
+    height: 100%;
+}
+
+.js-location__container.open {
+    background-color: $colorSupportingWhite !important;
+    transition: background-color 500ms linear;
+    color: $colorPrimaryDark;
+}

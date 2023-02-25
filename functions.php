@@ -89,12 +89,12 @@ function mytheme_setup_theme_supported_features() {
         ),
         array(
             'name'  => esc_attr__( 'light grey', 'tapacode' ),
-            'slug'  => 'light grey',
+            'slug'  => 'light-grey',
             'color' => '#E6EBEB',
         ),
         array(
             'name'  => esc_attr__( 'light jade', 'tapacode' ),
-            'slug'  => 'light jade',
+            'slug'  => 'light-jade',
             'color' => '#F4FCD8',
         ),
         array(
@@ -203,7 +203,52 @@ function tapacode_casestudy_setup_post_type() {
 add_action( 'init', 'tapacode_casestudy_setup_post_type' );
 
 
+function tapacode_office_setup_post_type() {
 
+    /*
+    * Labels for client custom post type
+    */
+    $labels = array(
+        'name'                  => _x( 'Offices', 'Post type general name', 'office' ),
+        'singular_name'         => _x( 'Office', 'Post type singular name', 'office' ),
+        'menu_name'             => _x( 'Offices', 'Admin Menu text', 'office' ),
+        'name_admin_bar'        => _x( 'Office', 'Add New on Toolbar', 'office' ),
+        'add_new'               => __( 'Add New', 'office' ),
+        'add_new_item'          => __( 'Add New office', 'office' ),
+        'new_item'              => __( 'New office', 'office' ),
+        'edit_item'             => __( 'Edit office', 'office' ),
+        'view_item'             => __( 'View office', 'office' ),
+        'all_items'             => __( 'All offices', 'office' ),
+        'search_items'          => __( 'Search offices', 'office' ),
+        'parent_item_colon'     => __( 'Parent offices:', 'office' ),
+        'not_found'             => __( 'No offices found.', 'office' ),
+        'not_found_in_trash'    => __( 'No offices found in Trash.', 'office' ),
+        'featured_image'        => _x( 'Office Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'office' ),
+        'set_featured_image'    => _x( 'Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'office' ),
+        'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'office' ),
+        'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'office' ),
+        'archives'              => _x( 'Office archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'office' ),
+        'insert_into_item'      => _x( 'Insert into office', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'office' ),
+        'uploaded_to_this_item' => _x( 'Uploaded to this office', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'office' ),
+        'filter_items_list'     => _x( 'Filter offices list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'office' ),
+        'items_list_navigation' => _x( 'Offices list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'office' ),
+        'items_list'            => _x( 'Offices list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'office' ),
+    );
+
+    //Register CPT office
+    register_post_type('tapacode_office',
+        array(
+            'labels'      => $labels,
+            'public'      => true,
+            'has_archive' => true,
+            'rewrite'     => array( 'slug' => 'office'),
+            'capability_type'    => 'post',
+            'supports'    => array( 'title', 'thumbnail', 'excerpt' ),
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action( 'init', 'tapacode_office_setup_post_type' );
 
 if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
 

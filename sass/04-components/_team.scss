@@ -1,0 +1,12 @@
+.team__img {
+    max-height: 480px;
+}
+.team__job {
+    @include global-body;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+.team__name {
+    @include global-title;
+    color: $colorFontsDark;
+}
