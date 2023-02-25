@@ -234,7 +234,8 @@ a.gb-button {
   color: #022C2E !important;
   background-image: url("../assets/right-chevron-dark.svg"); }
 
-.gb-block-button.button--outline.button--dark-green a.gb-button:hover {
+.gb-block-button.button--outline.button--dark-green a.gb-button:hover,
+.gb-block-button.button--outline.button--dark-green.active a.gb-button {
   background-color: #022C2E !important;
   color: #FFFFFF !important;
   background-image: url("../assets/right-chevron.svg"); }
@@ -1116,6 +1117,14 @@ select.wpcf7-select {
   line-height: 1.375rem;
   font-weight: 400;
   color: #022C2E; }
+
+.js-locations__section,
+.js-contact-form__section {
+  display: none; }
+
+.js-locations__section.active,
+.js-contact-form__section.active {
+  display: block; }
 
 .location__toggle {
   border: 1px solid #FFFFFF;

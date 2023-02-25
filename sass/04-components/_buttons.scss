@@ -60,7 +60,8 @@ a.gb-button {
     background-image: url('../assets/right-chevron-dark.svg');
 }
 
-.gb-block-button.button--outline.button--dark-green a.gb-button:hover {
+.gb-block-button.button--outline.button--dark-green a.gb-button:hover, 
+.gb-block-button.button--outline.button--dark-green.active a.gb-button{
     background-color: $colorPrimaryDark !important;
     color: $colorSupportingWhite !important;
     background-image: url('../assets/right-chevron.svg');

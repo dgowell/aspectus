@@ -1,3 +1,12 @@
+.js-locations__section,
+.js-contact-form__section {
+    display: none;
+}
+.js-locations__section.active,
+.js-contact-form__section.active {
+    display:block;
+}
+
 .location__toggle {
     border: 1px solid $colorSupportingWhite;
     width: 38px;
