@@ -4,17 +4,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
 .filter-bar__col {
     border: 1px solid $colorSupportingGreyLight;
     padding: 0 40px;
 }
+
 .filter-bar__col--search {
     padding-left: 76px;
     background-image: url('../assets/search.svg');
     background-position: left 40px center;
     background-repeat: no-repeat;
 }
-input.filter-bar__input{
+
+input.filter-bar__input {
     padding: 0;
     line-height: 80px;
 }
@@ -32,12 +35,15 @@ input.filter-bar__input{
     padding-right: 0;
     box-shadow: none;
 }
+
 .filter-link:hover {
     color: $colorPrimaryDark;
 }
+
 .filter-link__title {
     margin-bottom: 0;
 }
+
 .filter-link__icon {
     height: 80px;
     width: 80px;
@@ -46,12 +52,44 @@ input.filter-bar__input{
     background-repeat: no-repeat;
     border-left: 1px solid $colorSupportingGreyLight;
 }
+
 .filter-link.active .filter-link__icon {
     background: $colorPrimaryDark url('../assets/filter-green.svg') no-repeat center center;
 }
+
 .filters__container {
     display: none;
+    width: 100vw;
+    margin-left: -40px;
+    background: $colorSupportingWhite;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
+
 .filters__container.active {
-    display: block;
+    display: grid;
+    grid-template-columns: 34fr 37fr 29fr;
+}
+
+.filters__col {
+    padding: 30px 40px;
+}
+.filter__input input[type="checkbox"] {
+    display: none;
+}
+
+.filter__text {
+border: 1px solid $colorPrimaryDark;
+    border-radius: 30px;
+        padding: 3px 12px;
+        display: inline-block;
+        margin-bottom: 12px;
+        margin-right: 12px;
+        color: $colorFontsDark;
+}
+input[type="checkbox"]:checked + span {
+    background-color: $colorPrimaryDark;
+    color: $colorSupportingWhite;
 }

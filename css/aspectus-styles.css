@@ -1169,10 +1169,37 @@ input.filter-bar__input {
   background: #022C2E url("../assets/filter-green.svg") no-repeat center center; }
 
 .filters__container {
-  display: none; }
+  display: none;
+  width: 100vw;
+  margin-left: -40px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px; }
 
 .filters__container.active {
-  display: block; }
+  display: grid;
+  grid-template-columns: 34fr 37fr 29fr; }
+
+.filters__col {
+  padding: 30px 40px; }
+
+.filter__input input[type="checkbox"] {
+  display: none; }
+
+.filter__text {
+  border: 1px solid #022C2E;
+  border-radius: 30px;
+  padding: 3px 12px;
+  display: inline-block;
+  margin-bottom: 12px;
+  margin-right: 12px;
+  color: #022C2E; }
+
+input[type="checkbox"]:checked + span {
+  background-color: #022C2E;
+  color: #FFFFFF; }
 
 .js-locations__section,
 .js-contact-form__section {
