@@ -1118,6 +1118,62 @@ select.wpcf7-select {
   font-weight: 400;
   color: #022C2E; }
 
+.filter-bar__container {
+  width: 100vw;
+  margin-left: -40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+.filter-bar__col {
+  border: 1px solid #E6EBEB;
+  padding: 0 40px; }
+
+.filter-bar__col--search {
+  padding-left: 76px;
+  background-image: url("../assets/search.svg");
+  background-position: left 40px center;
+  background-repeat: no-repeat; }
+
+input.filter-bar__input {
+  padding: 0;
+  line-height: 80px; }
+
+.filter-link,
+.filter-link:active,
+.filter-link:focus,
+.filter-link:visited {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  color: #022C2E;
+  align-items: center;
+  padding-right: 0;
+  box-shadow: none; }
+
+.filter-link:hover {
+  color: #022C2E; }
+
+.filter-link__title {
+  margin-bottom: 0; }
+
+.filter-link__icon {
+  height: 80px;
+  width: 80px;
+  background-image: url("../assets/filter.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-left: 1px solid #E6EBEB; }
+
+.filter-link.active .filter-link__icon {
+  background: #022C2E url("../assets/filter-green.svg") no-repeat center center; }
+
+.filters__container {
+  display: none; }
+
+.filters__container.active {
+  display: block; }
+
 .js-locations__section,
 .js-contact-form__section {
   display: none; }

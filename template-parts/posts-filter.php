@@ -1,4 +1,8 @@
 <?php
+
+/*
+* Initial query to populate page on first load
+*/
 $args = wp_parse_args(
     $args,
     array(
@@ -15,10 +19,10 @@ $query_args = array(
     'orderby' => 'date',
 );
 
-
-
-/* show checkboxes of service taxonomy */
-$html = wp_dropdown_categories( array(
+/*
+* Services taxonomy filter
+*/
+$services_filter = wp_dropdown_categories( array(
         'taxonomy' => array('service'),
         'name' => 'service',
         'id' => 'js-services',
@@ -27,18 +31,18 @@ $html = wp_dropdown_categories( array(
         'value_field' => 'slug'
     ) );
 
-$html = str_replace( "form id=", "form multiple='multiple' id=", $html );
-$html = str_replace( "select", "span", $html );
-$html = str_replace( "option class=", "input type='checkbox' class=", $html );
-$html = str_replace( "option", "", $html );
-$html = str_replace( "</>", "<br/>", $html );
-
-echo $html;
+$services_filter = str_replace( "form id=", "form multiple='multiple' id=", $services_filter );
+$services_filter = str_replace( "select", "span", $services_filter );
+$services_filter = str_replace( "option class=", "input type='checkbox' class=", $services_filter );
+$services_filter = str_replace( "option", "", $services_filter );
+$services_filter = str_replace( "</>", "<br/>", $services_filter );
 
 
 
-/* show checkboxes of type taxonomy */
-$html = wp_dropdown_categories( array(
+/*
+* Type taxonomy filter
+*/
+$type_filter = wp_dropdown_categories( array(
         'taxonomy' => 'type',
         'name' => 'type',
         'id' => 'js-types',
@@ -47,16 +51,18 @@ $html = wp_dropdown_categories( array(
         'value_field' => 'slug'
     ) );
 
-$html = str_replace( "form id=", "form multiple='multiple' id=", $html );
-$html = str_replace( "select", "span", $html );
-$html = str_replace( "option class=", "input type='checkbox' class=", $html );
-$html = str_replace( "option", "", $html );
-$html = str_replace( "</>", "<br/>", $html );
+$type_filter = str_replace( "form id=", "form multiple='multiple' id=", $type_filter );
+$type_filter = str_replace( "select", "span", $type_filter );
+$type_filter = str_replace( "option class=", "input type='checkbox' class=", $type_filter );
+$type_filter = str_replace( "option", "", $type_filter );
+$type_filter = str_replace( "</>", "<br/>", $type_filter );
 
-echo $html;
 
-/* show checkboxes of category taxonomy */
-$html = wp_dropdown_categories( array(
+
+/*
+* Sectors (category) taxonomy filter
+*/
+$sectors_filter = wp_dropdown_categories( array(
         'taxonomy' => 'category',
         'name' => 'sectors',
         'id' => 'js-sectors',
@@ -64,13 +70,17 @@ $html = wp_dropdown_categories( array(
         'echo' => 0,
         'value_field' => 'slug'
     ) );
-$html = str_replace( "form id=", "form multiple='multiple' id=", $html );
-$html = str_replace( "select", "span", $html );
-$html = str_replace( "option class=", "input type='checkbox' class=", $html );
-$html = str_replace( "option", "", $html );
-$html = str_replace( "</>", "<br/>", $html );
+$sectors_filter = str_replace( "form id=", "form multiple='multiple' id=", $sectors_filter );
+$sectors_filter = str_replace( "select", "span", $sectors_filter );
+$sectors_filter = str_replace( "option class=", "input type='checkbox' class=", $sectors_filter );
+$sectors_filter = str_replace( "option", "", $sectors_filter );
+$sectors_filter = str_replace( "</>", "<br/>", $sectors_filter );
 
-echo $html;
+
+
+
+
+
 
 
 
@@ -81,5 +91,37 @@ echo $html;
 //while($posts->have_posts()) : $posts->the_post();
   //  include('news-grid.php');
 //endwhile;
-echo '<div id="results"></div>';
+
 ?>
+<div class="filter-bar__container">
+    <div class="filter-bar__col filter-bar__col--search">
+        <input class="filter-bar__input" id="js-search" type="text" placeholder="Search.." value=<?php get_search_query() ?>>
+    </div>
+    <button class="js-filter-link filter-bar__col filter-link">
+        <p class="filter-link__title">Filter</p>
+        <div class="filter-link__icon"></div>
+    </button>
+</div>
+<div class="filters__container js-filters__container">
+    <div class="filters__col">
+        <p class="filters__title">by Service(s)</p>
+        <?php echo $services_filter; ?>
+    </div>
+    <div class="filters__col">
+        <p class="filters__title">by Sector(s)</p>
+        <?php echo $sectors_filter; ?>
+    </div>
+    <div class="filters__col">
+        <p class="filters__title">by Type</p>
+        <?php echo $type_filter; ?>
+    </div>
+</div>
+
+<select class="sorting-dropdown" name="sort-posts" id="sortbox">
+    <option disabled>Sort by</option>
+    <option value="orderby=date&order=DESC">Newest</option>
+    <option value="orderby=date&order=ASC">Oldest</option>
+    <option value="orderby=title&order=ASC">A-Z Asc</option>
+    <option value="orderby=title&order=DESC">A-Z Desc</option>
+</select>
+<div id="results"></div>

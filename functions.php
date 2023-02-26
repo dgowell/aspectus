@@ -435,34 +435,42 @@ function tapacode_selector_ajax_callback() {
     check_ajax_referer( 'wp-tapacode-nonce' );
 
     //Get each filter value
-    $services = $_GET['services'];
-    $sectors = $_GET['sectors'];
-    $types = $_GET['types'];
+    $services  = esc_attr( $_GET['services'] );
+    $sectors   = esc_attr( $_GET['sectors'] );
+    $types     = esc_attr( $_GET['types'] );
+    $search    = esc_attr( $_GET['search'] );
+    $orderby   = esc_attr( $_GET['orderby'] );
+    $order     = esc_attr( $_GET['order'] );
+
+    echo $search;
 
     $ser = explode(',', $services);
     $sec = explode(',', $sectors);
     $t = explode(',', $types);
 
     $ajaxposts = new WP_Query([
-        'post_type' => 'post',
-        'posts_per_page' => -1,
-        'tax_query' => array(
-            'relation' => 'OR',
-            array(
-                'taxonomy' => 'service',
-                'field'    => 'slug',
-                'terms'    => $ser,
-            ),
-             array(
-                'taxonomy' => 'category',
-                'field'    => 'slug',
-                'terms'    => $sec,
-            ),
-             array(
-                'taxonomy' => 'type',
-                'field'    => 'slug',
-                'terms'    => $t,
-            ),
+        'post_type'       => 'post',
+        'orderby'         => $orderby,
+        'order'           => $order,
+        's'               => $search,
+        'posts_per_page'  => -1,
+        'tax_query'       => array(
+                                'relation' => 'OR',
+                                array(
+                                    'taxonomy' => 'service',
+                                    'field'    => 'slug',
+                                    'terms'    => $ser,
+                                ),
+                                array(
+                                    'taxonomy' => 'category',
+                                    'field'    => 'slug',
+                                    'terms'    => $sec,
+                                ),
+                                array(
+                                    'taxonomy' => 'type',
+                                    'field'    => 'slug',
+                                    'terms'    => $t,
+                                ),
         ),
     ]);
     $response = '';
