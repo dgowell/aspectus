@@ -26,16 +26,16 @@ $services_filter = wp_dropdown_categories( array(
         'taxonomy' => array('service'),
         'name' => 'service',
         'id' => 'js-services',
-        'class' => 'services__form',
+        'class' => 'filter__form filter__form--services',
         'echo' => 0,
         'value_field' => 'slug'
     ) );
 
-$services_filter = str_replace( "form id=", "form multiple='multiple' id=", $services_filter );
+
 $services_filter = str_replace( "select", "span", $services_filter );
-$services_filter = str_replace( "option class=", "input type='checkbox' class=", $services_filter );
-$services_filter = str_replace( "option", "", $services_filter );
-$services_filter = str_replace( "</>", "<br/>", $services_filter );
+$services_filter = str_replace( "\">", "\"><span class='filter__text'>", $services_filter );
+$services_filter = str_replace( "<option ", "<label class='filter__input'><input type='checkbox' ", $services_filter );
+$services_filter = str_replace( "</option>", "</label>", $services_filter );
 
 
 
@@ -46,16 +46,15 @@ $type_filter = wp_dropdown_categories( array(
         'taxonomy' => 'type',
         'name' => 'type',
         'id' => 'js-types',
-        'class' => 'types__form',
+        'class' => 'filter__form filter__form--type',
         'echo' => 0,
         'value_field' => 'slug'
     ) );
 
-$type_filter = str_replace( "form id=", "form multiple='multiple' id=", $type_filter );
 $type_filter = str_replace( "select", "span", $type_filter );
-$type_filter = str_replace( "option class=", "input type='checkbox' class=", $type_filter );
-$type_filter = str_replace( "option", "", $type_filter );
-$type_filter = str_replace( "</>", "<br/>", $type_filter );
+$type_filter = str_replace( "\">", "\"><span class='filter__text'>", $type_filter );
+$type_filter = str_replace( "<option ", "<label class='filter__input'><input type='checkbox' ", $type_filter );
+$type_filter = str_replace( "</option>", "</label>", $type_filter );
 
 
 
@@ -66,23 +65,15 @@ $sectors_filter = wp_dropdown_categories( array(
         'taxonomy' => 'category',
         'name' => 'sectors',
         'id' => 'js-sectors',
-        'class' => 'sectors__form',
+        'class' => 'filter__form filter__form--sectors',
         'echo' => 0,
         'value_field' => 'slug'
     ) );
-$sectors_filter = str_replace( "form id=", "form multiple='multiple' id=", $sectors_filter );
 $sectors_filter = str_replace( "select", "span", $sectors_filter );
-$sectors_filter = str_replace( "option class=", "input type='checkbox' class=", $sectors_filter );
-$sectors_filter = str_replace( "option", "", $sectors_filter );
-$sectors_filter = str_replace( "</>", "<br/>", $sectors_filter );
-
-
-
-
-
-
-
-
+$sectors_filter = str_replace( "\">", "\"><span class='filter__text'>", $sectors_filter );
+$sectors_filter = str_replace( "<option ", "<label class='filter__input'><input type='checkbox' ", $sectors_filter );
+$sectors_filter = str_replace( "</option>", "</label>", $sectors_filter );
+    
 
 // The Query
 //$posts = new WP_Query( $query_args );
