@@ -73,7 +73,7 @@ $sectors_filter = str_replace( "select", "span", $sectors_filter );
 $sectors_filter = str_replace( "\">", "\"><span class='filter__text'>", $sectors_filter );
 $sectors_filter = str_replace( "<option ", "<label class='filter__input'><input type='checkbox' ", $sectors_filter );
 $sectors_filter = str_replace( "</option>", "</label>", $sectors_filter );
-    
+
 
 // The Query
 //$posts = new WP_Query( $query_args );
@@ -107,12 +107,18 @@ $sectors_filter = str_replace( "</option>", "</label>", $sectors_filter );
         <?php echo $type_filter; ?>
     </div>
 </div>
+<div class="sorting-dropdown__section">
+    <div class="sorting-dropdown__container">
+        <label class="sorting-dropdown__label">Sort by</label>
+        <select class="sorting-dropdown" name="sort-posts" id="sortbox">
+            <option disabled>Sort by</option>
+            <option value="orderby=date&order=DESC">Newest</option>
+            <option value="orderby=date&order=ASC">Oldest</option>
+            <option value="orderby=title&order=ASC">A-Z Asc</option>
+            <option value="orderby=title&order=DESC">A-Z Desc</option>
+        </select>
+        <div class="sorting-dropdown__icon"></div>
+    </div>
 
-<select class="sorting-dropdown" name="sort-posts" id="sortbox">
-    <option disabled>Sort by</option>
-    <option value="orderby=date&order=DESC">Newest</option>
-    <option value="orderby=date&order=ASC">Oldest</option>
-    <option value="orderby=title&order=ASC">A-Z Asc</option>
-    <option value="orderby=title&order=DESC">A-Z Desc</option>
-</select>
+</div>
 <div id="results"></div>

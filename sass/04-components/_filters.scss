@@ -76,20 +76,64 @@ input.filter-bar__input {
 .filters__col {
     padding: 30px 40px;
 }
+
 .filter__input input[type="checkbox"] {
     display: none;
 }
 
 .filter__text {
-border: 1px solid $colorPrimaryDark;
+    border: 1px solid $colorPrimaryDark;
     border-radius: 30px;
-        padding: 3px 12px;
-        display: inline-block;
-        margin-bottom: 12px;
-        margin-right: 12px;
-        color: $colorFontsDark;
+    padding: 3px 12px;
+    display: inline-block;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    color: $colorFontsDark;
 }
-input[type="checkbox"]:checked + span {
+
+input[type="checkbox"]:checked+span {
     background-color: $colorPrimaryDark;
     color: $colorSupportingWhite;
+}
+
+.sorting-dropdown__section {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.sorting-dropdown__container {
+    width: 325px;
+    border: 1px solid $colorSupportingGreyLight;
+    padding: 0;
+    @include global-body;
+}
+
+.sorting-dropdown {
+    padding: 30px 20px 8px 20px;
+    @include global-cta;
+    color: $colorPrimaryDark;
+    background-image: url('../assets/arrow-small-down.svg');
+    background-position: right 25px center;
+    background-repeat: no-repeat;
+}
+
+.sorting-dropdown__label::after {
+    content: "";
+    height: 60px;
+    border-left: 1px solid $colorSupportingGreyLight;
+    position: absolute;
+    margin-left: 191px;
+    margin-top: -8px;
+}
+
+.sorting-dropdown__icon {
+    border-left: 1px solid $colorSupportingGreyLight;
+}
+
+.sorting-dropdown__label {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 8px;
 }
