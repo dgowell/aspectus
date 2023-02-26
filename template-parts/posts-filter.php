@@ -121,4 +121,4 @@ $sectors_filter = str_replace( "</option>", "</label>", $sectors_filter );
     </div>
 
 </div>
-<div id="results"></div>
+<div id="results" class="filtered-posts"></div>
