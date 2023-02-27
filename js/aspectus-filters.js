@@ -14,6 +14,8 @@ function setupCategorySelector() {
     }
 
     function getResults(sectors, services, types, search, orderby, order) {
+        const postType = jQuery('#results').attr('data-type');
+        debugger;
         var data = {
             'action': 'tapacode_selector',
             '_ajax_nonce': ajax_object.nonce,
@@ -22,7 +24,8 @@ function setupCategorySelector() {
             'types': types.length ? JSON.stringify(types) : JSON.stringify(['news, insight']),
             'search': search ? search : '',
             'orderby': orderby ? orderby : 'title',
-            'order': order ? order : 'ASC'
+            'order': order ? order : 'ASC',
+            'post_type': postType ? postType : 'post'
         };
         // We can also pass the url value separately from ajaxurl for front end AJAX implementations
         jQuery.get(ajax_object.ajax_url, data, function (res) {

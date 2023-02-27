@@ -2,6 +2,17 @@
 /*
 * Services taxonomy filter
 */
+
+// Set defaults.
+$args = wp_parse_args(
+    $args,
+    array(
+        'post_type' => 'post',
+        'posts_per_page' => 9,
+        'post_status'    => array('publish'),
+    )
+);
+
 $services_filter = wp_dropdown_categories( array(
         'taxonomy' => array('service'),
         'name' => 'service',
@@ -23,7 +34,7 @@ $services_filter = str_replace( "</option>", "</label>", $services_filter );
 * Type taxonomy filter
 */
 $type_filter = wp_dropdown_categories( array(
-        'taxonomy' => 'type',
+        'taxonomy' => 'tapacode_type',
         'name' => 'type',
         'id' => 'js-types',
         'class' => 'filter__form filter__form--type',
@@ -95,16 +106,13 @@ $sectors_filter = str_replace( "</option>", "</label>", $sectors_filter );
     </div>
 
 </div>
-<div id="results" class="filtered-posts">
+<div id="results" data-type="<?php echo esc_attr( $args['post_type'] ) ?>" class="filtered-posts filtered-posts--<?php echo esc_attr( $args['post_type'] ) ?>">
 
 <?php
 /*
 * Initial query to populate page on first load
 */
-$args = array(
-    'post_type' => 'post',
-    'posts_per_page' => 9,
-);
+
 // The Query
 $query = new WP_Query($args);
 
@@ -119,5 +127,6 @@ if ($query->have_posts()) {
     // no posts found
 }
 wp_reset_postdata();
+
 ?>
 </div>

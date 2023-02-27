@@ -176,6 +176,7 @@ function tapacode_client_setup_post_type() {
             'capability_type'    => 'post',
             'supports'    => array( 'title', 'thumbnail', 'excerpt' ),
             'show_in_rest' => true,
+            'menu_icon' => 'dashicons-groups',
         )
     );
 }
@@ -224,6 +225,8 @@ function tapacode_casestudy_setup_post_type() {
             'capability_type'    => 'post',
             'supports'    => array( 'title', 'editor', 'revisions', 'trackbacks', 'author', 'thumbnail', 'excerpt', 'page-attributes', 'post-formats' ),
             'show_in_rest' => true,
+            'taxonomies'  => array('service', 'tapacode_type', 'category'),
+            'menu_icon' => 'dashicons-text-page',
         )
     );
     flush_rewrite_rules( false );
@@ -272,6 +275,7 @@ function tapacode_office_setup_post_type() {
             'capability_type'    => 'post',
             'supports'    => array( 'title', 'thumbnail', 'excerpt' ),
             'show_in_rest' => true,
+            'menu_icon'    => 'dashicons-admin-multisite',
         )
     );
 }
@@ -293,13 +297,13 @@ if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
 }
 
 /**
- * Add custom taxonomies
+ * Add custom taxonomies for posts
  * services, sectors and types
  * --------------------------------------------------------------------------------
  */
 function add_custom_taxonomies() {
   // Add new "Types" taxonomy to Posts
-  register_taxonomy('type', 'post', array(
+  register_taxonomy('tapacode_type', 'post', array(
     // Hierarchical taxonomy (like categories)
     'hierarchical' => true,
     // This array of options controls the labels displayed in the WordPress Admin UI
@@ -323,7 +327,12 @@ function add_custom_taxonomies() {
       'hierarchical' => true // This will allow URL's like "/types/boston/cambridge/"
     ),
     'show_admin_column' => true,
+    'show_in_rest' => true, //add this
+    'show_ui' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true
   ));
+  flush_rewrite_rules( false );
 
   register_taxonomy('service', 'post', array(
     // Hierarchical taxonomy (like categories)
@@ -349,6 +358,10 @@ function add_custom_taxonomies() {
       'hierarchical' => true // This will allow URL's like "/services/boston/cambridge/"
     ),
     'show_admin_column' => true,
+    'show_in_rest' => true, //add this
+    'show_ui' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true
   ));
  flush_rewrite_rules( false );
 }
@@ -421,10 +434,15 @@ function wpdocs_unregister_tags_for_posts() {
 add_action( 'init', 'wpdocs_unregister_tags_for_posts' );
 
 
+
+/* SHORTCODES
+* -------------------------------------------------------------------------------
+*/
 function posts_filter_shortcode_func( $atts ) {
+
+    //set default
     $attributes = shortcode_atts( array(
-        'type' => 'post',
-        'limit' => 9,
+        'post_type' => 'post',
     ), $atts );
 
     ob_start();
@@ -435,9 +453,63 @@ function posts_filter_shortcode_func( $atts ) {
     return ob_get_clean();
 
 }
-add_shortcode( 'posts-filter', 'posts_filter_shortcode_func' );
+add_shortcode( 'aspectus-filter', 'posts_filter_shortcode_func' );
+
+if ( ! function_exists( 'wpdocs_example_get_the_terms' ) ) {
+
+    /**
+     * Function to return list of the terms.
+     * 
+     * @param string 'taxonomy'
+     * 
+     * @return html Returns the list of elements.
+     */
+
+    function wpdocs_example_get_the_terms( $taxonomy ) {
+
+        $terms = get_the_terms( get_the_ID(), $taxonomy );
+
+        if ( $terms && ! is_wp_error( $terms ) ) :
+
+            $term_links = array();
+
+            foreach ( $terms as $term ) {
+               // $term_links[] = '<a href="' . esc_attr( get_term_link( $term->slug, $taxonomy ) ) . '">' . __( $term->name ) . '</a>';
+                $term_links[] = '<span class="filter__text">' . __( $term->name ) . '</span>';
+            }
+
+            $all_terms = join( '', $term_links );
+
+            echo '<span class="terms-' . esc_attr( $term->slug ) . '">' . __( $all_terms ) . '</span>';
+
+        endif;
+
+    }
+
+}
 
 
+function shortcode_get_services_taxonomy( $atts ) {
+    global $post;
+    ob_start();
+
+    echo wpdocs_example_get_the_terms( 'service' );
+
+    return ob_get_clean();
+
+}
+add_shortcode( 'services', 'shortcode_get_services_taxonomy' );
+
+function shortcode_get_sectors_taxonomy( $atts ) {
+    global $post;
+    ob_start();
+
+    echo wpdocs_example_get_the_terms( 'category' );
+
+    return ob_get_clean();
+
+}
+add_shortcode( 'sectors', 'shortcode_get_sectors_taxonomy' );
 
 /*
 *   AJAX
@@ -457,6 +529,7 @@ function tapacode_selector_ajax_callback() {
     $search    = esc_attr( $_GET['search'] );
     $orderby   = esc_attr( $_GET['orderby'] );
     $order     = esc_attr( $_GET['order'] );
+    $post_type = esc_attr( $_GET['post_type']);
 
     echo $search;
 
@@ -465,9 +538,10 @@ function tapacode_selector_ajax_callback() {
     $t = explode(',', $types);
 
     $ajaxposts = new WP_Query([
-        'post_type'       => 'post',
+        'post_type'       => $post_type,
         'orderby'         => $orderby,
         'order'           => $order,
+        'post_status'     => array('publish'),
         's'               => $search,
         'posts_per_page'  => -1,
         'tax_query'       => array(
@@ -483,7 +557,7 @@ function tapacode_selector_ajax_callback() {
                                     'terms'    => $sec,
                                 ),
                                 array(
-                                    'taxonomy' => 'type',
+                                    'taxonomy' => 'tapacode_type',
                                     'field'    => 'slug',
                                     'terms'    => $t,
                                 ),

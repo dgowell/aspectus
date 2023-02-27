@@ -137,71 +137,105 @@ input[type="checkbox"]:checked+span {
     margin-left: 20px;
     margin-top: 8px;
 }
+
+.post__item {
+    margin-bottom: 0;
+    list-style: none;
+}
 .filtered-posts {
     padding-top: 60px;
     padding-bottom: 100px;
     display: grid;
     gap: 60px 62px;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-areas: 
-    "areaA areaA areaA"
-    "areaB areaB areaC"
-    "areaD areaE areaE"
-    "areaF areaG areaH";
+    width: 100%;
 }
-.post__item {
-    margin-bottom: 0;
-    list-style: none;
-}
-.post__item:nth-child(1){
-    grid-area: areaA;
-}
-.post__item:nth-child(2){
-    grid-area: areaB;
-}
-.post__item:nth-child(3) {
-    grid-area: areaC;
 
+.filtered-posts--tapacode_case-study {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "areaA areaA areaA"
+        "areaB areaB areaC"
+        "areaD areaE areaE"
+        "areaF areaG areaH";
 }
-.post__item:nth-child(4) {
-    grid-area: areaD;
+
+.filtered-posts--post {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "areaA areaA"
+        "areaB areaC"
+        "areaD areaE"
+        "areaF areaG";
 }
-.post__item:nth-child(5) {
-    grid-area: areaE;
+.filtered-posts--post .post__item:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: inline-grid;
 }
-.post__item:nth-child(6) {
-    grid-area: areaF;
-}
-.post__item:nth-child(7) {
-    grid-area: areaG;
-}
-.post__item:nth-child(8) {
-    grid-area: areaH;
+
+.filtered-posts--tapacode_case-study {
+    .post__item:nth-child(1) {
+            grid-area: areaA;
+        }
+    .post__item:nth-child(2) {
+        grid-area: areaB;
+    }
+
+    .post__item:nth-child(3) {
+        grid-area: areaC;
+
+    }
+
+    .post__item:nth-child(4) {
+        grid-area: areaD;
+    }
+
+    .post__item:nth-child(5) {
+        grid-area: areaE;
+    }
+
+    .post__item:nth-child(6) {
+        grid-area: areaF;
+    }
+
+    .post__item:nth-child(7) {
+        grid-area: areaG;
+    }
+
+    .post__item:nth-child(8) {
+        grid-area: areaH;
+    }
 }
 .post__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .post__img {
     height: 580px;
     overflow: hidden;
     margin-bottom: 24px;
 }
+
 .post__title {
     @include global-title;
     color: $colorFontsDark;
     margin-bottom: 1rem;
 }
+
 a:hover>.post__title {
     text-decoration: none;
 }
+
 .post__excerpt {
     max-width: 325px;
     @include global-body;
     color: $colorFontsLight;
     margin-bottom: 0;
 }
+
 a:hover>.post__excerpt {
     text-decoration: none;
 }
