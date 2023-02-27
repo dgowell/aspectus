@@ -10,12 +10,14 @@
     box-shadow: none;
     color: $colorSupportingWhite;
 }
-
 .entry-content .breadcrumbs a:hover {
     color: $colorPrimaryLight;
     box-shadow: none;
 }
-
+.breadcrumbs.dark,
+.breadcrumbs.dark a {
+    color: $colorFontsDark;
+}
 .breadcrumbs__container {
     position: absolute;
     top: 120px;
@@ -31,4 +33,9 @@
 
 .breadcrumbs .sep>svg {
     height: 9px;
+}
+.breadcrumb__title,
+.breadcrumb__separator {
+    color: $colorFontsDark;
+    margin-left:  10px;
 }

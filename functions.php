@@ -100,7 +100,7 @@ function mytheme_setup_theme_supported_features() {
         ),
         array(
             'name'  => esc_attr__( 'deep grey', 'tapacode' ),
-            'slug'  => 'deep grey',
+            'slug'  => 'deep-grey',
             'color' => '#6F7783',
         ),
         array(
@@ -211,10 +211,11 @@ function tapacode_casestudy_setup_post_type() {
             'has_archive' => true,
             'rewrite'     => array( 'slug' => 'case-study'),
             'capability_type'    => 'post',
-            'supports'    => array( 'title', 'thumbnail', 'excerpt' ),
+            'supports'    => array( 'title', 'editor', 'revisions', 'trackbacks', 'author', 'thumbnail', 'excerpt', 'page-attributes', 'post-formats' ),
             'show_in_rest' => true,
         )
     );
+    flush_rewrite_rules( false );
 }
 add_action( 'init', 'tapacode_casestudy_setup_post_type' );
 
@@ -532,4 +533,38 @@ add_action('init', function () {
         remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
     }
 });
-?>
+
+
+
+if ( ! function_exists( 'genesis_block_theme_post_byline' ) ) :
+    /**
+     * Post byline
+     */
+    function genesis_block_theme_post_byline() {
+        ?>
+        <?php
+        // Get the post author.
+        global $post;
+        $author_id = $post->post_author;
+        ?>
+    <div class="byline__container">
+        <div class="byline__col byline__col--author">
+            <!-- Create an avatar link -->
+            
+            <a class="byline__img" href="<?php echo esc_url( get_author_posts_url( $author_id ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'Posts by %s', 'genesis-block-theme' ), get_the_author() ) ); ?>">
+                <?php echo get_avatar( $author_id, apply_filters( 'genesis_block_theme_author_bio_avatar', 44 ) ); ?>
+            </a>
+
+            <!-- Create an author post link -->
+            <a class="byline__author" href="<?php echo esc_url( get_author_posts_url( $author_id ) ); ?>">
+            By <?php echo esc_html( get_the_author_meta( 'display_name', $author_id ) ); ?>
+            </a>
+        </div>
+        <div class="byline__col byline__col--date">
+            <span class="byline__date"><?php echo get_the_date('d.m.y'); ?></span>
+        </div>
+    </div>
+        <?php
+    } endif;
+
+    ?>

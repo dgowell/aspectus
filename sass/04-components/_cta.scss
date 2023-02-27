@@ -56,6 +56,16 @@
     color: $colorSupportingWhite;
     @include global-body;
 }
+.cta.red {
+    background-color: $colorSecondaryThree;
+    color: $colorSupportingWhite;
+}
+.cta.red .cta__text {
+    color:$colorSupportingWhite;
+}
+.cta.red .cta__title {
+    color: $colorSupportingWhite;
+}
 @media screen and (max-width: $mobileFormatBig) {
     .cta {
         padding: 32px 20px;

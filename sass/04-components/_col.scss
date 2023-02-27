@@ -72,3 +72,6 @@
     grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr;
     grid-template-areas: "col1 . col2 . col3";
 }
+.col-1-col-6-col-1>.gb-layout-column-wrap {
+    grid-template-columns: 1fr 6fr 1fr;
+}

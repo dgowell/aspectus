@@ -1,0 +1,21 @@
+.category__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 32px;
+    margin-top: 80px;
+}
+.category__item {
+    border: 1px solid $colorFontsDark;
+    border-radius: 30px;
+    padding: 1px 12px;
+    margin-right: 12px;
+    display: inline-block;
+    background: $colorSupportingWhite;
+    @include global-cta;
+    color: $colorFontsDark;
+}
+.category__item:hover {
+    color: $colorFontsDark;
+}

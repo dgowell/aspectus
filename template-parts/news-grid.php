@@ -1,7 +1,7 @@
 <li class="post__item">
     <a href="<?php echo get_permalink() ?>">
         <figure class="post__img">
-            <?php echo get_the_post_thumbnail( get_the_id(), array(1024,683), array( 'class' => 'attachment-post-thumbnail size-post-thumbnail wp-post-image' ) ); ?>
+            <?php echo @get_the_post_thumbnail( get_the_ID(), array(1024,683), array( 'class' => 'attachment-post-thumbnail size-post-thumbnail wp-post-image' ) ); ?>
         </figure>
     </a>
     <a href="<?php echo get_permalink() ?>">

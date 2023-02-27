@@ -139,6 +139,7 @@ input[type="checkbox"]:checked+span {
 }
 .filtered-posts {
     padding-top: 60px;
+    padding-bottom: 100px;
     display: grid;
     gap: 60px 62px;
     grid-template-columns: 1fr 1fr 1fr ;

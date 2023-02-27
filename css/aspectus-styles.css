@@ -541,6 +541,12 @@ button.button--light:hover {
   height: 100%;
   overflow: hidden; }
 
+.image-container__580 {
+  height: 580px; }
+
+.image-container__480 {
+  height: 480px; }
+
 .image-container__img img {
   width: 100%;
   height: 100%;
@@ -752,6 +758,9 @@ button.button--light:hover {
   background-color: #FFFFFF;
   opacity: 0.05; }
 
+.equals-sign--black.grey {
+  background-color: #1C1C1C; }
+
 .equals-sign--above {
   margin-bottom: 28.27px; }
 
@@ -801,6 +810,68 @@ button.button--light:hover {
     margin-top: 40px;
     justify-content: flex-start; } }
 
+.category__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 32px;
+  margin-top: 80px; }
+
+.category__item {
+  border: 1px solid #022C2E;
+  border-radius: 30px;
+  padding: 1px 12px;
+  margin-right: 12px;
+  display: inline-block;
+  background: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 500;
+  color: #022C2E; }
+
+.category__item:hover {
+  color: #022C2E; }
+
+.byline__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; }
+
+.byline__col {
+  padding: 0 12px;
+  display: flex;
+  align-items: center; }
+
+.byline__col--author {
+  border-right: 1px solid #6F7783; }
+
+.byline__author,
+.byline__date {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: #022C2E; }
+
+.byline__img img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+  vertical-align: middle; }
+
+.article__header {
+  margin-bottom: 40px; }
+
+.article__title {
+  max-width: 860px;
+  text-align: center;
+  margin: auto; }
+
 .client-slider {
   margin-top: 66px;
   margin-bottom: 240px; }
@@ -848,6 +919,9 @@ button.button--light:hover {
 
 .js-client-slider__indicators .slick-active button {
   background-color: #022C2E; }
+
+.single-tapacode_case-study .entry-header {
+  display: none; }
 
 .client-logos {
   margin-top: 160px;
@@ -1245,6 +1319,7 @@ input[type="checkbox"]:checked + span {
 
 .filtered-posts {
   padding-top: 60px;
+  padding-bottom: 100px;
   display: grid;
   gap: 60px 62px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1494,6 +1569,9 @@ a:hover > .post__excerpt {
   grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr;
   grid-template-areas: "col1 . col2 . col3"; }
 
+.col-1-col-6-col-1 > .gb-layout-column-wrap {
+  grid-template-columns: 1fr 6fr 1fr; }
+
 .floating-menu__section {
   overflow: revert; }
 
@@ -1696,6 +1774,16 @@ p.floating-menu__item > a:hover {
   font-family: "Poppins", sans-serif;
   line-height: 1.375rem;
   font-weight: 400; }
+
+.cta.red {
+  background-color: #F14D54;
+  color: #FFFFFF; }
+
+.cta.red .cta__text {
+  color: #FFFFFF; }
+
+.cta.red .cta__title {
+  color: #FFFFFF; }
 
 @media screen and (max-width: 600px) {
   .cta {
@@ -2031,6 +2119,10 @@ div.alignfull.case-study-block {
   color: #C7F03D;
   box-shadow: none; }
 
+.breadcrumbs.dark,
+.breadcrumbs.dark a {
+  color: #022C2E; }
+
 .breadcrumbs__container {
   position: absolute;
   top: 120px;
@@ -2044,6 +2136,11 @@ div.alignfull.case-study-block {
 
 .breadcrumbs .sep > svg {
   height: 9px; }
+
+.breadcrumb__title,
+.breadcrumb__separator {
+  color: #022C2E;
+  margin-left: 10px; }
 
 div.about-banner__container.alignfull {
   margin-top: -204px;
@@ -2096,10 +2193,10 @@ div.about-banner__container.alignfull {
 .has-black-color {
   color: #1C1C1C; }
 
-.has-dark-grey-background-color {
+.has-deep-grey-background-color {
   background: #6F7783; }
 
-.has-dark-grey-color {
+.has-deep-grey-color {
   color: #6F7783; }
 
 .has-light-grey-background-color {
@@ -2122,6 +2219,9 @@ div.about-banner__container.alignfull {
 
 .p-20 {
   padding: 20px; }
+
+.pt-20 {
+  padding-top: 20px; }
 
 .pt-28 {
   padding-top: 28px; }
@@ -2157,6 +2257,9 @@ div.about-banner__container.alignfull {
 
 .pb-80 {
   padding-bottom: 80px; }
+
+.pt-90 {
+  padding-top: 90px; }
 
 .pt-92 {
   padding-top: 92px; }

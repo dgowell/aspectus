@@ -1,24 +1,4 @@
 <?php
-
-/*
-* Initial query to populate page on first load
-*/
-$args = wp_parse_args(
-    $args,
-    array(
-        'data' => array(
-            'type' => 'post',
-            'limit' => 9,
-        ),
-    )
-);
-
-$query_args = array(
-    'post_type' => $args['data']['type'],
-    'posts_per_page' => $args['data']['limit'],
-    'orderby' => 'date',
-);
-
 /*
 * Services taxonomy filter
 */
@@ -75,13 +55,7 @@ $sectors_filter = str_replace( "<option ", "<label class='filter__input'><input 
 $sectors_filter = str_replace( "</option>", "</label>", $sectors_filter );
 
 
-// The Query
-//$posts = new WP_Query( $query_args );
-// The Loop
 
-//while($posts->have_posts()) : $posts->the_post();
-  //  include('news-grid.php');
-//endwhile;
 
 ?>
 <div class="filter-bar__container">
@@ -121,4 +95,29 @@ $sectors_filter = str_replace( "</option>", "</label>", $sectors_filter );
     </div>
 
 </div>
-<div id="results" class="filtered-posts"></div>
+<div id="results" class="filtered-posts">
+
+<?php
+/*
+* Initial query to populate page on first load
+*/
+$args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 9,
+);
+// The Query
+$query = new WP_Query($args);
+
+// The Loop
+if ($query->have_posts()) {
+    while ($query->have_posts()) {
+        $query->the_post();
+        // do something
+         include('news-grid.php');
+    }
+} else {
+    // no posts found
+}
+wp_reset_postdata();
+?>
+</div>
