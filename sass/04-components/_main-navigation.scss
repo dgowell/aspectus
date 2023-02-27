@@ -36,8 +36,22 @@
 .js-navbar__close-icon {
     display: none;
 }
-
+.navbar.open .js-navbar__close-icon {
+    display: block;
+}
+.navbar.open .navbar__burger-icon {
+    display: none;
+}
 .js-navbar__logo--black {
+    display: none;
+}
+.navbar.open .js-navbar__logo--black {
+    display: block;
+}
+.navbar.open .js-navbar__logo--white {
+    display: none;
+}
+.js-navbar__logo--green {
     display: none;
 }
 
@@ -47,7 +61,10 @@
     display: grid;
     grid-template-columns: calc(22.5% + 80px) 1fr;
 }
-
+.navbar.open + .js-main-nav {
+    height: 954px;
+    padding: 40px 40px 60px;
+}
 .main-nav__list,
 .sub-menu {
     display: flex;

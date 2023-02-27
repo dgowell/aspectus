@@ -9,6 +9,9 @@
         position: relative;
         margin-top: -180px;
 }
+.floating-nav {
+    gap: 0;
+}
 .floating-menu__item {
     width: 100%;
     border-bottom: 1px $colorSupportingGreyLight solid;

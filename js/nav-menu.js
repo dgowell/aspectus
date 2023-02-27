@@ -1,29 +1,29 @@
 if (window.matchMedia('(min-width: 1000px)').matches) {
     function openNav() {
-        document.getElementsByClassName('js-main-nav')[0].style.height = '954px';
-        document.getElementsByClassName('js-main-nav')[0].style.padding = '40px 40px 0';
-        document.getElementsByClassName('header__column-line')[0].style.opacity = '1';
-        document.getElementsByClassName('js-navbar__close-icon')[0].style.display = 'block';
-        document.getElementsByClassName('js-navbar__burger-icon')[0].style.display = 'none';
-        document.getElementsByClassName('js-navbar__burger-icon')[1].style.display = 'none';
-        document.getElementsByClassName('js-navbar__logo--white')[0].style.display = 'none';
-        document.getElementsByClassName('js-navbar__logo--black')[0].style.display = 'block';
+        //document.getElementsByClassName('js-main-nav')[0].style.height = '954px';
+        //document.getElementsByClassName('js-main-nav')[0].style.padding = '40px 40px 0';
+        //document.getElementsByClassName('header__column-line')[0].style.opacity = '1';
+        //document.getElementsByClassName('js-navbar__close-icon')[0].style.display = 'block';
+        //document.getElementsByClassName('js-navbar__burger-icon')[0].style.display = 'none';
+        //document.getElementsByClassName('js-navbar__burger-icon')[1].style.display = 'none';
+        //document.getElementsByClassName('js-navbar__logo--white')[0].style.display = 'none';
+        //document.getElementsByClassName('js-navbar__logo--black')[0].style.display = 'block';
         document.getElementsByClassName('js-navbar')[0].classList.add('open');
     }
     function closeNav() {
-        document.getElementsByClassName('js-main-nav')[0].style.height = '0';
-        document.getElementsByClassName('js-main-nav')[0].style.padding = '0 40px 0';
-        document.getElementsByClassName('header__column-line')[0].style.opacity = '0';
-        document.getElementsByClassName('js-navbar__close-icon')[0].style.display = 'none';
+        //document.getElementsByClassName('js-main-nav')[0].style.height = '0';
+        //document.getElementsByClassName('js-main-nav')[0].style.padding = '0 40px 0';
+        //document.getElementsByClassName('header__column-line')[0].style.opacity = '0';
+        //document.getElementsByClassName('js-navbar__close-icon')[0].style.display = 'none';
         document.getElementsByClassName('js-navbar')[0].classList.remove('open');
 
         //check for certain pages
         if (jQuery('body').hasClass('page-id-1735')) {
-            document.getElementsByClassName('js-navbar__burger-icon')[1].style.display = 'block';
+            //document.getElementsByClassName('js-navbar__burger-icon')[1].style.display = 'block';
         } else {
-            document.getElementsByClassName('js-navbar__burger-icon')[0].style.display = 'block'
-            document.getElementsByClassName('js-navbar__logo--white')[0].style.display = 'block';
-            document.getElementsByClassName('js-navbar__logo--black')[0].style.display = 'none';
+            //document.getElementsByClassName('js-navbar__burger-icon')[0].style.display = 'block'
+            //document.getElementsByClassName('js-navbar__logo--white')[0].style.display = 'block';
+            //document.getElementsByClassName('js-navbar__logo--black')[0].style.display = 'none';
         }
     }
 }

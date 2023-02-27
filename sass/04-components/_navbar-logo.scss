@@ -1,6 +1,113 @@
+/* PAGES WITH BLACK LOGOS */
+
+//about page
 .page-id-1735 .js-navbar__logo--black {
     display:block;
 }
 .page-id-1735 .js-navbar__logo--white {
+    display: none;
+}
+
+//services page
+.page-id-1739 .js-navbar__logo--black {
+    display: block;
+}
+
+.page-id-1739 .js-navbar__logo--white {
+    display: none;
+}
+
+//all case-studys
+.single-tapacode_case-study .js-navbar__logo--black {
+    display: block;
+}
+
+.single-tapacode_case-study .js-navbar__logo--white {
+    display: none;
+}
+
+//all posts
+.single-post .js-navbar__logo--black {
+    display: block;
+}
+
+.single-post .js-navbar__logo--white {
+    display: none;
+}
+
+//contact page
+.page-id-1747 .js-navbar__logo--black {
+    display: block;
+}
+
+.page-id-1747 .js-navbar__logo--white {
+    display: none;
+}
+
+
+
+/* PAGES WIOTH GREEN LOGOS */
+
+//our story
+.page-id-1805 .js-navbar__logo--green {
+    display: block;
+}
+.page-id-1805 .js-navbar__logo--white {
+    display: none;
+}
+.page-id-1805 .navbar.open .js-navbar__logo--green {
+    display: none;
+}
+//sectors and children of sectors
+.page-id-1737 .js-navbar__logo--green,
+.parent-pageid-1737 .js-navbar__logo--green {
+    display: block;
+}
+.page-id-1737 .js-navbar__logo--white,
+.parent-pageid-1737 .js-navbar__logo--white {
+    display: none;
+}
+.page-id-1737 .navbar.open .js-navbar__logo--green,
+.parent-pageid-1737 .navbar.open .js-navbar__logo--green {
+    display: none;
+}
+
+
+//our work
+.page-id-1741 .js-navbar__logo--green {
+    display: block;
+}
+
+.page-id-1741 .js-navbar__logo--white {
+    display: none;
+}
+
+.page-id-1741 .navbar.open .js-navbar__logo--green {
+    display: none;
+}
+
+//news & insights
+.page-id-1745 .js-navbar__logo--green {
+    display: block;
+}
+
+.page-id-1745 .js-navbar__logo--white {
+    display: none;
+}
+
+.page-id-1745 .navbar.open .js-navbar__logo--green {
+    display: none;
+}
+
+//about / team /leadership
+.page-id-1813 .js-navbar__logo--green {
+    display: block;
+}
+
+.page-id-1813 .js-navbar__logo--white {
+    display: none;
+}
+
+.page-id-1813 .navbar.open .js-navbar__logo--green {
     display: none;
 }

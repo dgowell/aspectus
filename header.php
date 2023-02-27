@@ -27,6 +27,7 @@
             <a href="/">
                 <img class="js-navbar__logo--white" src="<?php echo get_stylesheet_directory_uri() ?>/assets/aspectus-logo-white-complete.svg" alt="Aspectus Logo" />
                 <img class="js-navbar__logo--black" src="<?php echo get_stylesheet_directory_uri() ?>/assets/aspectus-logo-black-complete.svg" alt="Aspectus Logo" />
+                <img class="js-navbar__logo--green" src="<?php echo get_stylesheet_directory_uri() ?>/assets/aspectus-logo-green-complete.svg" alt="Aspectus Logo" />
             </a>
         </div>
         <div class="navbar__right">

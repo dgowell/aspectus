@@ -2,13 +2,61 @@
     line-height: 1rem;
     transition: 0.5s ease;
 }
+
 .navbar__burger-icon--black {
     display: none;
 }
-//page specific styles
+
+//About page
 .page-id-1735 .navbar__burger-icon--white {
-    display: none!important;
+    display: none !important;
 }
+
 .page-id-1735 .navbar__burger-icon--black {
+    display: block;
+}
+
+//service page
+.page-id-1739 .navbar__burger-icon--white {
+    display: none !important;
+}
+
+.page-id-1739 .navbar__burger-icon--black {
+    display: block;
+}
+
+//all case studies
+.single-tapacode_case-study .navbar__burger-icon--white {
+    display: none !important;
+}
+
+.single-tapacode_case-study .navbar__burger-icon--black {
+    display: block;
+}
+
+//all case studies
+.single-post .navbar__burger-icon--white {
+    display: none !important;
+}
+
+.single-post .navbar__burger-icon--black {
+    display: block;
+}
+
+//service page
+.page-id-1811 .navbar__burger-icon--white {
+    display: none !important;
+}
+
+.page-id-1811 .navbar__burger-icon--black {
+    display: block;
+}
+
+//contact page
+.page-id-1747 .navbar__burger-icon--white {
+    display: none !important;
+}
+
+.page-id-1747 .navbar__burger-icon--black {
     display: block;
 }

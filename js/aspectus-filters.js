@@ -17,14 +17,13 @@ function setupCategorySelector() {
         var data = {
             'action': 'tapacode_selector',
             '_ajax_nonce': ajax_object.nonce,
-            'sectors': JSON.stringify(sectors),
-            'services': JSON.stringify(services),
-            'types': JSON.stringify(types),
+            'sectors': sectors.length ? JSON.stringify(sectors) : JSON.stringify(["uncategorized", "capital-markets", "energy", "financial-services", "industrials", "technology"]),
+            'services': services.length ? JSON.stringify(services) : JSON.stringify(["brand-insights-strategy", "digital-marketing", "pr-comms", "websites", "campaigns-content", "esg-comms"]), 
+            'types': types.length ? JSON.stringify(types) : JSON.stringify(['news, insight']),
             'search': search ? search : '',
             'orderby': orderby ? orderby : 'title',
             'order': order ? order : 'ASC'
         };
-
         // We can also pass the url value separately from ajaxurl for front end AJAX implementations
         jQuery.get(ajax_object.ajax_url, data, function (res) {
             jQuery('#results').html(res);

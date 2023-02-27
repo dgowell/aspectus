@@ -1,4 +1,9 @@
 <?php
+
+/*
+*   Load all the styles and scripts
+*  -------------------------------------------------------------------------
+*/
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function my_theme_enqueue_styles() {
     $parenthandle = 'genesis-block-theme-style';
@@ -61,6 +66,10 @@ function my_theme_enqueue_styles() {
 
 
 }
+/*
+* Set Colours for admin editor
+* -------------------------------------------------------------------
+*/
 function mytheme_setup_theme_supported_features() {
     add_theme_support( 'editor-color-palette', array(
         array(
@@ -124,11 +133,12 @@ function mytheme_setup_theme_supported_features() {
 add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
 
 
-function tapacode_client_setup_post_type() {
 
-    /*
-    * Labels for client custom post type
-    */
+/*
+* Labels for client custom post type
+* --------------------------------------------------------------------
+*/
+function tapacode_client_setup_post_type() {
     $labels = array(
         'name'                  => _x( 'Clients', 'Post type general name', 'client' ),
         'singular_name'         => _x( 'Client', 'Post type singular name', 'client' ),
@@ -171,11 +181,12 @@ function tapacode_client_setup_post_type() {
 }
 add_action( 'init', 'tapacode_client_setup_post_type' );
 
-function tapacode_casestudy_setup_post_type() {
 
-    /*
-    * Labels for client custom post type
-    */
+/*
+* Labels for client custom post type
+* ---------------------------------------------------------------------------------------
+*/
+function tapacode_casestudy_setup_post_type() {
     $labels = array(
         'name'                  => _x( 'Case Study', 'Post type general name', 'case-study' ),
         'singular_name'         => _x( 'Case Study', 'Post type singular name', 'case-study' ),
@@ -219,12 +230,11 @@ function tapacode_casestudy_setup_post_type() {
 }
 add_action( 'init', 'tapacode_casestudy_setup_post_type' );
 
-
+/*
+* Labels for client custom post type
+* ------------------------------------------------------------------------------------
+*/
 function tapacode_office_setup_post_type() {
-
-    /*
-    * Labels for client custom post type
-    */
     $labels = array(
         'name'                  => _x( 'Offices', 'Post type general name', 'office' ),
         'singular_name'         => _x( 'Office', 'Post type singular name', 'office' ),
@@ -284,9 +294,8 @@ if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
 
 /**
  * Add custom taxonomies
- *
- * Additional custom taxonomies can be defined here
- * https://codex.wordpress.org/Function_Reference/register_taxonomy
+ * services, sectors and types
+ * --------------------------------------------------------------------------------
  */
 function add_custom_taxonomies() {
   // Add new "Types" taxonomy to Posts
@@ -335,19 +344,19 @@ function add_custom_taxonomies() {
     ),
     // Control the slugs used for this taxonomy
     'rewrite' => array(
-      'slug' => 'services', // This controls the base slug that will display before each term
-      'with_front' => false, // Don't display the category base before "/services/"
+      'slug' => 'category/services', // This controls the base slug that will display before each term
+      'with_front' => true, // Don't display the category base before "/services/"
       'hierarchical' => true // This will allow URL's like "/services/boston/cambridge/"
     ),
     'show_admin_column' => true,
   ));
-
+ flush_rewrite_rules( false );
 }
 add_action( 'init', 'add_custom_taxonomies', 0 );
 
 /**
  * Rename Category to Theme
- *
+ * -----------------------------------------------------------------------------
  */
 function be_rename_category_theme() {
 
@@ -380,8 +389,11 @@ function be_rename_category_theme() {
 }
 add_action( 'init', 'be_rename_category_theme' );
 
-function tapacode_rename_posts_post_type(){
- //rename post type posts to news
+/*
+* Rename post type posts to news
+* ----------------------------------------------------------------------------
+*/
+function tapacode_rename_posts_post_type(){ 
     $get_post_type = get_post_type_object('post');
     $labels = $get_post_type->labels;
     $labels->name = 'News Articles';
@@ -400,7 +412,9 @@ function tapacode_rename_posts_post_type(){
 }
 add_action( 'init', 'tapacode_rename_posts_post_type' );
 
-//completely remove tags on posts
+/* Remove tags on posts
+* -------------------------------------------------------------------------------
+*/
 function wpdocs_unregister_tags_for_posts() {
     unregister_taxonomy_for_object_type( 'post_tag', 'post' );
 }
@@ -429,6 +443,7 @@ add_shortcode( 'posts-filter', 'posts_filter_shortcode_func' );
 *   AJAX
 *   Page: Our Work Page
 *   Taxonomy Filters
+* --------------------------------------------------------------------------------
 */
 
 function tapacode_selector_ajax_callback() {
@@ -481,7 +496,7 @@ function tapacode_selector_ajax_callback() {
         $response .= get_template_part('template-parts/news-grid');
         endwhile;
     } else {
-        $response = 'empty';
+        $response = '<p>No results found</p>';
     }
 
     echo $response;
@@ -493,7 +508,10 @@ add_action( 'wp_ajax_tapacode_selector', 'tapacode_selector_ajax_callback' );
 
 
 
-/* remove comments */
+/*
+* Remove comments
+*--------------------------------------------------------------------------
+*/
 add_action('admin_init', function () {
     // Redirect any user trying to access comments page
     global $pagenow;
@@ -536,6 +554,10 @@ add_action('init', function () {
 
 
 
+/*
+* Byline - Section with avatar at the top of the single posts
+*--------------------------------------------------------------------------------------
+*/
 if ( ! function_exists( 'genesis_block_theme_post_byline' ) ) :
     /**
      * Post byline
@@ -550,7 +572,6 @@ if ( ! function_exists( 'genesis_block_theme_post_byline' ) ) :
     <div class="byline__container">
         <div class="byline__col byline__col--author">
             <!-- Create an avatar link -->
-            
             <a class="byline__img" href="<?php echo esc_url( get_author_posts_url( $author_id ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'Posts by %s', 'genesis-block-theme' ), get_the_author() ) ); ?>">
                 <?php echo get_avatar( $author_id, apply_filters( 'genesis_block_theme_author_bio_avatar', 44 ) ); ?>
             </a>

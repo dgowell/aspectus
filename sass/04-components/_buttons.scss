@@ -60,8 +60,8 @@ a.gb-button {
     background-image: url('../assets/right-chevron-dark.svg');
 }
 
-.gb-block-button.button--outline.button--dark-green a.gb-button:hover, 
-.gb-block-button.button--outline.button--dark-green.active a.gb-button{
+.gb-block-button.button--outline.button--dark-green a.gb-button:hover,
+.gb-block-button.button--outline.button--dark-green.active a.gb-button {
     background-color: $colorPrimaryDark !important;
     color: $colorSupportingWhite !important;
     background-image: url('../assets/right-chevron.svg');
@@ -109,30 +109,96 @@ button.button--light:hover {
 
 @media screen and (max-width: $mobileFormatBig) {
     .mob-button-full-width--97>.gb-button {
-            width: 100%;
-            background-position: right calc(50% + -97px) center !important;
-        }
+        width: 100%;
+        background-position: right calc(50% + -97px) center !important;
+    }
+
     .mob-button-full-width--82>.gb-button {
         width: 100%;
         background-position: right calc(50% + -82px) center !important;
     }
-   .mob-button-full-width--62>.gb-button {
-       width: 100%;
-       background-position: right calc(50% + -62px) center !important;
-   }
+
+    .mob-button-full-width--62>.gb-button {
+        width: 100%;
+        background-position: right calc(50% + -62px) center !important;
+    }
+
     .mob-button-full-width--52>.gb-button {
         width: 100%;
         background-position: right calc(50% + -52px) center !important;
     }
+
     .mob-button-full-width--35>.gb-button {
         width: 100%;
         background-position: right calc(50% + -35px) center !important;
     }
 }
 
-//page specific styles
+//About page
 .page-id-1735 button.navbar__contact {
     background-color: $colorPrimaryDark;
     color: $colorSupportingWhite;
     border: $colorPrimaryDark;
+}
+
+
+//services / websites
+.page-id-1780 button.navbar__contact {
+    background-color: $colorSupportingWhite;
+    color: $colorFontsDark;
+    border: $colorSupportingWhite;
+}
+
+.page-id-1780 button.navbar__contact:hover {
+    background-color: $colorSecondaryTwo;
+    color: $colorSupportingWhite;
+    border: $colorSupportingWhite;
+}
+
+//our work
+.page-id-1741 button.navbar__contact {
+    background-color: $colorPrimaryDark;
+    color: $colorSupportingWhite;
+    border: $colorPrimaryDark;
+}
+
+//all case studies
+.single-tapacode_case-study button.navbar__contact {
+    background-color: $colorPrimaryDark;
+    color: $colorSupportingWhite;
+    border: $colorPrimaryDark;
+}
+
+//all posts
+.single-post button.navbar__contact {
+    background-color: $colorPrimaryDark;
+    color: $colorSupportingWhite;
+    border: $colorPrimaryDark;
+}
+
+//about / team
+.page-id-1811 button.navbar__contact {
+    background-color: $colorPrimaryDark;
+    color: $colorSupportingWhite;
+    border: $colorPrimaryDark;
+}
+
+
+//fix all borders hack
+button.navbar__contact:hover {
+    border-color: transparent;
+}
+
+
+//contact
+.page-id-1747 button.navbar__contact {
+    background-color: $colorSupportingWhite;
+    color: $colorFontsDark;
+    border-color: $colorPrimaryDark;
+}
+
+.page-id-1747 button.navbar__contact:hover {
+    background-color: $colorPrimaryDark;
+    color: $colorSupportingWhite;
+    border-color: $colorPrimaryDark;
 }
