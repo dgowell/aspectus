@@ -455,15 +455,23 @@ button.navbar__contact:hover {
   z-index: 11;
   position: relative; }
 
+@media screen and (max-width: 1000px) {
+  .navbar {
+    padding: 32px 20px 32px 23px; } }
+
 .navbar.open {
   background-color: #FFFFFF;
   transition: 0.3s ease; }
+
+.js-navbar.open.highlight {
+  background-color: #E6EBEB; }
 
 .navbar__right {
   display: flex;
   gap: 40px;
   align-items: center; }
 
+x
 .navbar__break {
   border-left: 1px solid #E6EBEB;
   height: 32px; }
@@ -502,6 +510,11 @@ button.navbar__contact:hover {
   height: 954px;
   padding: 40px 40px 60px; }
 
+@media screen and (max-width: 1000px) {
+  .navbar.open + .js-main-nav {
+    height: 1160px;
+    padding: 22px 20px 280px; } }
+
 .main-nav__list,
 .sub-menu {
   display: flex;
@@ -523,6 +536,7 @@ button.navbar__contact:hover {
   background-color: #FFFFFF; }
 
 .js-sub-menu__title {
+  margin-top: 32px;
   margin-bottom: 20px;
   line-height: 1.375rem; }
 
@@ -599,25 +613,43 @@ button.navbar__contact:hover {
   .header__column-line {
     display: none; }
   .main-nav__container {
+    height: max-content;
     padding-bottom: 28px;
-    margin-bottom: 48px;
-    border-bottom: 2px solid #E6EBEB; }
-  .menu-item:hover .sub-menu {
-    display: none;
-    left: inherit;
-    top: inherit; }
-  .sub-menu {
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 186px; }
+    border-bottom: 2px solid #E6EBEB;
+    margin-bottom: 48px; }
   .main-nav__container .menu-item-has-children:hover {
     background-position: right center; }
   .main-nav__container .menu-item-has-children a {
     display: block; }
   .main-nav__container:hover .menu-item-has-children a {
-    padding: 0; } }
+    padding: 0; }
+  .hide {
+    z-index: -100; }
+  .main-nav__list .sub-menu.show {
+    display: block;
+    padding: 0 20px;
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    /* Stay in place */
+    z-index: 20;
+    /* Sit on top */
+    left: 0;
+    top: 72px;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s; }
+  .sub-menu__backlink {
+    padding-bottom: 32px;
+    padding-top: 44px;
+    display: block;
+    background-color: #E6EBEB;
+    width: 100vw;
+    margin-left: -20px;
+    padding-left: 20px;
+    font-weight: 400;
+    color: #022C2E; } }
 
 .header__second-column {
   padding-left: 13.5%; }
