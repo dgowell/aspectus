@@ -7,31 +7,63 @@
     margin-top: -342px;
     z-index: 1;
 }
+
+@media screen and (max-width: $screenSizeSmall) {
+    .equals-sign__container {
+        margin-top: -326px;
+    }
+}
+
 .equals-sign__container--fullwidth {
     margin-top: -542px;
 }
+
+@media screen and (max-width: $screenSizeSmall) {
+    .equals-sign__container--fullwidth {
+        margin-top: -522px;
+    }
+}
+
 @media screen and (max-width: $mobileFormatBig) {
     .equals-sign__container--fullwidth {
         margin-top: -500px
     }
 }
+
 .equals-sign {
     width: 185px;
     height: 42px;
     background-color: $colorPrimaryLight;
 }
+
 .equals-sign--black {
     width: 100vw;
     height: 186px;
     background-color: $colorSupportingWhite;
     opacity: 0.05;
 }
+
 .equals-sign--black.grey {
     background-color: $colorSupportingBlack;
 }
+
 .equals-sign--above {
     margin-bottom: 28.27px;
 }
+
 .equals-sign--black__above {
     margin-bottom: 53px;
+}
+
+@media screen and (max-width: $screenSizeSmall) {
+
+
+    .equals-sign--above {
+        margin-bottom: 18.27px;
+    }
+
+    .equals-sign {
+        width: 120px;
+        height: 28px;
+    }
 }

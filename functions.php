@@ -34,6 +34,9 @@ function my_theme_enqueue_styles() {
     //custom submenu js
     wp_enqueue_script( 'tapacode-submenu-navs', get_stylesheet_directory_uri() . '/js/aspectus-submenu-navs.js', array( 'jquery', 'easy-pie-chart-js' ), '1.0.0', true );
 
+    //floating nav js
+    wp_enqueue_script( 'tapacode-floating-navs', get_stylesheet_directory_uri() . '/js/aspectus-floating-nav.js', array( 'jquery' ), '1.0.0', true );
+
     //custom switches js
     wp_enqueue_script( 'tapacode-switches', get_stylesheet_directory_uri() . '/js/aspectus-switches.js', array( 'jquery' ), '1.0.0', true );
 
@@ -459,16 +462,18 @@ if ( ! function_exists( 'wpdocs_example_get_the_terms' ) ) {
 
     /**
      * Function to return list of the terms.
-     * 
+     *
      * @param string 'taxonomy'
-     * 
+     *
      * @return html Returns the list of elements.
      */
 
     function wpdocs_example_get_the_terms( $taxonomy ) {
-
+        global $post;
+        echo get_the_ID();
+        echo $taxonomy;
         $terms = get_the_terms( get_the_ID(), $taxonomy );
-
+        echo var_dump($terms);
         if ( $terms && ! is_wp_error( $terms ) ) :
 
             $term_links = array();
@@ -510,6 +515,50 @@ function shortcode_get_sectors_taxonomy( $atts ) {
 
 }
 add_shortcode( 'sectors', 'shortcode_get_sectors_taxonomy' );
+
+
+function shortcode_get_type_taxonomy( $atts ) {
+    global $post;
+    ob_start();
+
+    echo wpdocs_example_get_the_terms( 'service' );
+
+    return ob_get_clean();
+
+}
+add_shortcode( 'types', 'shortcode_get_type_taxonomy' );
+
+function shortcode_sector_nav( $atts ) {
+    global $post;
+    ob_start();
+
+    global $post;
+        //echo get_the_ID();
+        //echo $taxonomy;
+        $terms = get_the_terms( get_the_ID(), $taxonomy );
+        //echo var_dump($terms);
+        if ( $terms && ! is_wp_error( $terms ) ) :
+
+            $term_links = array();
+
+            foreach ( $terms as $term ) {
+               // $term_links[] = '<a href="' . esc_attr( get_term_link( $term->slug, $taxonomy ) ) . '">' . __( $term->name ) . '</a>';
+                $term_links[] = '<span class="filter__text">' . __( $term->name ) . '</span>';
+            }
+
+            $all_terms = join( '', $term_links );
+
+            echo '<span clasis="terms-' . esc_attr( $term->slug ) . '">' . __( $all_terms ) . '</span>';
+
+        endif;
+
+
+    return ob_get_clean();
+
+}
+
+add_shortcode( 'types', 'shortcode_sector_nav' );
+
 
 /*
 *   AJAX

@@ -3,6 +3,12 @@
     justify-items: stretch;
 }
 
+@media screen and (max-width: $mobileFormatBig) {
+    .image-container--three .gb-layout-column-wrap {
+        gap: 5px;
+    }
+}
+
 .image-container--three .gb-block-layout-column {
     height: 100%;
 }
@@ -15,12 +21,15 @@
     height: 100%;
     overflow: hidden;
 }
+
 .image-container__580 {
     height: 580px;
 }
+
 .image-container__480 {
     height: 480px;
 }
+
 .image-container__img img {
     width: 100%;
     height: 100%;
@@ -43,8 +52,22 @@
     .mob-img-portrait {
         height: 548px;
     }
-
+    .mob-slide__img {
+        height: 480px!important;
+    }
     .mob-img-portrait--560 {
         height: 560px;
     }
+
+    .fading-line {
+        max-height: 100px;
+       // overflow: hidden;
+    }
+        .fading-line figure {
+            height: 100%;
+        }
+                .fading-line figure img {
+                    height: 100px;
+                    object-fit: fill;
+                }
 }

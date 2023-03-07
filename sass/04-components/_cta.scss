@@ -1,5 +1,5 @@
 .cta {
-    padding: 32px;
+    padding: 32px 90px 32px 32px;
     background: $colorSupportingGreenLight;
     width: 43.5vw;
     max-width: 628px;
@@ -12,19 +12,38 @@
     bottom: 24px;
     left: 10vw;
 }
+
 .cta--left {
     left: -8vw;
 }
+
+@media screen and (max-width: $screenSizeSmall) {
+    .cta {
+        width: 80vw;
+    }
+    .cta--left {
+        left: -42vw;
+    }
+}
+
 .cta--bottom-left {
     left: 20px;
     bottom: 20px;
 }
+
 .cta--bottom-3-5 {
     left: 38.9%;
 }
+
+.cta__container {
+    border-right: 1px solid $colorSupportingGreyLight;
+    padding-right: 22px;
+}
+
 .cta__title {
     @include global-small;
     color: $colorFontsDark;
+    margin-bottom: 12px;
 }
 
 .cta__text {
@@ -33,14 +52,6 @@
     max-width: 464px;
 }
 
-.cta::after {
-    height: 100px;
-    content: "";
-    border: #E6EBEB solid 1px;
-    position: absolute;
-    right: 90px;
-    margin-top: -90px;
-}
 .cta--dark {
     background: $colorPrimaryDark;
     color: $colorSupportingWhite;
@@ -48,27 +59,33 @@
     background-repeat: no-repeat;
     background-position: right 40px center;
 }
+
 .cta--dark .cta__title {
     color: $colorSupportingWhite;
     @include global-title;
 }
+
 .cta--dark .cta__text {
     color: $colorSupportingWhite;
     @include global-body;
 }
+
 .cta.red {
     background-color: $colorSecondaryThree;
     color: $colorSupportingWhite;
 }
+
 .cta.red .cta__text {
-    color:$colorSupportingWhite;
+    color: $colorSupportingWhite;
 }
+
 .cta.red .cta__title {
     color: $colorSupportingWhite;
 }
+
 @media screen and (max-width: $mobileFormatBig) {
     .cta {
-        padding: 32px 20px;
+        padding: 32px 90px 32px 20px;
         width: 100vw;
         left: -20px;
         bottom: 0;

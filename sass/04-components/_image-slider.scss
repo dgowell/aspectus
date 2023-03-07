@@ -18,3 +18,12 @@
     right: 40px;
     background-image: url('../assets/arrow-small-right-white.svg');
 }
+@media screen and (max-width: $mobileFormatBig) {
+.image-slider__button--prev {
+        left: 20px;
+    }
+
+    .image-slider__button--next {
+        right: 20px;
+    }
+}

@@ -3,7 +3,10 @@
     margin-bottom: 120px;
 }
 
-@media screen and (max-width: $mobileFormatBig) {
+@media screen and (max-width: $screenSizeSmall) {
+    .client-logos .mob-hide {
+        display: none;
+    }
     .client-logos {
         margin-top: 140px;
         margin-bottom: 100px;

@@ -25,9 +25,21 @@
     flex-grow: 1;
 }
 
+@media screen and (max-width: $mobileFormatBig) {
+    .sector-menu__col--title>.gb-block-layout-column-inner h2 {
+        margin-bottom: 24px;
+    }
+}
+
 .sector-menu__text {
     max-width: 498px;
     margin-bottom: 36px;
+}
+
+@media screen and (max-width: $mobileFormatBig) {
+    .sector-menu__text {
+        margin-bottom: 40px;
+    }
 }
 
 .sector-submenu__container>.gb-layout-column-wrap {
@@ -44,6 +56,15 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0px 140px;
 }
+
+.submenu-nav .selectbox__container {
+    display: none;
+}
+
+.submenu-nav.open .selectbox__container {
+    display: block;
+}
+
 
 .submenu-nav>.wp-block-navigation__container li {
     padding-top: 16px;
@@ -72,6 +93,24 @@
     border: none;
     text-decoration: none;
 }
+
+@media screen and (max-width: $mobileFormatBig) {
+    .sector-menu__switch {
+        margin-top: 24px;
+    }
+}
+
 .sector-menu__switch.open .gb-button {
     background: $colorPrimaryLight url('../assets/minus.svg') no-repeat right 12px center;
+}
+
+@media screen and (max-width: $mobileFormatBig) {
+    .sector-menu__col--icon img {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    #page .sector-menu__img figure.alignleft {
+        width: auto;
+    }
 }

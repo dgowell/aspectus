@@ -2,34 +2,68 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
 .vertical-align>figure.aligncenter {
-    margin: 0 auto!important;
+    margin: 0 auto !important;
 }
+
 .mob-show {
     display: none;
 }
+
 .max-75 {
     max-width: 75%;
 }
+
 .global-title {
     @include global-title;
 }
+
+.justify-center {
+    justify-self: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
 @media screen and (max-width: $mobileFormatBig) {
     .mob-max-75 {
         max-width: 75%;
     }
+
     .mob-hide {
-        display: none; 
+        display: none;
     }
+
     .mob-show {
         display: block;
     }
+
     .mob-reverse-columns>.gb-layout-column-wrap.gb-is-responsive-column {
         grid-template-areas: "col2" "col1";
     }
-    .mob-gap-20, 
+
+    .mob-gap-20,
     .mob-gap-20>.gb-layout-column-wrap {
         gap: 20px;
     }
-}
 
+    .mob-pt-20-important {
+        padding-top: 20px !important;
+    }
+
+    .mobile-fullwidth {
+        width: 100vw;
+        margin-left: -20px;
+    }
+    div[class*=gb-section-].alignfull.mobile-fullwidth,
+    div[class*=gb-layout-].alignfull.mobile-fullwidth {
+        width: 100vw;
+        margin-left: -20px;
+    }
+}

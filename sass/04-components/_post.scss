@@ -19,6 +19,7 @@
 @media screen and (max-width: $mobileFormatBig) {
     .post__title-container {
         min-height: auto;
+        width: 100%;
     }
 }
 .post__title-container .gb-container-inside {
@@ -37,4 +38,14 @@
 .wp-block-post-author__content {
     display: flex;
     align-items: center;
+}
+.post__type {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+.post__type a {
+    background-color: $colorSupportingWhite;
+    border-radius: 30px;
+    padding: 4px 12px;
 }
