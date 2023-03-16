@@ -37,8 +37,10 @@
     background: $colorSecondaryThree;
 }
 
-.has-crimson-color {
-    color: $colorSecondaryThree;
+.has-crimson-color,
+.has-crimson-color a {
+    color: $colorSecondaryThree!important;
+    box-shadow: none!important;
 }
 
 //Peach

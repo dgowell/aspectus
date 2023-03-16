@@ -18,6 +18,7 @@ $colorPrimaryLight: #C7F03D; //Lime Green
 $colorPrimaryDark: #022C2E; //Dark Green
 $colorSecondaryOne: #6ED4B7; //Jade
 $colorSecondaryTwo: #8A59FF; //Violet
+$colorSecondaryTwoOpaque: rgba(137, 87, 255, 0.1);
 $colorSecondaryThree: #F14D54; //Red
 $colorSecondaryFour: #FFBF65; //Orange
 $colorSupportingBlack: #1C1C1C; //black
@@ -25,6 +26,7 @@ $colorSupportingGreyDark:#6F7783; //dark grey
 $colorSupportingGreyLight:#E6EBEB; //light grey
 $colorSupportingGreenLight: #F4FCD8; //light jade
 $colorSupportingWhite: #FFFFFF; //white
+$colorSupportingWhiteWithOpacity: rgba(255,255,255,0.25);
 $colorLightGreyWithOpacity: rgba(230, 235, 235, 0.25);
 
 $gradientLimeToDark: linear-gradient(95deg, rgba(199, 240, 61, 1) 0%, rgba(2, 51, 53, 1) 100%);

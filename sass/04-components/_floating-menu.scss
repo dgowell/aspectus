@@ -1,17 +1,27 @@
 .floating-menu__section {
     overflow: revert;
 }
+
 .floating-menu__section>.gb-layout-column-wrap {
     grid-template-columns: 1fr 4fr 1fr 2fr;
 }
+
 .floating-nav {
     z-index: 200;
-        position: relative;
-        margin-top: -180px;
+    position: relative;
+    margin-top: -180px;
 }
+
+@media screen and (max-width: $mobileFormatBig) {
+    .floating-nav {
+        margin-top: -200px;
+    }
+}
+
 .floating-nav {
     gap: 0;
 }
+
 .floating-menu__item {
     width: 100%;
     border-bottom: 1px $colorSupportingGreyLight solid;
@@ -43,8 +53,9 @@ p.floating-menu__item>a:hover {
     background-image: url('../assets/arrow-right-white.svg');
     border: 1px solid $colorSupportingWhite;
 }
+
 .violet .floating-menu__item:hover {
-background-color: $colorSecondaryTwo;
+    background-color: $colorSecondaryTwo;
 }
 
 .floating-menu__item:hover.floating-menu__item>a {

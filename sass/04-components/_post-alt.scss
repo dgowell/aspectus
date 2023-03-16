@@ -1,24 +1,58 @@
 .post-alt__container>.gb-layout-column-wrap {
     grid-template-columns: 1fr 3fr;
 }
+
 .post-alt__separator {
     margin-top: 40px;
     border-color: $colorSupportingGreyLight;
 }
+
+@media screen and (max-width: $mobileFormatBig) {
+    .post-alt__separator {
+        margin-top: 0;
+        margin-bottom: 66px;
+    }
+}
+
 .post-alt__list li:hover .post-alt__separator {
     border-color: $colorFontsDark;
 }
+
 .post-alt__list>.is-layout-flow li {
     margin-bottom: 32px;
 }
-.post-alt__title a{
+@media screen and (max-width: $mobileFormatBig) {
+.post-alt__list>.is-layout-flow li {
+        margin-bottom: 96px;
+    }
+}
+
+.post-alt__title a {
     margin-top: 18px;
     text-decoration: none;
 }
+
 .post-alt__date a {
     color: $colorSupportingGreyDark;
     text-decoration: none;
 }
+
 .post-alt__list .gb-block-layout-column-gap-2 {
     gap: 20px;
+}
+
+@media screen and (max-width: $mobileFormatBig) {
+    .post-alt__list li {
+        border-bottom: 1px solid $colorSupportingGreyLight;
+        padding-bottom: 40px;
+    }
+
+    .post-alt__list .gb-block-layout-column-gap-2 {
+        gap: 16px;
+    }
+
+    .post-alt__title a {
+        margin-top: 24px;
+
+    }
 }

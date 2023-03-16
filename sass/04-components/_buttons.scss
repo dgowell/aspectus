@@ -118,6 +118,11 @@ button.button--light:hover {
         background-position: right calc(50% + -82px) center !important;
     }
 
+    .mob-button-full-width--72>.gb-button {
+        width: 100%;
+        background-position: right calc(50% + -72px) center !important;
+    }
+
     .mob-button-full-width--62>.gb-button {
         width: 100%;
         background-position: right calc(50% + -62px) center !important;

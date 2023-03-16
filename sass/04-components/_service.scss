@@ -1,5 +1,6 @@
 .js-service__container {
     background-color: $colorPrimaryDark;
+    transition: background-color 900ms ease-out;
 }
 
 .service__toggle {
@@ -52,4 +53,25 @@
 
 .js-service__container.open .service__name {
     color: $colorPrimaryDark;
+}
+
+.js-service__container.open .service__fraction {
+    color: $colorFontsDark;
+    opacity: 1;
+}
+
+.js-service__container.open .service__number {
+    color: $colorFontsDark;
+    opacity: 1;
+}
+
+.js-service__container.open h2.has-white-color {
+    color: $colorFontsDark !important;
+}
+
+@media screen and (max-width: $mobileFormatBig) {
+    .service__header>.gb-layout-column-wrap {
+        grid-template-columns: 1fr 45px!important;
+        grid-template-areas: "col1 col2"!important;
+    }
 }

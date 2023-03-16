@@ -31,6 +31,9 @@ function my_theme_enqueue_styles() {
     //custom slider js
     wp_enqueue_script( 'tapacode-moving-menu', get_stylesheet_directory_uri() . '/js/aspectus-moving-menu.js', array( 'jquery', 'slick-js', 'easy-pie-chart-js' ), '1.0.0', true );
 
+    //tab slider js
+    wp_enqueue_script( 'tapacode-tab-slider', get_stylesheet_directory_uri() . '/js/aspectus-tab-slider.js', array( 'jquery', 'slick-js' ), '1.0.0', true );
+
     //custom submenu js
     wp_enqueue_script( 'tapacode-submenu-navs', get_stylesheet_directory_uri() . '/js/aspectus-submenu-navs.js', array( 'jquery', 'easy-pie-chart-js' ), '1.0.0', true );
 
@@ -470,10 +473,7 @@ if ( ! function_exists( 'wpdocs_example_get_the_terms' ) ) {
 
     function wpdocs_example_get_the_terms( $taxonomy ) {
         global $post;
-        echo get_the_ID();
-        echo $taxonomy;
         $terms = get_the_terms( get_the_ID(), $taxonomy );
-        echo var_dump($terms);
         if ( $terms && ! is_wp_error( $terms ) ) :
 
             $term_links = array();

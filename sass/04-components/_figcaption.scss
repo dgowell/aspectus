@@ -1,0 +1,8 @@
+.with-figcaption figcaption {
+    position: relative;
+    margin-top: -36px;
+    display: block;
+}
+.with-figcaption--copyright figcaption {
+    background: $colorSecondaryThree url('../assets/Ⓒ.svg') left 12px center no-repeat;
+}

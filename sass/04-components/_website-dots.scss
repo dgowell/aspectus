@@ -1,0 +1,20 @@
+.website-dots {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.website-dots li {
+    width: 100%;
+}
+.website-dots li button {
+    width: 100%;
+    height: 1px;
+    padding: 0;
+    background-color: $colorSupportingGreyLight;
+}
+.website-dots li.slick-active button {
+    background-color: $colorPrimaryDark;
+    height: 2px;
+}

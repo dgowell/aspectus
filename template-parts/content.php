@@ -11,7 +11,8 @@
     <div class="post-content">
         <header class="article__header">
             <?php if ( is_singular('post') ) { ?>
-                <div class="breadcrumbs"><a href="/news-insights">News & Insights</a><span class="breadcrumb__separator">></span><span class="breadcrumb__title"><?php the_title(); ?></span></div>
+                <div class="breadcrumbs mob-hide"><a href="/news-insights">News & Insights</a><span class="breadcrumb__separator">></span><span class="breadcrumb__title"><?php the_title(); ?></span></div>
+                <div class="breadcrumbs mob-show pt-20"><a href="/news-insights">< Back to News & Insights</a></div>
                 <div class="category__container">
                     <?php
                         $categories = get_the_category();

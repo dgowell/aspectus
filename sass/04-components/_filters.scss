@@ -5,6 +5,12 @@
     grid-template-columns: 1fr 1fr;
 }
 
+@media screen and (max-width: $mobileFormatBig) {
+    .filter-bar__container {
+        grid-template-columns: 1fr;
+    }
+}
+
 .filter-bar__col {
     border: 1px solid $colorSupportingGreyLight;
     padding: 0 40px;
@@ -15,6 +21,12 @@
     background-image: url('../assets/search.svg');
     background-position: left 40px center;
     background-repeat: no-repeat;
+}
+
+@media screen and (max-width: $mobileFormatBig) {
+    .filter-bar__col--search {
+        width: calc(100vw + 20px);
+    }
 }
 
 input.filter-bar__input {
@@ -142,6 +154,7 @@ input[type="checkbox"]:checked+span {
     margin-bottom: 0;
     list-style: none;
 }
+
 .filtered-posts {
     padding-top: 60px;
     padding-bottom: 100px;
@@ -159,6 +172,21 @@ input[type="checkbox"]:checked+span {
         "areaF areaG areaH";
 }
 
+@media screen and (max-width: $mobileFormatBig) {
+    .filtered-posts--tapacode_case-study {
+        grid-template-columns: 1fr;
+
+        grid-template-areas: "areaA"
+            "areaB"
+            "areaC"
+            "areaD"
+            "areaE"
+            "areaF"
+            "areaG"
+            "areaH";
+    }
+}
+
 .filtered-posts--post {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -168,6 +196,7 @@ input[type="checkbox"]:checked+span {
         "areaD areaE"
         "areaF areaG";
 }
+
 .filtered-posts--post .post__item:nth-child(1) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -176,8 +205,9 @@ input[type="checkbox"]:checked+span {
 
 .filtered-posts--tapacode_case-study {
     .post__item:nth-child(1) {
-            grid-area: areaA;
-        }
+        grid-area: areaA;
+    }
+
     .post__item:nth-child(2) {
         grid-area: areaB;
     }
@@ -207,6 +237,14 @@ input[type="checkbox"]:checked+span {
         grid-area: areaH;
     }
 }
+
+@media screen and (max-width: $mobileFormatBig) {
+    .filtered-posts--post {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 .post__img img {
     width: 100%;
     height: 100%;
@@ -218,7 +256,11 @@ input[type="checkbox"]:checked+span {
     overflow: hidden;
     margin-bottom: 24px;
 }
-
+@media screen and (max-width: $mobileFormatBig) {
+.post__img {
+    height: 400px;
+}
+}
 .post__title {
     @include global-title;
     color: $colorFontsDark;

@@ -10,11 +10,14 @@ jQuery(document).ready(function () {
             // Create the dropdown base
             const select = jQuery("<select class='selectbox__select' />").appendTo(div);
 
-
+            let text = "Sectors";
+            if (jQuery("body").hasClass('parent-pageid-1739')) {
+                text = "Services";
+            }
             // Create default option "Go to..."
             jQuery("<label />", {
                 "class": "selectbox__label",
-                "text": "Sectors    "
+                "text": text
             }).prependTo(div);
 
 

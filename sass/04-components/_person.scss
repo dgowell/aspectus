@@ -7,6 +7,12 @@
     margin-bottom: 16px;
 }
 
+@media screen and (max-width: $mobileFormatBig) {
+    .person__job {
+        margin-top: 28px;
+    }
+}
+
 .person__name {
     font-size: 1.375rem;
     margin-bottom: 32px;
@@ -22,7 +28,11 @@
 .js-person__info.open {
     max-height: 270px;
 }
-
+@media screen and (max-width: $mobileFormatBig) {
+.js-person__info.open {
+        max-height: 400px;
+    }
+}
 .person__switch {
     position: absolute;
     right: 0;

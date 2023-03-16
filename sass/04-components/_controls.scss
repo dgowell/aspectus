@@ -13,11 +13,17 @@
 .slider-control--prev:hover {
     background: $colorSupportingGreenLight url('../assets/arrow-small-left.svg') no-repeat center;
 }
+.violet .slider-control--prev:hover {
+    background: $colorSecondaryTwoOpaque url('../assets/arrow-small-left.svg') no-repeat center;
+}
 .slider-control--next {
     background: transparent url('../assets/arrow-small-right.svg') no-repeat center;
 }
 .slider-control--next:hover {
     background: $colorSupportingGreenLight url('../assets/arrow-small-right.svg') no-repeat center;
+}
+.violet .slider-control--next:hover {
+    background: $colorSecondaryTwoOpaque url('../assets/arrow-small-right.svg') no-repeat center;
 }
 @media screen and (max-width: $mobileFormatBig) {
     .slider-control__container.wp-block-buttons.wp-container-1 {

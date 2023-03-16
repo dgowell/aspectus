@@ -2,13 +2,18 @@
     border: 1px solid $colorPrimaryDark;
     width: 100%;
 }
-
+.light .selectbox__container {
+    border-color: $colorSupportingGreyLight;
+}
 .selectbox__container.white {
     border: 0;
 }
 .selectbox__container::after {
     height: 100px;
-    border-left: 1px solid black;
+    border-left: 1px solid $colorPrimaryDark;
+}
+.light .selectbox__container::after {
+    border-left: 1px solid $colorSupportingGreyLight;
 }
 .selectbox__label {
     position: absolute;
@@ -32,4 +37,8 @@
     background-image: url('../assets/arrow-small-down.svg');
     padding: 47px 50px 12px 20px;
     background-position: right 34px center;
+}
+.light .selectbox__select {
+    background-image: url('../assets/arrow-small-down.svg');
+    background-position: right 25px center;
 }

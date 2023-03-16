@@ -97,7 +97,7 @@ jQuery(document).ready(function () {
 * Run on all Sub Sectors pages parent-pageid-1737
 */
 jQuery(document).ready(function () {
-    if (jQuery("body").hasClass('parent-pageid-1737')) {
+    if (jQuery("body").hasClass('page-child')) {
         const nav = jQuery('.subsectors-list');
         const menu = jQuery('.subsectors-list>.wp-block-navigation__container');
 

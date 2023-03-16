@@ -9,18 +9,33 @@
 .p-20 {
     padding: 20px;
 }
+
+.px-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .pt-20 {
     padding-top: 20px;
 }
+
 .pt-28 {
     padding-top: 28px;
 }
+
+.px-22 {
+    padding-right: 22px;
+    padding-left: 22px;
+}
+
 .pt-32 {
     padding-top: 32px;
 }
+
 .pr-32 {
     padding-right: 32px;
 }
+
 .pt-40 {
     padding-top: 40px;
 }
@@ -28,29 +43,46 @@
 .pt-60 {
     padding-top: 60px;
 }
+
 .pb-40 {
-    padding-bottom: 40px;;
+    padding-bottom: 40px;
+    ;
 }
+
 .px-40 {
     padding-left: 40px;
     padding-right: 40px;
 }
+
 .py-40 {
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
+.pb-60 {
+    padding-bottom: 60px;
+}
+
+.pt-70 {
+    padding-top: 70px;
+}
+
 .pr-80 {
     padding-right: 80px;
 }
+
 .pt-80 {
     padding-top: 80px;
 }
+
 .pb-80 {
     padding-bottom: 80px;
 }
+
 .pt-90 {
     padding-top: 90px;
 }
+
 .pt-92 {
     padding-top: 92px;
 }
@@ -59,20 +91,20 @@
     padding-top: 100px;
 }
 
-.pb-60 {
-    padding-bottom: 60px;
-}
 
 .pb-100 {
     padding-bottom: 100px;
 }
+
 .py-100 {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 .pt-120 {
     padding-top: 120px;
 }
+
 .pl-120 {
     padding-left: 120px;
 }
@@ -98,6 +130,10 @@
     padding-bottom: 168px;
 }
 
+.pt-160 {
+    padding-top: 160px;
+}
+
 .p-200 {
     padding: 200px;
 }
@@ -106,9 +142,11 @@
     padding-top: 200px;
     padding-bottom: 200px;
 }
+
 .pt-320 {
     padding-top: 320px;
 }
+
 @media screen and (max-width: $screenSizeSmall) {
     .tablet-p-60 {
         padding: 60px;
@@ -120,22 +158,49 @@
     .mob-p-0 {
         padding: 0;
     }
+
+    .mob-pb-0 {
+        padding-bottom: 0;
+    }
+
     .mob-pt-0 {
         padding-top: 0;
     }
-    .mob-py-0 {
+
+    .mob-px-0 {
         padding-left: 0;
         padding-right: 0;
     }
+
+    .mob-py-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .mob-y-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .mob-px-6 {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
     .mob-p-8 {
         padding: 8px;
     }
+
     .mob-pt-20 {
         padding-top: 20px;
     }
 
     .mob-pb-20 {
         padding-bottom: 20px;
+    }
+
+    .mob-pr-20 {
+        padding-right: 20px;
     }
 
     .mob-px-20 {
@@ -147,18 +212,29 @@
         padding-left: 24px;
         padding-right: 24px;
     }
+
     .mob-pt-40 {
         padding-top: 40px;
     }
+
     .mob-pt-50 {
         padding-top: 50px;
     }
+
     .mob-pb-60 {
         padding-bottom: 60px;
     }
 
     .mob-pb-40 {
         padding-bottom: 40px;
+    }
+
+    .mob-pt-80 {
+        padding-top: 80px;
+    }
+
+    .mob-pb-80 {
+        padding-bottom: 80px;
     }
 
     .mob-py-100 {
@@ -169,6 +245,7 @@
     .mob-pt-100 {
         padding-top: 100px;
     }
+
     .mob-py-107 {
         padding-top: 107px;
         padding-bottom: 107px;
@@ -178,20 +255,44 @@
         padding-bottom: 100px;
     }
 
+    .mob-pt-116 {
+        padding-top: 116px;
+    }
+
     .mob-pt-132 {
         padding-top: 132px;
     }
+
     .mob-pt-140 {
         padding-top: 140px;
     }
+
     .mob-pb-140 {
         padding-bottom: 140px;
     }
+
     .mob-pt-145 {
         padding-top: 145px;
     }
+
+    .mob-pb-150 {
+        padding-bottom: 150px;
+    }
+
     .mob-py-165 {
         padding-top: 165px;
         padding-bottom: 165px;
+    }
+
+    .mob-pb-188 {
+        padding-bottom: 188px;
+    }
+
+    .mob-pt-240 {
+        padding-top: 240px;
+    }
+
+    .mob-pt-284 {
+        padding-top: 284px;
     }
 }

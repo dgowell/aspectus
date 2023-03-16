@@ -1,6 +1,16 @@
 .office__img {
     width: 100%;
     padding-right: 18px;
+    height: 480px;
+}
+.office__img img {
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: $mobileFormatBig) {
+.office__img {
+        padding-right: 0;
+    }
 }
 .office__location {
     margin-top: 24px;

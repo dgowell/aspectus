@@ -81,3 +81,11 @@
 .col-4-col-1-col-3>.gb-layout-column-wrap {
     grid-template-columns: 4fr 1fr 3fr;
 }
+@media screen and (max-width: $mobileFormatBig) {
+    .mob-reverse-col>.gb-layout-column-wrap {
+            grid-template-areas:
+                    "col3"
+                    "col2"
+                    "col1"!important;
+    }
+}
