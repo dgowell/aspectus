@@ -11,4 +11,5 @@
 .title--technology {
     @include global-title;
     margin-bottom: 32px;
+    color: $colorPrimaryDark;
 }

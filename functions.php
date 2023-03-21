@@ -32,7 +32,7 @@ function my_theme_enqueue_styles() {
     wp_enqueue_script( 'tapacode-moving-menu', get_stylesheet_directory_uri() . '/js/aspectus-moving-menu.js', array( 'jquery', 'slick-js', 'easy-pie-chart-js' ), '1.0.0', true );
 
     //tab slider js
-    wp_enqueue_script( 'tapacode-tab-slider', get_stylesheet_directory_uri() . '/js/aspectus-tab-slider.js', array( 'jquery', 'slick-js' ), '1.0.0', true );
+    wp_enqueue_script( 'tapacode-tab-slider', get_stylesheet_directory_uri() . '/js/aspectus-tab-slider.js', array( 'jquery', 'slick-js' ), '1.0.0', false );
 
     //custom submenu js
     wp_enqueue_script( 'tapacode-submenu-navs', get_stylesheet_directory_uri() . '/js/aspectus-submenu-navs.js', array( 'jquery', 'easy-pie-chart-js' ), '1.0.0', true );
@@ -60,15 +60,13 @@ function my_theme_enqueue_styles() {
             ) );
 
     //slick css
-    wp_enqueue_style( 'slick-styles',
-    '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'
-    );
+    wp_enqueue_style( 'slick-styles', get_stylesheet_directory_uri() . '/css/slick.css', array(), '1.0.0', false);
 
     //slick js
-    wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.0.0', true ); 
+    wp_enqueue_script( 'slick-js', get_stylesheet_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '1.0.0', false); 
 
     //easy pie chart
-    wp_enqueue_script( 'easy-pie-chart-js', get_stylesheet_directory_uri() . '/js/easy-pie-chart.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_script( 'easy-pie-chart-js', get_stylesheet_directory_uri() . '/js/easy-pie-chart.js', array( 'jquery' ), '1.0.0', false );
 
 
 }
@@ -559,6 +557,18 @@ function shortcode_sector_nav( $atts ) {
 
 add_shortcode( 'types', 'shortcode_sector_nav' );
 
+function shortcode_get_lottie( $atts ) {
+    ob_start();
+
+    echo '<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><div id="pre-loader" style="position: fixed; width: 100vw; height: 100vh; top: 0px; left: 0px; z-index: 999999; background-color: rgb(70, 181, 168); display: none;">
+        <lottie-player src="'. get_stylesheet_directory_uri() . '/lottie/a-equals.json" background="transparent"  speed="1"  style="width: calc(100vw + 40px); height: 100%; margin-left: -20px;" autoplay></lottie-player>
+        </div>';
+
+    return ob_get_clean();
+
+}
+add_shortcode( 'lottie', 'shortcode_get_lottie' );
+
 
 /*
 *   AJAX
@@ -616,7 +626,11 @@ function tapacode_selector_ajax_callback() {
 
     if($ajaxposts->have_posts()) {
         while($ajaxposts->have_posts()) : $ajaxposts->the_post();
-        $response .= get_template_part('template-parts/news-grid');
+            if ($post_type === 'post') {
+               $response .= get_template_part('template-parts/post-grid'); 
+            } else {
+                $response .= get_template_part('template-parts/news-grid');
+            }
         endwhile;
     } else {
         $response = '<p>No results found</p>';
@@ -710,5 +724,37 @@ if ( ! function_exists( 'genesis_block_theme_post_byline' ) ) :
     </div>
         <?php
     } endif;
+/**
+ * Inject term slug into custom post type permastruct.
+ * 
+ * @link   http://wordpress.stackexchange.com/a/5313/1685
+ * 
+ * @param  string  $link
+ * @param  WP_Post $post 
+ * @return array
+ */
+/*
+function wpse_5308_post_link( $link, $post ) {
+    if ( $post->post_type === 'post' ) {
+        if ( $terms = get_the_terms( $post->ID, 'tapacode_type' ) )
+            $link = str_replace( '%type%', current( $terms )->slug, $link );
+    }
 
+    return $link;
+}
+
+add_filter( 'post_link', 'wpse_5308_post_link', 10, 2 );
+*/
+function custom_taxonomy_permalink_structure( $post_link, $post ) {
+    if ( false !== strpos( $post_link, '%tapacode_type%' ) ) {
+        $tapacode_type_term = get_the_terms( $post->ID, 'tapacode_type' );
+        if ( ! empty( $tapacode_type_term ) ) {
+            $post_link = str_replace( '%tapacode_type%', $tapacode_type_term[0]->slug, $post_link );
+        } else {
+            $post_link = str_replace( '/%tapacode_type%', '', $post_link );
+        }
+    }
+    return $post_link;
+}
+add_filter( 'post_link', 'custom_taxonomy_permalink_structure', 10, 4 );
     ?>

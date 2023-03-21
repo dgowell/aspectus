@@ -121,7 +121,11 @@ if ($query->have_posts()) {
     while ($query->have_posts()) {
         $query->the_post();
         // do something
+        if ($args['post_type'] === 'post'){
+            include('post-grid.php');
+        } else {
          include('news-grid.php');
+        }
     }
 } else {
     // no posts found

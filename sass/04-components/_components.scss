@@ -31,6 +31,9 @@
 .alignfull {
     padding: 0 40px;
 }
+.wp-block-separator {
+    border-bottom: 1px solid;
+}
 
 @media screen and (max-width: $screenSizeSmall) {
 .alignfull {

@@ -56,11 +56,14 @@
     width: 100%;
     min-height: 220px;
     border: 1px $colorSupportingGreyLight solid;
+    border-left: none;
     color: $colorFontsDark;
     @include global-title;
     background-color: $colorSupportingWhite;
 }
-
+.js-fullscreen-slider__indicators li:first-child button {
+    border-left:1px $colorSupportingGreyLight solid;
+}
 .js-fullscreen-slider__indicators li:nth-child(1) button {
     background: $colorSupportingWhite url('../assets/capital-markets.svg') no-repeat center top 55px;
 }

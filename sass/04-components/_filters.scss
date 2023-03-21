@@ -256,15 +256,21 @@ input[type="checkbox"]:checked+span {
     overflow: hidden;
     margin-bottom: 24px;
 }
+
 @media screen and (max-width: $mobileFormatBig) {
-.post__img {
-    height: 400px;
+    .post__img {
+        height: 400px;
+    }
 }
-}
+
 .post__title {
     @include global-title;
     color: $colorFontsDark;
     margin-bottom: 1rem;
+}
+
+.post__title--post {
+    margin-bottom: 4px;
 }
 
 a:hover>.post__title {
@@ -280,4 +286,41 @@ a:hover>.post__title {
 
 a:hover>.post__excerpt {
     text-decoration: none;
+}
+
+.post-info__img {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    color: $colorSupportingGreyDark;
+    height: 32px;
+    width: 32px;
+}
+
+.post-info__img img {
+    width: 100%;
+    height: 100%;
+}
+
+a.post-info__author,
+a.post-info__author:visited {
+    color: $colorSupportingGreyDark;
+    @include global-micro;
+}
+
+.post-info__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post-info__col--author {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+.post-info__date {
+    @include global-micro;
 }

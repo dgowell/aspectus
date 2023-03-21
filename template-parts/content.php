@@ -11,7 +11,7 @@
     <div class="post-content">
         <header class="article__header">
             <?php if ( is_singular('post') ) { ?>
-                <div class="breadcrumbs mob-hide"><a href="/news-insights">News & Insights</a><span class="breadcrumb__separator">></span><span class="breadcrumb__title"><?php the_title(); ?></span></div>
+                <div class="breadcrumbs mob-hide"><a href="/news-insights">News & Insights</a><span class="breadcrumb__separator">></span><span class="breadcrumb__title"><?php echo wp_trim_words( get_the_title(), 3 ); ?></span></div>
                 <div class="breadcrumbs mob-show pt-20"><a href="/news-insights">< Back to News & Insights</a></div>
                 <div class="category__container">
                     <?php
@@ -40,6 +40,7 @@
             } else {
                 // Get the content.
                 the_content( esc_html__( 'Read More', 'genesis-block-theme' ) . ' <span class="screen-reader-text">' . __( 'about ', 'genesis-block-theme' ) . get_the_title() . '</span>' );
+                 get_template_part( 'template-parts/related-news');
             }
 
             ?>

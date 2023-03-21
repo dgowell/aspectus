@@ -92,6 +92,8 @@
 
 .featured__separator {
     margin-top: 32px;
+    border-color: $colorSupportingWhiteWithOpacity;
+
 }
 
 .featured__list li {
@@ -101,7 +103,7 @@
 .featured__container--small>.wp-block-group__inner-container {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-content: flex-start;
     flex-wrap: wrap;
 }
 

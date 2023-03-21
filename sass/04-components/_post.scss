@@ -2,6 +2,9 @@
     padding-top: 100px;
     padding-bottom: 100px;
 }
+.post__list li:hover hr {
+    background-color: $colorPrimaryDark;
+}
 @media screen and (max-width: $mobileFormatBig) {
     .post__container {
         padding-top: 64px;
@@ -28,6 +31,10 @@
 
 .post__separator {
     margin: 20px auto;
+    width: 100%;
+    color: $colorLightGreyWithOpacity;
+    background-color: $colorLightGreyWithOpacity;
+    border-color: $colorLightGreyWithOpacity;
 }
 
 .wp-block-post-author__avatar {
@@ -48,4 +55,7 @@
     background-color: $colorSupportingWhite;
     border-radius: 30px;
     padding: 4px 12px;
+}
+.post__author>.wp-block-post-author__content, .post__date>time {
+    @include global-micro;
 }

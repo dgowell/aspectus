@@ -144,6 +144,9 @@ p.has-background {
 .alignfull {
   padding: 0 40px; }
 
+.wp-block-separator {
+  border-bottom: 1px solid; }
+
 @media screen and (max-width: 1000px) {
   .alignfull {
     padding: 0 20px; } }
@@ -301,16 +304,12 @@ a.gb-button {
   color: #C7F03D;
   border: solid 1px #C7F03D; }
 
-button.button:hover a.gb-button:hover {
+button.button:hover, a.gb-button:hover {
   background: #022C2E;
   background-image: url("../assets/right-chevron-dark.svg");
   background-position: right 10px center;
   background-repeat: no-repeat;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 1px 30px 2px 15px;
   transition: 0.2s ease-in-out;
-  border-radius: 50px;
   background-color: #C7F03D;
   color: #022C2E;
   border: solid 1px #022C2E; }
@@ -349,7 +348,7 @@ a.gb-button {
 
 button.button--clean {
   background-image: none;
-  padding: 1px 15px 2px; }
+  padding: 1px 15px 1px; }
 
 button.button--clean:hover {
   background-image: none;
@@ -450,9 +449,11 @@ button.navbar__contact:hover {
   padding: 40px;
   display: flex;
   justify-content: space-between;
-  transition: 0.3s ease;
+  transition: 0.5s linear;
   z-index: 11;
-  position: relative; }
+  position: absolute;
+  z-index: 9999999999;
+  width: 100vw; }
 
 @media screen and (max-width: 1000px) {
   .navbar {
@@ -460,7 +461,10 @@ button.navbar__contact:hover {
 
 .navbar.open {
   background-color: #FFFFFF;
-  transition: 0.3s ease; }
+  transition: visibility 0s, opacity 0s linear;
+  position: fixed;
+  z-index: 9999999999;
+  width: 100vw; }
 
 .js-navbar.open.highlight {
   background-color: #E6EBEB; }
@@ -499,14 +503,23 @@ x .navbar__break {
   display: none; }
 
 .main-nav {
-  padding: 0 40px 0;
+  padding: 100px 40px;
   background-color: #FFFFFF;
   display: grid;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  position: fixed;
+  z-index: 999999;
+  width: 100vw;
   grid-template-columns: calc(22.5% + 80px) 1fr; }
 
 .navbar.open + .js-main-nav {
+  padding: 152px 40px 60px;
   height: 954px;
-  padding: 40px 40px 60px; }
+  opacity: 1;
+  transition: visibility 0s,opacity, 0.5s, height 0.5s linear;
+  visibility: visible; }
 
 @media screen and (max-width: 1000px) {
   .navbar.open + .js-main-nav {
@@ -534,7 +547,7 @@ x .navbar__break {
   background-color: #FFFFFF; }
 
 .js-sub-menu__title {
-  margin-top: 32px;
+  margin-top: 0;
   margin-bottom: 20px;
   line-height: 1.375rem; }
 
@@ -782,6 +795,16 @@ x .navbar__break {
 .image-container--fullwidth {
   margin-left: -40px; }
 
+.overlay {
+  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.634913) 100%);
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  display: inline-block;
+  margin-top: -200px; }
+
 @media screen and (max-width: 600px) {
   .image-container__img--portrait {
     height: 548px; }
@@ -831,6 +854,7 @@ x .navbar__break {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
+  letter-spacing: -0.02em;
   background: #F14D54 url("../assets/i.svg") left 12px center no-repeat;
   color: #FFFFFF;
   padding: 8px 12px 8px 12px;
@@ -886,6 +910,9 @@ x .navbar__break {
   padding-top: 100px;
   padding-bottom: 100px; }
 
+.post__list li:hover hr {
+  background-color: #022C2E; }
+
 @media screen and (max-width: 600px) {
   .post__container {
     padding-top: 64px; }
@@ -907,7 +934,11 @@ x .navbar__break {
   margin-top: auto; }
 
 .post__separator {
-  margin: 20px auto; }
+  margin: 20px auto;
+  width: 100%;
+  color: rgba(230, 235, 235, 0.25);
+  background-color: rgba(230, 235, 235, 0.25);
+  border-color: rgba(230, 235, 235, 0.25); }
 
 .wp-block-post-author__avatar {
   border-radius: 50%;
@@ -926,6 +957,13 @@ x .navbar__break {
   background-color: #FFFFFF;
   border-radius: 30px;
   padding: 4px 12px; }
+
+.post__author > .wp-block-post-author__content, .post__date > time {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.02em; }
 
 .post-alt__container > .gb-layout-column-wrap {
   grid-template-columns: 1fr 3fr; }
@@ -1185,6 +1223,7 @@ x .navbar__break {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
+  letter-spacing: -0.02em;
   color: #022C2E; }
 
 .byline__img img {
@@ -1227,6 +1266,7 @@ x .navbar__break {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
+  letter-spacing: -0.02em;
   color: #E6EBEB;
   padding-right: 18px; }
 
@@ -1254,6 +1294,7 @@ x .navbar__break {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
+  letter-spacing: -0.02em;
   color: #E6EBEB; }
 
 .featured__author .wp-block-post-author__avatar {
@@ -1276,7 +1317,8 @@ x .navbar__break {
   overflow: hidden; }
 
 .featured__separator {
-  margin-top: 32px; }
+  margin-top: 32px;
+  border-color: rgba(255, 255, 255, 0.25); }
 
 .featured__list li {
   margin-bottom: 20px; }
@@ -1284,7 +1326,7 @@ x .navbar__break {
 .featured__container--small > .wp-block-group__inner-container {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-content: flex-start;
   flex-wrap: wrap; }
 
 .featured__title--small {
@@ -1318,7 +1360,8 @@ hr.has-light-grey-color {
   font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  font-weight: 400; }
+  font-weight: 400;
+  letter-spacing: -0.02em; }
 
 .white .selectbox__label {
   top: 17px;
@@ -1472,12 +1515,16 @@ hr.has-light-grey-color {
   width: 100%;
   min-height: 220px;
   border: 1px #E6EBEB solid;
+  border-left: none;
   color: #022C2E;
   font-family: "ivypresto-display", sans-serif;
   font-size: 1.125rem;
   line-height: 1.625rem;
   font-weight: 400;
   background-color: #FFFFFF; }
+
+.js-fullscreen-slider__indicators li:first-child button {
+  border-left: 1px #E6EBEB solid; }
 
 .js-fullscreen-slider__indicators li:nth-child(1) button {
   background: #FFFFFF url("../assets/capital-markets.svg") no-repeat center top 55px; }
@@ -1645,6 +1692,7 @@ input[type="submit"].form__submit {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
+  letter-spacing: -0.02em;
   background-color: transparent;
   background-position: right calc(50% - 58px) center;
   background-repeat: no-repeat;
@@ -1686,7 +1734,8 @@ textarea {
   font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  font-weight: 400; }
+  font-weight: 400;
+  letter-spacing: -0.02em; }
 
 .form__label input {
   padding: 3px 0 8px;
@@ -1923,6 +1972,9 @@ input[type="checkbox"]:checked + span {
   color: #022C2E;
   margin-bottom: 1rem; }
 
+.post__title--post {
+  margin-bottom: 4px; }
+
 a:hover > .post__title {
   text-decoration: none; }
 
@@ -1937,6 +1989,46 @@ a:hover > .post__title {
 
 a:hover > .post__excerpt {
   text-decoration: none; }
+
+.post-info__img {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  color: #6F7783;
+  height: 32px;
+  width: 32px; }
+
+.post-info__img img {
+  width: 100%;
+  height: 100%; }
+
+a.post-info__author,
+a.post-info__author:visited {
+  color: #6F7783;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.02em; }
+
+.post-info__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.post-info__col--author {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px; }
+
+.post-info__date {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.02em; }
 
 .js-locations__section,
 .js-contact-form__section {
@@ -2025,7 +2117,8 @@ a:hover > .post__excerpt {
   font-size: 1.125rem;
   line-height: 1.625rem;
   font-weight: 400;
-  margin-bottom: 32px; }
+  margin-bottom: 32px;
+  color: #022C2E; }
 
 .contact__container {
   margin-top: 182px;
@@ -2206,6 +2299,7 @@ p.floating-menu__item > a:hover {
 .sector-menu__col--icon img {
   height: 83px;
   width: 100%;
+  max-width: 102px;
   margin-top: -48px; }
 
 .sector-menu__col--title {
@@ -2351,7 +2445,8 @@ p.floating-menu__item > a:hover {
   line-height: 1.25rem;
   font-weight: 500;
   color: #022C2E;
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  font-weight: 400; }
 
 .cta__text {
   font-family: "ivypresto-display", sans-serif;
@@ -2428,6 +2523,12 @@ p.floating-menu__item > a:hover {
     height: 124px;
     right: 79px;
     margin-top: -114px; } }
+
+.global-cta {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 500; }
 
 .js-service__container {
   background-color: #022C2E;
@@ -2644,7 +2745,7 @@ p.floating-menu__item > a:hover {
 
 .tab-block__container.wp-block-atbs-tabs[class*="atbs__tabs_"] .atbs__tab-content {
   background-color: rgba(230, 235, 235, 0.25);
-  width: 100vw;
+  width: 100%;
   margin-left: -40px;
   padding: 100px 40px; }
 
@@ -2771,6 +2872,7 @@ div.alignfull.case-study-block {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
+  letter-spacing: -0.02em;
   max-width: 356px;
   margin: auto; }
 
@@ -2793,12 +2895,17 @@ div.alignfull.case-study-block {
   font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  font-weight: 400; }
+  font-weight: 400;
+  letter-spacing: -0.02em; }
+
+.breadcrumbs a {
+  font-weight: 500; }
 
 .entry-content .breadcrumbs a {
   font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  font-weight: 500;
   font-weight: 500;
   text-decoration: none;
   box-shadow: none;
@@ -2836,8 +2943,7 @@ div.alignfull.case-study-block {
   margin-left: 10px; }
 
 div.about-banner__container.alignfull {
-  margin-top: -204px;
-  padding-top: 305px;
+  padding-top: 220px;
   padding-bottom: 180px; }
 
 @media screen and (max-width: 600px) {

@@ -3,9 +3,12 @@
     color: $colorSupportingWhite;
     @include global-micro;
 }
-
+.breadcrumbs a {
+    font-weight: 500;
+}
 .entry-content .breadcrumbs a {
     @include global-small;
+    font-weight: 500;
     text-decoration: none;
     box-shadow: none;
     color: $colorSupportingWhite;

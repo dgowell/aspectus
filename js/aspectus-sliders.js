@@ -1,9 +1,15 @@
-jQuery(document).ready(function () {
+jQuery(window).on("load", function () {
   //standard image slider
+  var len = jQuery('script[src="http://localhost:10009/wp-content/themes/genesis-block-theme-child/js/aspectus-sliders.js?ver=1.0.0"]').length;
+  console.log(len);
+  var len = jQuery('script[src="http://localhost:10009/wp-content/themes/genesis-block-theme-child/js/slick.min.js?ver=1.0.0"]').length;
+  console.log(len);
+  console.log(jQuery('.image-slider'));
   jQuery('.image-slider').slick({
     infinite: true,
     dots: false,
     slidesToShow: 1,
+    lazyLoad: 'ondemand',
     slidesToScroll: 1,
     prevArrow: '<button type="button" class="image-slider__button image-slider__button--prev"></button>',
     nextArrow: '<button type="button" class="image-slider__button image-slider__button--next"></button>',

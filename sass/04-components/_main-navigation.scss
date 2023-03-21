@@ -8,9 +8,11 @@
     padding: 40px;
     display: flex;
     justify-content: space-between;
-    transition: 0.3s ease;
+    transition: 0.5s linear;
     z-index: 11;
-    position: relative;
+    position: absolute;
+    z-index: 9999999999;
+    width: 100vw;
 }
 
 @media screen and (max-width: $screenSizeSmall) {
@@ -21,7 +23,10 @@
 
 .navbar.open {
     background-color: $colorSupportingWhite;
-    transition: 0.3s ease;
+    transition: visibility 0s, opacity 0s linear;
+    position: fixed;
+    z-index: 9999999999;
+    width: 100vw;
 }
 
 .js-navbar.open.highlight {
@@ -72,15 +77,24 @@ x .navbar__break {
 }
 
 .main-nav {
-    padding: 0 40px 0;
+    padding: 100px 40px;
     background-color: $colorSupportingWhite;
     display: grid;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    position: fixed;
+    z-index: 999999;
+    width: 100vw;
     grid-template-columns: calc(22.5% + 80px) 1fr;
 }
 
 .navbar.open+.js-main-nav {
+    padding: 152px 40px 60px;
     height: 954px;
-    padding: 40px 40px 60px;
+    opacity: 1;
+    transition: visibility 0s,opacity, 0.5s, height 0.5s linear;
+    visibility: visible;
 }
 
 @media screen and (max-width: $screenSizeSmall) {
@@ -115,7 +129,7 @@ x .navbar__break {
 }
 
 .js-sub-menu__title {
-    margin-top: 32px;
+    margin-top: 0;
     margin-bottom: 20px;
     line-height: 1.375rem;
 }

@@ -51,6 +51,7 @@
     @include global-small;
     color: $colorFontsDark;
     margin-bottom: 12px;
+    font-weight: 400;
 }
 
 .cta__text {
@@ -133,4 +134,7 @@ position: relative;
         right: 79px;
         margin-top: -114px;
     }
+}
+.global-cta {
+    @include global-cta;
 }

@@ -55,6 +55,11 @@ jQuery(document).ready(function () {
         const submenus = jQuery('.js-location__dropdown');
         const locationSeparators = jQuery('.js-location__separator');
 
+        //set the first accordian to open
+        jQuery(submenus[0]).addClass('open');
+        jQuery(locationSeparators[0]).addClass('open');
+        jQuery(switches[0]).addClass('open');
+
         jQuery.each(switches, addClickHandler);
 
         function addClickHandler(index, value) {
